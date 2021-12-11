@@ -1,0 +1,43 @@
+// Colors
+$primary-font-color-light: #ffffff;
+$primary-font-color-dark: #303030;
+$secondary-font-color-light: #e2e2e2;
+$secondary-font-color-dark: #5d5d5d;
+$accent-color: linear-gradient(90deg, hsl(241, 70, 60), hsl(292, 70, 60));
+$accent-color-hover: hsl(348, 78%, 41%);
+$accent-color-disabled: hsl(348, 48%, 61%);
+$primary-background-color-light: #ffffff;
+$secondary-background-color-light: #f6f6f6;
+$primary-background-color-dark: #2a2a2a;
+$secondary-background-color-dark: #3a3a3a;
+
+// Bootstrap breakpoints
+$grid-breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+$container-widths: (
+  "xs": 100%,
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1140px,
+  "xxl": 1320px,
+);
+
+// Font-families
+$primary-font-light: "Poppins-Light";
+$primary-font-regular: "Poppins-Regular";
+$primary-font-bold: "Poppins-Bold";
+
+$secondary-font-light: "Railway-Light";
+$secondary-font-regular: "Railway-Regular";
+$secondary-font-bold: "Railway-Bold";
+
+// Misc
+$default-border-radius: 12px;

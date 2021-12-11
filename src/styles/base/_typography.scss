@@ -1,0 +1,51 @@
+@import "abstracts/variables";
+
+@font-face {
+  font-family: $primary-font-light;
+  src: url("/assets/fonts/poppins/poppins-light.ttf");
+}
+@font-face {
+  font-family: $primary-font-regular;
+  src: url("/assets/fonts/poppins/poppins-regular.ttf");
+}
+@font-face {
+  font-family: $primary-font-bold;
+  src: url("/assets/fonts/poppins/poppins-bold.ttf");
+}
+@font-face {
+  font-family: $secondary-font-light;
+  src: url("/assets/fonts/raleway/raleway-light.ttf");
+}
+@font-face {
+  font-family: $secondary-font-regular;
+  src: url("/assets/fonts/raleway/raleway-regular.ttf");
+}
+@font-face {
+  font-family: $secondary-font-bold;
+  src: url("/assets/fonts/raleway/raleway-bold.ttf");
+}
+
+* {
+  font-family: $secondary-font-regular;
+  color: $secondary-font-color-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primary-font-bold;
+  color: $primary-font-color-dark;
+}
+
+h1 {
+  font-size: calc(60 / 16 * 1rem);
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.175;
+}

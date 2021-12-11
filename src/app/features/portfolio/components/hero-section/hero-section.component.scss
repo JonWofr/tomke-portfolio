@@ -1,0 +1,86 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.hero {
+  height: 90vh;
+  min-height: 500px;
+  background-image: url("/assets/images/hero-background-image-mobile.jpeg");
+  background-position-x: 40%;
+  background-size: cover;
+
+  @include media-breakpoint-up("md") {
+    background-image: url("/assets/images/hero-background-image-tablet.jpeg");
+    background-position-y: 65%;
+  }
+
+  &__overlay {
+    height: 100%;
+    background-image: linear-gradient(
+      90deg,
+      hsla(0, 0, 0, 0.7),
+      hsla(0, 0, 50, 0.7)
+    );
+  }
+
+  &__title {
+    color: $primary-font-color-light;
+    font-family: $primary-font-regular;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__name {
+    font-family: $primary-font-bold;
+    color: inherit;
+    line-height: inherit;
+  }
+
+  &__mission-statement {
+    font-size: 1.25rem;
+    color: $secondary-font-color-light;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__social-media-link {
+    border: 1px solid $secondary-font-color-light;
+    border-radius: 50%;
+    padding: 7px;
+  }
+
+  &__social-media-icon {
+    width: 24px;
+    height: 24px;
+    fill: $secondary-font-color-light;
+    display: block;
+  }
+}
+
+.container {
+  height: 100%;
+}
+
+.inner-container {
+  position: relative;
+  height: 100%;
+}
+
+.content-container {
+  width: 100%;
+  position: absolute;
+  top: 55%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.social-media-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  margin: 0 auto;
+}
