@@ -1,0 +1,20 @@
+@import "abstracts/variables";
+
+.section-header {
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    background-image: $accent-color;
+    background-clip: text;
+    color: transparent;
+  }
+}
