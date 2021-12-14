@@ -1,0 +1,18 @@
+<section class="section">
+  <div class="container">
+    <portfolio-section-header
+      title="Was andere über mich sagen"
+      subtitle="Empfehlungen"
+    >
+    </portfolio-section-header>
+    <div #testimonialSlideshowViewport class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let testimonial of testimonials">
+          <portfolio-testimonial
+            [testimonial]="testimonial"
+          ></portfolio-testimonial>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
