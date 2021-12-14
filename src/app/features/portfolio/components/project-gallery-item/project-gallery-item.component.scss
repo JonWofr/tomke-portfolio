@@ -1,0 +1,49 @@
+@import "abstracts/variables";
+
+.project-gallery-item {
+  width: 100%;
+  height: 100%;
+  border-radius: $default-border-radius;
+  overflow: hidden;
+  position: relative;
+
+  &:hover &__overlay {
+    opacity: 1;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $overlay-color;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: opacity 0.125s ease-in-out;
+  }
+
+  &__subtitle {
+    color: $secondary-accent-color;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    color: $primary-font-color-light;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  &__description {
+    color: $secondary-font-color-light;
+  }
+
+  &__thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

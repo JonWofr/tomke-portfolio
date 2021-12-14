@@ -1,0 +1,12 @@
+<section class="section">
+  <div class="container">
+    <portfolio-section-header title="Was ich mache" subtitle="Leistungen">
+    </portfolio-section-header>
+    <div class="service-cards-container">
+      <portfolio-service-card
+        *ngFor="let service of services"
+        [service]="service"
+      ></portfolio-service-card>
+    </div>
+  </div>
+</section>
