@@ -1,6 +1,8 @@
 @import "abstracts/variables";
 
 .section-header {
+  margin-bottom: 2.5rem;
+
   &__title {
     text-align: center;
     font-size: 2rem;
@@ -9,12 +11,9 @@
 
   &__subtitle {
     text-align: center;
-    font-size: 0.75rem;
-    line-height: 1.5;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    background-image: $accent-color;
+    background-image: $primary-accent-color;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
   }
 }

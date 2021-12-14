@@ -30,7 +30,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles/main.scss"],
+            "styles": [
+              "src/styles/main.scss",
+              "node_modules/swiper/swiper.min.css"
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },

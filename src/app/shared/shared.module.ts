@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CropTextPipe } from './pipes/crop-text/crop-text.pipe';
 
 /**
  * This module contains all components, pipes etc. that are shared across the
@@ -8,10 +9,11 @@ import { CommonModule } from '@angular/common';
  * etc. from the shared module.
  */
 @NgModule({
-  declarations: [],
+  declarations: [CropTextPipe],
   imports: [
     CommonModule,
     // Should not import other modules of this application
   ],
+  exports: [CropTextPipe],
 })
 export class SharedModule {}

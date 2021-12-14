@@ -1,8 +1,9 @@
 @use "sass:map";
 @import "abstracts/mixins";
+@import "abstracts/variables";
 
 .container {
-  padding: 0 0.75rem;
+  padding: 0 $container-horizontal-padding-xs;
 }
 
 @include media-breakpoint-up("sm") {

@@ -1,0 +1,18 @@
+<div class="project-gallery-item">
+  <div class="project-gallery-item__overlay">
+    <h3 class="subtitle project-gallery-item__subtitle">
+      {{ project?.services?.join(", ") }}
+    </h3>
+    <h4 class="project-gallery-item__title">
+      {{ project?.title }}
+    </h4>
+    <p class="project-gallery-item__description">
+      {{ project ? (project.description | cropText: 15) : undefined }}
+    </p>
+  </div>
+  <img
+    [src]="project?.thumbnailImageUrl"
+    alt=""
+    class="project-gallery-item__thumbnail-image"
+  />
+</div>

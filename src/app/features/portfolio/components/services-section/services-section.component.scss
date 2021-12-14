@@ -1,0 +1,11 @@
+@import "abstracts/variables";
+
+.section {
+  background-color: $secondary-background-color-light;
+}
+
+.service-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
