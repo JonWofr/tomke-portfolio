@@ -12,6 +12,7 @@ import { ProjectsSectionComponent } from './components/projects-section/projects
 import { ProjectGalleryComponent } from './components/project-gallery/project-gallery.component';
 import { ProjectGalleryItemComponent } from './components/project-gallery-item/project-gallery-item.component';
 import { SharedModule } from '@shared/shared.module';
+import { ClientsSectionComponent } from './components/clients-section/clients-section.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SharedModule } from '@shared/shared.module';
     ProjectsSectionComponent,
     ProjectGalleryComponent,
     ProjectGalleryItemComponent,
+    ClientsSectionComponent,
   ],
   imports: [CommonModule, PortfolioRoutingModule, SharedModule],
 })

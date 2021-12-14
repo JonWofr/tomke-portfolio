@@ -3,9 +3,10 @@
 @import "abstracts/mixins";
 
 .project-gallery {
-  // The height is stored in a specific variable to be able to access it even for
-  // width purposes
+  // The height is stored in a specific variable to be able to calculate the width
+  // of the child elements depending on the height of the parent element
   --height: 500px;
+  // The grid gap is stored in a specific variable because it is used across elements
   --grid-gap: 1.5rem;
   height: var(--height);
   overflow: hidden;
