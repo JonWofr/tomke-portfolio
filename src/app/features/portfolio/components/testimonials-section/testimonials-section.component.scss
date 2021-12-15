@@ -1,0 +1,75 @@
+@import "abstracts/variables";
+
+.testimonials-section {
+  background-color: $primary-background-color-light;
+
+  &__testimonials-container {
+    margin-bottom: 1.5rem;
+  }
+
+  &__testimonial-container {
+    // Same padding as arrow widths plus additional space
+    padding: 0 calc(24px + 8px);
+  }
+
+  &__pagination-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  &__pagination-button {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    background-color: $primary-background-color-light;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    appearance: none;
+    transition: background-color 0.25s ease-in-out;
+
+    &:checked {
+      background-color: transparent;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      z-index: -1;
+      width: calc(100% + 2 * 1px);
+      height: calc(100% + 2 * 1px);
+      background-image: $primary-accent-color;
+      border-radius: 50%;
+    }
+  }
+
+  &__navigation-button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: $default-button-hitbox;
+    z-index: 2000;
+
+    &:disabled {
+      filter: saturate(30%) brightness(1.5);
+    }
+
+    &--left {
+      left: 0;
+      margin-left: -$default-button-hitbox;
+    }
+
+    &--right {
+      right: 0;
+      margin-right: -$default-button-hitbox;
+    }
+  }
+
+  &__arrow-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

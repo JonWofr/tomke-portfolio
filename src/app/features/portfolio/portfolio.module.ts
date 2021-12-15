@@ -13,6 +13,8 @@ import { ProjectGalleryComponent } from './components/project-gallery/project-ga
 import { ProjectGalleryItemComponent } from './components/project-gallery-item/project-gallery-item.component';
 import { SharedModule } from '@shared/shared.module';
 import { ClientsSectionComponent } from './components/clients-section/clients-section.component';
+import { TestimonialsSectionComponent } from './components/testimonials-section/testimonials-section.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ClientsSectionComponent } from './components/clients-section/clients-se
     ProjectGalleryComponent,
     ProjectGalleryItemComponent,
     ClientsSectionComponent,
+    TestimonialsSectionComponent,
+    TestimonialComponent,
   ],
   imports: [CommonModule, PortfolioRoutingModule, SharedModule],
 })
