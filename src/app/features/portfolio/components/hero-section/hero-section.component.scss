@@ -42,18 +42,6 @@
     margin-bottom: 1.5rem;
     text-align: center;
   }
-
-  &__social-media-link {
-    border: 1px solid $secondary-font-color-light;
-    border-radius: 50%;
-    padding: 7px;
-  }
-
-  &__social-media-icon {
-    width: 24px;
-    height: 24px;
-    fill: $secondary-font-color-light;
-  }
 }
 
 .container {
@@ -73,9 +61,6 @@
   transform: translate(0, -50%);
 }
 
-.social-media-links-container {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+.social-media-channels-container {
   margin-bottom: 2rem;
 }

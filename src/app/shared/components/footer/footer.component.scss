@@ -1,0 +1,45 @@
+@import "abstracts/variables";
+
+.footer {
+  background-color: $primary-background-color-dark;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__impressum-link {
+    color: $secondary-font-color-light;
+  }
+
+  &__icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__contact-information {
+    color: $secondary-font-color-light;
+    text-align: center;
+  }
+
+  &__author-note {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: $secondary-font-color-light;
+    text-align: center;
+  }
+
+  &__jonas-wolfram-link {
+    background-image: $primary-accent-color;
+    background-clip: text;
+    color: transparent;
+    font-family: $secondary-font-bold;
+  }
+}
