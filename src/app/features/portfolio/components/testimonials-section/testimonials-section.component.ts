@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Testimonial } from '@features/portfolio/models/testimonial.model';
-import Swiper from 'swiper';
+import { Swiper, Autoplay } from 'swiper';
 
 @Component({
   selector: 'portfolio-testimonials-section',
@@ -14,8 +14,8 @@ import Swiper from 'swiper';
   styleUrls: ['./testimonials-section.component.scss'],
 })
 export class TestimonialsSectionComponent implements OnInit, AfterViewInit {
-  @ViewChild('testimonialSlideshowViewport')
-  testimonalSlideshowViewport?: ElementRef<HTMLDivElement>;
+  @ViewChild('slideshowContainer')
+  slideshowContainer?: ElementRef<HTMLDivElement>;
 
   testimonials: Testimonial[] = [
     {
@@ -38,13 +38,44 @@ export class TestimonialsSectionComponent implements OnInit, AfterViewInit {
       jobTitle: 'CEO AMG',
     },
   ];
+  swiper?: Swiper;
+  slideIndex = 0;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    if (this.testimonalSlideshowViewport)
-      new Swiper(this.testimonalSlideshowViewport?.nativeElement);
+    this.initialiseSwiper();
+  }
+
+  initialiseSwiper() {
+    if (this.slideshowContainer) {
+      Swiper.use([Autoplay]);
+      this.swiper = new Swiper(this.slideshowContainer.nativeElement, {
+        autoplay: true,
+      });
+      this.swiper.on('activeIndexChange', this.onActiveIndexChange.bind(this));
+    }
+  }
+
+  onActiveIndexChange(swiper: Swiper): void {
+    this.slideIndex = swiper.activeIndex;
+  }
+
+  slideToPreviousSlide() {
+    this.swiper?.slidePrev();
+  }
+
+  slideToNextSlide() {
+    this.swiper?.slideNext();
+  }
+
+  onChangePaginationButton(slideIndex: number) {
+    this.slideToSlide(slideIndex);
+  }
+
+  slideToSlide(slideIndex: number) {
+    this.swiper?.slideTo(slideIndex);
   }
 }

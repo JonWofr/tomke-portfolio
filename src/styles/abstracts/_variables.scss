@@ -9,7 +9,11 @@ $primary-accent-color: linear-gradient(
   hsl(292, 70, 60)
 );
 $primary-accent-color-hover: hsl(348, 78%, 41%);
-$primary-accent-color-disabled: hsl(348, 48%, 61%);
+$primary-accent-color-disabled: linear-gradient(
+  90deg,
+  hsl(241, 30, 60),
+  hsl(292, 30, 60)
+);
 $secondary-accent-color: #9997ff;
 $primary-background-color-light: #ffffff;
 $secondary-background-color-light: #f6f6f6;
@@ -51,3 +55,4 @@ $secondary-font-bold: "Railway-Bold";
 
 // Misc
 $default-border-radius: 12px;
+$default-button-hitbox: 0.5rem;
