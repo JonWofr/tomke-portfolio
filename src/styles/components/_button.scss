@@ -7,6 +7,11 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  margin: 0 auto;
+
+  &:disabled {
+    filter: $primary-accent-color-disabled-filter;
+  }
 
   &__icon {
     width: 24px;
