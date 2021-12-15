@@ -16,16 +16,6 @@
           ></portfolio-testimonial>
         </div>
       </div>
-      <div class="testimonials-section__pagination-buttons-container">
-        <input
-          *ngFor="let testimonial of testimonials; let i = index"
-          class="testimonials-section__pagination-button"
-          type="radio"
-          name="pagination-button"
-          [checked]="i === slideIndex"
-          (change)="onChangePaginationButton(i)"
-        />
-      </div>
       <button
         #arrowLeftButton
         class="
@@ -118,6 +108,16 @@
           </defs>
         </svg>
       </button>
+      <div class="testimonials-section__pagination-buttons-container">
+        <input
+          *ngFor="let testimonial of testimonials; let i = index"
+          class="testimonials-section__pagination-button"
+          type="radio"
+          name="pagination-button"
+          [checked]="i === slideIndex"
+          (change)="onChangePaginationButton(i)"
+        />
+      </div>
     </div>
   </div>
 </section>

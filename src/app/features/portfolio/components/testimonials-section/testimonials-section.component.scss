@@ -51,10 +51,10 @@
     top: 50%;
     transform: translate(0, -50%);
     padding: $default-button-hitbox;
-    z-index: 2000;
+    z-index: 1;
 
     &:disabled {
-      filter: saturate(30%) brightness(1.5);
+      filter: $primary-accent-color-disabled-filter;
     }
 
     &--left {

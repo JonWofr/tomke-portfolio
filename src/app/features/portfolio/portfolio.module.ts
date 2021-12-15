@@ -15,6 +15,8 @@ import { SharedModule } from '@shared/shared.module';
 import { ClientsSectionComponent } from './components/clients-section/clients-section.component';
 import { TestimonialsSectionComponent } from './components/testimonials-section/testimonials-section.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { ContactSectionComponent } from './components/contact-section/contact-section.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
     ClientsSectionComponent,
     TestimonialsSectionComponent,
     TestimonialComponent,
+    ContactSectionComponent,
   ],
-  imports: [CommonModule, PortfolioRoutingModule, SharedModule],
+  imports: [CommonModule, PortfolioRoutingModule, SharedModule, FormsModule],
 })
 export class PortfolioModule {}

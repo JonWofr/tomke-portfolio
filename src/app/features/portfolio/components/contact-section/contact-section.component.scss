@@ -1,0 +1,38 @@
+@import "abstracts/variables";
+
+.contact-section {
+  background-color: $secondary-background-color-light;
+
+  &__form-fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__form-field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__alerts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__alert {
+    font-size: 0.75rem;
+    color: $error-color;
+  }
+
+  &__form-field {
+    padding: 1rem;
+    border: none;
+    background-color: $primary-background-color-light;
+    border-radius: $default-border-radius;
+    font-size: 1rem;
+    line-height: 1.175;
+  }
+}

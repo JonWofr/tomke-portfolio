@@ -1,0 +1,114 @@
+<section class="section contact-section">
+  <div class="container">
+    <portfolio-section-header
+      title="Schreibe mir direkt eine Nachricht"
+      subtitle="Kontakt"
+    ></portfolio-section-header>
+    <form ngForm #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div class="contact-section__form-fields-container">
+        <div class="contact-section__form-field-container">
+          <input
+            type="text"
+            placeholder="Name"
+            class="contact-section__form-field"
+            name="name"
+            ngModel
+            #name="ngModel"
+            required
+          />
+          <div
+            *ngIf="name.invalid && name.touched"
+            class="contact-section__alerts-container"
+          >
+            <p
+              *ngIf="name.errors ? name.errors['required'] : undefined"
+              class="contact-section__alert"
+            >
+              Du musst deinen Namen angeben
+            </p>
+          </div>
+        </div>
+        <div class="contact-section__form-field-container">
+          <input
+            type="email"
+            placeholder="Email"
+            class="contact-section__form-field"
+            name="email"
+            ngModel
+            #email="ngModel"
+            required
+            email
+          />
+          <div
+            *ngIf="email.invalid && email.touched"
+            class="contact-section__alerts-container"
+          >
+            <p
+              *ngIf="email.errors ? email.errors['required'] : undefined"
+              class="contact-section__alert"
+            >
+              Du musst deine E-Mail-Adresse angeben
+            </p>
+            <p
+              *ngIf="email.errors ? email.errors['email'] : undefined"
+              class="contact-section__alert"
+            >
+              Ungültige E-Mail-Adresse
+            </p>
+          </div>
+        </div>
+        <div class="contact-section__form-field-container">
+          <textarea
+            cols="30"
+            rows="10"
+            placeholder="Nachricht"
+            class="contact-section__form-field"
+            name="message"
+            ngModel
+            #message="ngModel"
+            required
+          ></textarea>
+          <div
+            *ngIf="message.invalid && message.touched"
+            class="contact-section__alerts-container"
+          >
+            <p
+              *ngIf="message.errors ? message.errors['required'] : undefined"
+              class="contact-section__alert"
+            >
+              Du musst eine Nachricht eingeben
+            </p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="button" [disabled]="contactForm.invalid">
+        <svg
+          width="25"
+          height="25"
+          viewBox="0 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="button__icon"
+        >
+          <g clip-path="url(#clip0_211_277)">
+            <path
+              d="M24.5 0.526367L18.5 22.5264L10.371 15.2874L18.173 7.05337L7.715 14.2804L0.5 12.5264L24.5 0.526367ZM9.5 17.1944V24.5264L12.758 20.0954L9.5 17.1944Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_211_277">
+              <rect
+                width="24"
+                height="24"
+                fill="white"
+                transform="translate(0.5 0.526367)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+        <p class="button__label">Senden</p>
+      </button>
+    </form>
+  </div>
+</section>
