@@ -1,13 +1,24 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .header {
   width: 100%;
   height: 64px;
-  border-bottom: 1px solid #a3a3a3;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+  @include with-transition(all);
+
+  &--white {
+    background-color: $primary-background-color-light;
+    border-bottom: 1px solid $primary-background-color-light;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border-bottom: 1px solid #a3a3a3;
+  }
 
   &__container {
     height: 100%;
@@ -19,6 +30,18 @@
   &__portfolio-icon {
     width: 32px;
     height: 32px;
+  }
+
+  &__icon-vector {
+    @include with-transition(fill);
+
+    &--white {
+      fill: $secondary-font-color-dark;
+    }
+
+    &--transparent {
+      fill: $primary-font-color-light;
+    }
   }
 
   &__burger-menu-button {
@@ -38,18 +61,12 @@
     left: 0;
     transform: translate(0, 100%);
     background-color: $primary-background-color-light;
-    transition: height 0.25s ease-in-out;
     overflow: hidden;
+    @include with-transition(height);
 
     &--expanded {
       height: 15rem;
     }
-  }
-
-  &__navigation-list {
-  }
-
-  &__navigation-item {
   }
 
   &__navigation-link {

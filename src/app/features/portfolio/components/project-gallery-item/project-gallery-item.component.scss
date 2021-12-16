@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .project-gallery-item {
   width: 100%;
@@ -23,7 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transition: opacity 0.125s ease-in-out;
+    @include with-transition(opacity);
   }
 
   &__subtitle {

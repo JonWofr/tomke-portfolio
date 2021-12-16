@@ -1,5 +1,7 @@
-<shared-header></shared-header>
-<portfolio-hero-section></portfolio-hero-section>
+<shared-header [backgroundColor]="headerBackgroundColor"></shared-header>
+<portfolio-hero-section
+  (changeHeroTitleIntersection)="onChangeHeroTitleIntersection($event)"
+></portfolio-hero-section>
 <portfolio-about-section></portfolio-about-section>
 <portfolio-services-section></portfolio-services-section>
 <portfolio-projects-section></portfolio-projects-section>

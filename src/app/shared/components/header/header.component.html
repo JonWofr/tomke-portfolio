@@ -1,4 +1,8 @@
-<header class="header">
+<header
+  *ngIf="backgroundColor"
+  class="header"
+  [ngClass]="'header--' + backgroundColor"
+>
   <div class="container header__container">
     <a href="/">
       <svg
@@ -15,12 +19,16 @@
             clip-rule="evenodd"
             d="M9.32598 30.6685L0.499973 8.36729L18.152 8.36729L9.32598 30.6685Z"
             fill="white"
+            class="header__icon-vector"
+            [ngClass]="'header__icon-vector--' + backgroundColor"
           />
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M29.674 30.6859L38.5 8.38477H20.848L12.022 30.6859H29.674Z"
             fill="white"
+            class="header__icon-vector"
+            [ngClass]="'header__icon-vector--' + backgroundColor"
           />
         </g>
         <defs>
@@ -30,6 +38,8 @@
               height="38"
               fill="white"
               transform="translate(0.5 0.526367)"
+              class="header__icon-vector"
+              [ngClass]="'header__icon-vector--' + backgroundColor"
             />
           </clipPath>
         </defs>
@@ -47,6 +57,8 @@
         <path
           d="M24 2C24 3.10457 23.1046 4 22 4H2C0.89543 4 0 3.10457 0 2V2C0 0.895431 0.895431 0 2 0H22C23.1046 0 24 0.895431 24 2V2ZM24 10C24 8.89543 23.1046 8 22 8H2C0.89543 8 0 8.89543 0 10V10C0 11.1046 0.895431 12 2 12H22C23.1046 12 24 11.1046 24 10V10ZM24 18C24 16.8954 23.1046 16 22 16H2C0.89543 16 0 16.8954 0 18V18C0 19.1046 0.895431 20 2 20H22C23.1046 20 24 19.1046 24 18V18Z"
           fill="white"
+          class="header__icon-vector"
+          [ngClass]="'header__icon-vector--' + backgroundColor"
         />
       </svg>
     </button>
@@ -56,20 +68,20 @@
     [ngClass]="{ 'header__navigation--expanded': shouldShowNavigationMenu }"
   >
     <div class="container">
-      <ul class="header__navigation-list">
-        <li class="header__navigation-item">
+      <ul>
+        <li>
           <a class="header__navigation-link" href="/">Home</a>
         </li>
-        <li class="header__navigation-item">
+        <li>
           <a class="header__navigation-link" href="/">Über mich</a>
         </li>
-        <li class="header__navigation-item">
+        <li>
           <a class="header__navigation-link" href="/">Leistungen</a>
         </li>
-        <li class="header__navigation-item">
+        <li>
           <a class="header__navigation-link" href="/">Projekte</a>
         </li>
-        <li class="header__navigation-item">
+        <li>
           <a class="header__navigation-link" href="/">Kontakt</a>
         </li>
       </ul>
