@@ -39,7 +39,7 @@ export class TestimonialsSectionComponent implements OnInit, AfterViewInit {
     },
   ];
   swiper?: Swiper;
-  slideIndex = 0;
+  activeSlideIndex = 0;
 
   constructor() {}
 
@@ -60,7 +60,7 @@ export class TestimonialsSectionComponent implements OnInit, AfterViewInit {
   }
 
   onActiveIndexChange(swiper: Swiper): void {
-    this.slideIndex = swiper.activeIndex;
+    this.activeSlideIndex = swiper.activeIndex;
   }
 
   slideToPreviousSlide() {

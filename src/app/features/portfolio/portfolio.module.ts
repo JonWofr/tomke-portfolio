@@ -17,6 +17,8 @@ import { TestimonialsSectionComponent } from './components/testimonials-section/
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { FormsModule } from '@angular/forms';
+import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
+import { ProjectDetailSlideshowComponent } from './components/project-detail-slideshow/project-detail-slideshow.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { FormsModule } from '@angular/forms';
     TestimonialsSectionComponent,
     TestimonialComponent,
     ContactSectionComponent,
+    ProjectDetailComponent,
+    ProjectDetailSlideshowComponent,
   ],
   imports: [CommonModule, PortfolioRoutingModule, SharedModule, FormsModule],
 })

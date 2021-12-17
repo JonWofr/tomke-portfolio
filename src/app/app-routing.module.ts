@@ -20,8 +20,11 @@ export class AppRoutingModule {
       .pipe(filter((event: Event): event is Scroll => event instanceof Scroll))
       .subscribe((event) => {
         if (event.position) {
-          // Backward navigation
-          console.log('backward navigation');
+          // Backward navigation. Small timeout because otherwise the previous position can't be calculated correctly.
+          const position = event.position;
+          setTimeout(() => {
+            viewportScroller.scrollToPosition(position);
+          }, 50);
         } else if (event.anchor) {
           // Anchor navigation. Scroll-margin is set for all anchors in CSS.
           console.log('anchor navigation');
@@ -30,7 +33,7 @@ export class AppRoutingModule {
             ?.scrollIntoView({ behavior: 'smooth' });
         } else {
           // Forward navigation
-          console.log('forward navigation');
+          viewportScroller.scrollToPosition([0, 0]);
         }
       });
   }
