@@ -14,7 +14,6 @@ import {
   styleUrls: ['./hero-section.component.scss'],
 })
 export class HeroSectionComponent implements OnInit, AfterViewInit {
-  @ViewChild('heroTitle') heroTitle?: ElementRef<HTMLHeadingElement>;
   @Output() changeHeroTitleIntersection = new EventEmitter<boolean>();
   constructor() {}
 
@@ -26,9 +25,8 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
 
   initialiseIntersectionObserver() {
     const intersectionObserver = this.createIntersectionObserver();
-    if (this.heroTitle) {
-      intersectionObserver.observe(this.heroTitle.nativeElement);
-    }
+    const heroTitle = document.querySelector('.hero__title');
+    if (heroTitle) intersectionObserver.observe(heroTitle);
   }
 
   createIntersectionObserver() {

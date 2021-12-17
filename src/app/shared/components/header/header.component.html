@@ -3,7 +3,10 @@
   class="header"
   [ngClass]="'header--' + backgroundColor"
 >
-  <div class="container header__container">
+  <div
+    class="container header__top-row"
+    [ngClass]="'header__top-row--' + backgroundColor"
+  >
     <a href="/">
       <svg
         width="39"
@@ -68,21 +71,71 @@
     [ngClass]="{ 'header__navigation--expanded': shouldShowNavigationMenu }"
   >
     <div class="container">
-      <ul>
+      <ul class="header__navigation-list">
         <li>
-          <a class="header__navigation-link" href="/">Home</a>
+          <a
+            class="header__navigation-link"
+            [ngClass]="{
+              'header__navigation-link--active':
+                activeSectionId === SectionId.HOME
+            }"
+            routerLink="/"
+            [fragment]="SectionId.HOME"
+            >Home</a
+          >
         </li>
         <li>
-          <a class="header__navigation-link" href="/">Über mich</a>
+          <a
+            class="header__navigation-link"
+            [ngClass]="{
+              'header__navigation-link--active':
+                activeSectionId === SectionId.ABOUT
+            }"
+            routerLink="/"
+            [fragment]="SectionId.ABOUT"
+            >Über mich</a
+          >
         </li>
         <li>
-          <a class="header__navigation-link" href="/">Leistungen</a>
+          <a
+            class="header__navigation-link"
+            [ngClass]="{
+              'header__navigation-link--active':
+                activeSectionId === SectionId.SERVICES
+            }"
+            routerLink="/"
+            [fragment]="SectionId.SERVICES"
+            >Leistungen</a
+          >
         </li>
         <li>
-          <a class="header__navigation-link" href="/">Projekte</a>
+          <!-- A bunch of sections do not have their own link in the header.
+          Therefore they should make another link active. -->
+          <a
+            class="header__navigation-link"
+            [ngClass]="{
+              'header__navigation-link--active':
+                activeSectionId === SectionId.PROJECTS ||
+                activeSectionId === SectionId.CLIENTS ||
+                activeSectionId === SectionId.TESTIMONIALS ||
+                activeSectionId === SectionId.NEWS
+            }"
+            routerLink="/"
+            [fragment]="SectionId.PROJECTS"
+            >Projekte</a
+          >
         </li>
         <li>
-          <a class="header__navigation-link" href="/">Kontakt</a>
+          <a
+            class="header__navigation-link"
+            [ngClass]="{
+              'header__navigation-link--active':
+                activeSectionId === SectionId.CONTACT
+            }"
+            routerLink="/"
+            [fragment]="SectionId.CONTACT"
+            >Kontakt</a
+          >
         </li>
       </ul>
     </div>

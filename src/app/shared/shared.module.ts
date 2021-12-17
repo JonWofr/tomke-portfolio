@@ -4,6 +4,7 @@ import { CropTextPipe } from './pipes/crop-text/crop-text.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialMediaChannelsComponent } from './components/social-media-channels/social-media-channels.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 /**
  * This module contains all components, pipes etc. that are shared across the
@@ -20,6 +21,7 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   imports: [
     CommonModule,
+    RouterModule.forChild([]),
     // Should not import other modules of this application
   ],
   exports: [

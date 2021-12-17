@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enum';
+import { SectionId } from '@shared/enums/section-id.enum';
 
 @Component({
   selector: 'shared-header',
@@ -7,7 +8,10 @@ import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enu
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  SectionId = SectionId;
+
   @Input() backgroundColor?: HeaderBackgroundColor;
+  @Input() activeSectionId?: SectionId;
 
   shouldShowNavigationMenu = false;
 
