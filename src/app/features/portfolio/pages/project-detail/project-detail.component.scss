@@ -1,0 +1,60 @@
+@import "abstracts/variables";
+
+.project-detail {
+  padding-top: 2rem;
+
+  &__breadcrumbs {
+    background-image: $primary-accent-color;
+    color: transparent;
+    background-clip: text;
+    font-family: $primary-font-bold;
+    margin-bottom: 1rem;
+  }
+
+  &__back-button {
+    background-image: inherit;
+    color: inherit;
+    background-clip: inherit;
+    font-family: inherit;
+  }
+
+  &__slideshow-container {
+    margin-bottom: 3rem;
+  }
+
+  &__text-information-container {
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__text-information-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:last-child {
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__paragraph {
+    margin-bottom: 2rem;
+  }
+}
+
+.additional-information-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+
+  &__list {
+    list-style-position: inside;
+  }
+}

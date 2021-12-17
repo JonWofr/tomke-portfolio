@@ -23,7 +23,7 @@
           testimonials-section__navigation-button--left
         "
         (click)="slideToPreviousSlide()"
-        [disabled]="slideIndex === 0"
+        [disabled]="activeSlideIndex === 0"
       >
         <svg
           width="24"
@@ -69,7 +69,7 @@
           testimonials-section__navigation-button--right
         "
         (click)="slideToNextSlide()"
-        [disabled]="slideIndex === testimonials.length - 1"
+        [disabled]="activeSlideIndex === testimonials.length - 1"
       >
         <svg
           width="24"
@@ -114,7 +114,7 @@
           class="testimonials-section__pagination-button"
           type="radio"
           name="pagination-button"
-          [checked]="i === slideIndex"
+          [checked]="i === activeSlideIndex"
           (change)="onChangePaginationButton(i)"
         />
       </div>
