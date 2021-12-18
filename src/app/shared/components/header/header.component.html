@@ -3,141 +3,165 @@
   class="header"
   [ngClass]="'header--' + backgroundColor"
 >
-  <div
-    class="container header__top-row"
-    [ngClass]="'header__top-row--' + backgroundColor"
-  >
-    <a href="/">
-      <svg
-        width="39"
-        height="39"
-        viewBox="0 0 39 39"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="header__portfolio-icon"
-      >
-        <g clip-path="url(#clip0_113_1113)">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M9.32598 30.6685L0.499973 8.36729L18.152 8.36729L9.32598 30.6685Z"
-            fill="white"
-            class="header__icon-vector"
-            [ngClass]="'header__icon-vector--' + backgroundColor"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M29.674 30.6859L38.5 8.38477H20.848L12.022 30.6859H29.674Z"
-            fill="white"
-            class="header__icon-vector"
-            [ngClass]="'header__icon-vector--' + backgroundColor"
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_113_1113">
-            <rect
-              width="38"
-              height="38"
+  <div class="container container--tablet header__inner-container">
+    <div
+      class="header__top-row-container"
+      [ngClass]="'header__top-row-container--' + backgroundColor"
+    >
+      <div class="container container--mobile header__top-row">
+        <a href="/">
+          <svg
+            width="39"
+            height="39"
+            viewBox="0 0 39 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__portfolio-icon"
+          >
+            <g clip-path="url(#clip0_113_1113)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.32598 30.6685L0.499973 8.36729L18.152 8.36729L9.32598 30.6685Z"
+                fill="white"
+                class="header__icon-vector"
+                [ngClass]="'header__icon-vector--' + backgroundColor"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M29.674 30.6859L38.5 8.38477H20.848L12.022 30.6859H29.674Z"
+                fill="white"
+                class="header__icon-vector"
+                [ngClass]="'header__icon-vector--' + backgroundColor"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_113_1113">
+                <rect
+                  width="38"
+                  height="38"
+                  fill="white"
+                  transform="translate(0.5 0.526367)"
+                  class="header__icon-vector"
+                  [ngClass]="'header__icon-vector--' + backgroundColor"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <button
+          class="header__burger-menu-button"
+          (click)="toggleNavigationMenu()"
+        >
+          <svg
+            width="24"
+            height="20"
+            viewBox="0 0 24 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__burger-menu-icon"
+          >
+            <path
+              d="M24 2C24 3.10457 23.1046 4 22 4H2C0.89543 4 0 3.10457 0 2V2C0 0.895431 0.895431 0 2 0H22C23.1046 0 24 0.895431 24 2V2ZM24 10C24 8.89543 23.1046 8 22 8H2C0.89543 8 0 8.89543 0 10V10C0 11.1046 0.895431 12 2 12H22C23.1046 12 24 11.1046 24 10V10ZM24 18C24 16.8954 23.1046 16 22 16H2C0.89543 16 0 16.8954 0 18V18C0 19.1046 0.895431 20 2 20H22C23.1046 20 24 19.1046 24 18V18Z"
               fill="white"
-              transform="translate(0.5 0.526367)"
               class="header__icon-vector"
               [ngClass]="'header__icon-vector--' + backgroundColor"
             />
-          </clipPath>
-        </defs>
-      </svg>
-    </a>
-    <button class="header__burger-menu-button" (click)="toggleNavigationMenu()">
-      <svg
-        width="24"
-        height="20"
-        viewBox="0 0 24 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="header__burger-menu-icon"
-      >
-        <path
-          d="M24 2C24 3.10457 23.1046 4 22 4H2C0.89543 4 0 3.10457 0 2V2C0 0.895431 0.895431 0 2 0H22C23.1046 0 24 0.895431 24 2V2ZM24 10C24 8.89543 23.1046 8 22 8H2C0.89543 8 0 8.89543 0 10V10C0 11.1046 0.895431 12 2 12H22C23.1046 12 24 11.1046 24 10V10ZM24 18C24 16.8954 23.1046 16 22 16H2C0.89543 16 0 16.8954 0 18V18C0 19.1046 0.895431 20 2 20H22C23.1046 20 24 19.1046 24 18V18Z"
-          fill="white"
-          class="header__icon-vector"
-          [ngClass]="'header__icon-vector--' + backgroundColor"
-        />
-      </svg>
-    </button>
-  </div>
-  <nav
-    class="header__navigation"
-    [ngClass]="{ 'header__navigation--expanded': shouldShowNavigationMenu }"
-  >
-    <div class="container">
-      <ul class="header__navigation-list">
-        <li>
-          <a
-            class="header__navigation-link"
-            [ngClass]="{
-              'header__navigation-link--active':
-                activeSectionId === SectionId.HOME
-            }"
-            routerLink="/"
-            [fragment]="SectionId.HOME"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            class="header__navigation-link"
-            [ngClass]="{
-              'header__navigation-link--active':
-                activeSectionId === SectionId.ABOUT
-            }"
-            routerLink="/"
-            [fragment]="SectionId.ABOUT"
-            >Über mich</a
-          >
-        </li>
-        <li>
-          <a
-            class="header__navigation-link"
-            [ngClass]="{
-              'header__navigation-link--active':
-                activeSectionId === SectionId.SERVICES
-            }"
-            routerLink="/"
-            [fragment]="SectionId.SERVICES"
-            >Leistungen</a
-          >
-        </li>
-        <li>
-          <!-- A bunch of sections do not have their own link in the header.
-          Therefore they should make another link active. -->
-          <a
-            class="header__navigation-link"
-            [ngClass]="{
-              'header__navigation-link--active':
-                activeSectionId === SectionId.PROJECTS ||
-                activeSectionId === SectionId.CLIENTS ||
-                activeSectionId === SectionId.TESTIMONIALS ||
-                activeSectionId === SectionId.NEWS
-            }"
-            routerLink="/"
-            [fragment]="SectionId.PROJECTS"
-            >Projekte</a
-          >
-        </li>
-        <li>
-          <a
-            class="header__navigation-link"
-            [ngClass]="{
-              'header__navigation-link--active':
-                activeSectionId === SectionId.CONTACT
-            }"
-            routerLink="/"
-            [fragment]="SectionId.CONTACT"
-            >Kontakt</a
-          >
-        </li>
-      </ul>
+          </svg>
+        </button>
+      </div>
     </div>
-  </nav>
+    <nav
+      class="header__navigation"
+      [ngClass]="{ 'header__navigation--expanded': shouldShowNavigationMenu }"
+    >
+      <div
+        class="container container--mobile header__navigation-list-container"
+      >
+        <ul class="header__navigation-list">
+          <li>
+            <a
+              [class]="
+                'header__navigation-link header__navigation-link--' +
+                backgroundColor
+              "
+              [ngClass]="{
+                'header__navigation-link--active':
+                  activeSectionId === SectionId.HOME
+              }"
+              routerLink="/"
+              [fragment]="SectionId.HOME"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              [class]="
+                'header__navigation-link header__navigation-link--' +
+                backgroundColor
+              "
+              [ngClass]="{
+                'header__navigation-link--active':
+                  activeSectionId === SectionId.ABOUT
+              }"
+              routerLink="/"
+              [fragment]="SectionId.ABOUT"
+              >Über mich</a
+            >
+          </li>
+          <li>
+            <a
+              [class]="
+                'header__navigation-link header__navigation-link--' +
+                backgroundColor
+              "
+              [ngClass]="{
+                'header__navigation-link--active':
+                  activeSectionId === SectionId.SERVICES
+              }"
+              routerLink="/"
+              [fragment]="SectionId.SERVICES"
+              >Leistungen</a
+            >
+          </li>
+          <li>
+            <!-- A bunch of sections do not have their own link in the header.
+          Therefore they should make another link active. -->
+            <a
+              [class]="
+                'header__navigation-link header__navigation-link--' +
+                backgroundColor
+              "
+              [ngClass]="{
+                'header__navigation-link--active':
+                  activeSectionId === SectionId.PROJECTS ||
+                  activeSectionId === SectionId.CLIENTS ||
+                  activeSectionId === SectionId.TESTIMONIALS ||
+                  activeSectionId === SectionId.NEWS
+              }"
+              routerLink="/"
+              [fragment]="SectionId.PROJECTS"
+              >Projekte</a
+            >
+          </li>
+          <li>
+            <a
+              [class]="
+                'header__navigation-link header__navigation-link--' +
+                backgroundColor
+              "
+              [ngClass]="{
+                'header__navigation-link--active':
+                  activeSectionId === SectionId.CONTACT
+              }"
+              routerLink="/"
+              [fragment]="SectionId.CONTACT"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>

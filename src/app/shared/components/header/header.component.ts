@@ -9,6 +9,7 @@ import { SectionId } from '@shared/enums/section-id.enum';
 })
 export class HeaderComponent implements OnInit {
   SectionId = SectionId;
+  HeaderBackgroundColor = HeaderBackgroundColor;
 
   @Input() backgroundColor?: HeaderBackgroundColor;
   @Input() activeSectionId?: SectionId;
