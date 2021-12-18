@@ -16,6 +16,7 @@
   &__quote {
     quotes: "„" "“" "‚" "‘";
     margin-bottom: 0.5rem;
+    max-width: 350px;
 
     &::before {
       content: open-quote;

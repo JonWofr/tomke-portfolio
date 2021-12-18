@@ -63,6 +63,7 @@
 
   &__burger-menu-button {
     padding: $default-button-hitbox;
+    margin-right: -$default-button-hitbox;
   }
 
   &__burger-menu-icon {

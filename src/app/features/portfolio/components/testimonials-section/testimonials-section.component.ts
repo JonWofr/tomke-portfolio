@@ -54,6 +54,7 @@ export class TestimonialsSectionComponent implements OnInit, AfterViewInit {
       Swiper.use([Autoplay]);
       this.swiper = new Swiper(this.slideshowContainer.nativeElement, {
         autoplay: true,
+        grabCursor: true,
       });
       this.swiper.on('activeIndexChange', this.onActiveIndexChange.bind(this));
     }
