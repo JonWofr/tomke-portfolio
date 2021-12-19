@@ -19,6 +19,7 @@ import { ContactSectionComponent } from './components/contact-section/contact-se
 import { FormsModule } from '@angular/forms';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { ProjectDetailSlideshowComponent } from './components/project-detail-slideshow/project-detail-slideshow.component';
+import { NewsSectionComponent } from './components/news-section/news-section.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ProjectDetailSlideshowComponent } from './components/project-detail-sli
     ContactSectionComponent,
     ProjectDetailComponent,
     ProjectDetailSlideshowComponent,
+    NewsSectionComponent,
   ],
   imports: [CommonModule, PortfolioRoutingModule, SharedModule, FormsModule],
 })
