@@ -3,10 +3,12 @@ $primary-font-color-light: #ffffff;
 $primary-font-color-dark: #303030;
 $secondary-font-color-light: #e2e2e2;
 $secondary-font-color-dark: #5c5c5c;
+$primary-accent-color-start: hsl(241, 70, 60);
+$primary-accent-color-stop: hsl(292, 70, 60);
 $primary-accent-color: linear-gradient(
   90deg,
-  hsl(241, 70, 60),
-  hsl(292, 70, 60)
+  $primary-accent-color-start,
+  $primary-accent-color-stop
 );
 $primary-accent-color-hover: hsl(348, 78%, 41%);
 $primary-accent-color-disabled-filter: saturate(30%) brightness(1.5);

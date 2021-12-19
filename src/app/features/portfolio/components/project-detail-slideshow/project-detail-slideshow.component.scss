@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .project-detail-slideshow {
   display: flex;
@@ -43,7 +44,7 @@
     height: 32px;
   }
 
-  &__preview-image-buttons-container {
+  &__preview-image-buttons-inner-container {
     display: flex;
     gap: 0.5rem;
     overflow: auto;
@@ -67,6 +68,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    @include with-transition(opacity);
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__preview-image {
@@ -74,19 +81,61 @@
     height: 100%;
     object-fit: cover;
   }
-}
 
-.padding-top-hack-outer-container {
-  padding-top: 56.25%;
-  position: relative;
-}
+  @include media-breakpoint-up("md") {
+    flex-direction: row;
+    align-items: stretch;
 
-.padding-top-hack-inner-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    &__cinema-image-container {
+      flex: 3.15;
+    }
+
+    &__navigation-button {
+      &--left {
+        left: 1.5rem;
+      }
+      &--right {
+        right: 1.5rem;
+      }
+    }
+
+    &__preview-image-buttons-container {
+      flex: 1;
+      position: relative;
+    }
+
+    &__preview-image-buttons-inner-container {
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+
+    &__preview-image-button {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up("lg") {
+    gap: 2rem;
+
+    &__cinema-image-container {
+      flex: 3.25;
+    }
+
+    &__preview-image-buttons-inner-container {
+      gap: 1rem;
+    }
+  }
+
+  @include media-breakpoint-up("xl") {
+    &__cinema-image-container {
+      flex: 3.2;
+    }
+  }
 }
 
 .swiper {

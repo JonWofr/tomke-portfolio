@@ -1,11 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Swiper, Autoplay } from 'swiper';
 
 @Component({
@@ -34,6 +27,7 @@ export class ProjectDetailSlideshowComponent implements OnInit {
       Swiper.use([Autoplay]);
       this.swiper = new Swiper(this.slideshowContainer.nativeElement, {
         autoplay: true,
+        grabCursor: true,
       });
       this.swiper.on('activeIndexChange', this.onActiveIndexChange.bind(this));
     }
