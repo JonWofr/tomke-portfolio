@@ -29,7 +29,14 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              {
+                "glob": "**",
+                "input": "src/favicon",
+                "output": "/"
+              },
+              "src/assets"
+            ],
             "styles": [
               "src/styles/main.scss",
               "node_modules/swiper/swiper.min.css"
@@ -37,7 +44,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
-            "scripts": []
+            "scripts": ["node_modules/instafeed.js/dist/instafeed.min.js"]
           },
           "configurations": {
             "production": {

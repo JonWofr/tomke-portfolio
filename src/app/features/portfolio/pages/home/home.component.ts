@@ -37,6 +37,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
       isIntersecting: undefined,
     },
     {
+      id: SectionId.NEWS,
+      isIntersecting: undefined,
+    },
+    {
       id: SectionId.CONTACT,
       isIntersecting: undefined,
     },
