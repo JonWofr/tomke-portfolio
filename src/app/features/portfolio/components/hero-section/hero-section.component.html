@@ -1,25 +1,35 @@
 <section class="hero">
   <div class="hero__overlay">
-    <div class="container">
-      <div class="hero__inner-container">
-        <div class="hero__content-container">
-          <h1 class="hero__title">
-            Hi, <br />
-            ich bin <span class="hero__name">Tomke</span>
-          </h1>
-          <p class="hero__mission-statement">
-            Lorem cillum aliqua eu aliquip pariatur do sunt. Aute quis Lorem
-            tempor non ad. Eiusmod Lorem sint ipsum do cillum incididunt tempor
-            cillum aliqua tempor et culpa.
-          </p>
-          <div class="hero__social-media-channels-container">
-            <shared-social-media-channels
-              instagramUrl="/"
-              linkedInUrl="/"
-              tikTokUrl="/"
-            ></shared-social-media-channels>
-          </div>
-          <button class="button">
+    <div class="hero__content-container">
+      <div class="container">
+        <h1 class="hero__title">
+          Hi, <br />
+          ich bin <span class="hero__name">Tomke</span>
+        </h1>
+        <p class="hero__mission-statement">
+          Lorem cillum aliqua eu aliquip pariatur do sunt. Aute quis Lorem
+          tempor non ad. Eiusmod Lorem sint ipsum do cillum incididunt tempor
+          cillum aliqua tempor et culpa.
+        </p>
+        <div class="hero__social-media-channels-container">
+          <shared-social-media-channels
+            instagramUrl="/"
+            linkedInUrl="/"
+            tikTokUrl="/"
+          ></shared-social-media-channels>
+        </div>
+        <!-- Only for intersection observer purpuses -->
+        <div class="hero__contact-button-trigger"></div>
+      </div>
+      <div class="hero__contact-button-container">
+        <div class="hero__contact-button-inner-container">
+          <button
+            class="button hero__contact-button"
+            [ngClass]="{
+              'hero__contact-button--fixed':
+                isContactButtonIntersecting === false
+            }"
+          >
             <svg
               width="24"
               height="24"
@@ -33,7 +43,15 @@
                 fill="white"
               />
             </svg>
-            <p class="button__label">Kontakt</p>
+            <p
+              class="button__label hero__contact-button-label"
+              [ngClass]="{
+                'hero__contact-button-label--fixed':
+                  isContactButtonIntersecting === false
+              }"
+            >
+              Kontakt
+            </p>
           </button>
         </div>
       </div>
