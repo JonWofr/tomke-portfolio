@@ -6,55 +6,57 @@
     ></portfolio-section-header>
     <form ngForm #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="contact-section__form-fields-container">
-        <div class="contact-section__form-field-container">
-          <input
-            type="text"
-            placeholder="Name"
-            class="contact-section__form-field"
-            ngModel
-            #name="ngModel"
-            name="name"
-            required
-          />
-          <div
-            *ngIf="name.invalid && name.touched"
-            class="contact-section__alerts-container"
-          >
-            <p
-              *ngIf="name.errors ? name.errors['required'] : undefined"
-              class="contact-section__alert"
+        <div class="contact-section__name-and-email-form-fields-container">
+          <div class="contact-section__form-field-container">
+            <input
+              type="text"
+              placeholder="Name"
+              class="contact-section__form-field"
+              ngModel
+              #name="ngModel"
+              name="name"
+              required
+            />
+            <div
+              *ngIf="name.invalid && name.touched"
+              class="contact-section__alerts-container"
             >
-              Du musst deinen Namen angeben
-            </p>
+              <p
+                *ngIf="name.errors ? name.errors['required'] : undefined"
+                class="contact-section__alert"
+              >
+                Du musst deinen Namen angeben
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="contact-section__form-field-container">
-          <input
-            type="email"
-            placeholder="Email"
-            class="contact-section__form-field"
-            name="email"
-            ngModel
-            #email="ngModel"
-            required
-            email
-          />
-          <div
-            *ngIf="email.invalid && email.touched"
-            class="contact-section__alerts-container"
-          >
-            <p
-              *ngIf="email.errors ? email.errors['required'] : undefined"
-              class="contact-section__alert"
+          <div class="contact-section__form-field-container">
+            <input
+              type="email"
+              placeholder="Email"
+              class="contact-section__form-field"
+              name="email"
+              ngModel
+              #email="ngModel"
+              required
+              email
+            />
+            <div
+              *ngIf="email.invalid && email.touched"
+              class="contact-section__alerts-container"
             >
-              Du musst deine E-Mail-Adresse angeben
-            </p>
-            <p
-              *ngIf="email.errors ? email.errors['email'] : undefined"
-              class="contact-section__alert"
-            >
-              Ungültige E-Mail-Adresse
-            </p>
+              <p
+                *ngIf="email.errors ? email.errors['required'] : undefined"
+                class="contact-section__alert"
+              >
+                Du musst deine E-Mail-Adresse angeben
+              </p>
+              <p
+                *ngIf="email.errors ? email.errors['email'] : undefined"
+                class="contact-section__alert"
+              >
+                Ungültige E-Mail-Adresse
+              </p>
+            </div>
           </div>
         </div>
         <div class="contact-section__form-field-container">

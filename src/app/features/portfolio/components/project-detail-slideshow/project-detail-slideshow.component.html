@@ -1,7 +1,7 @@
 <div class="project-detail-slideshow">
   <div class="project-detail-slideshow__cinema-image-container">
-    <div class="padding-top-hack-outer-container">
-      <div class="padding-top-hack-inner-container">
+    <div class="padding-top-hack padding-top-hack--16-by-9">
+      <div class="padding-top-hack__inner-container">
         <div #slideshowContainer class="swiper">
           <div class="swiper-wrapper">
             <div *ngFor="let imageUrl of imageUrls" class="swiper-slide">
@@ -109,39 +109,46 @@
     </div>
   </div>
   <div class="project-detail-slideshow__preview-image-buttons-container">
-    <button
-      *ngFor="let imageUrl of imageUrls; let i = index"
-      class="project-detail-slideshow__preview-image-button"
-      (click)="onClickPreviewImageButton(i)"
+    <div
+      class="project-detail-slideshow__preview-image-buttons-inner-container"
     >
-      <div class="padding-top-hack-outer-container">
-        <div class="padding-top-hack-inner-container">
-          <div
-            *ngIf="activeSlideIndex === i"
-            class="project-detail-slideshow__preview-image-overlay"
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+      <button
+        *ngFor="let imageUrl of imageUrls; let i = index"
+        class="project-detail-slideshow__preview-image-button"
+        (click)="onClickPreviewImageButton(i)"
+      >
+        <div class="padding-top-hack padding-top-hack--16-by-9">
+          <div class="padding-top-hack__inner-container">
+            <div
+              class="project-detail-slideshow__preview-image-overlay"
+              [ngClass]="{
+                'project-detail-slideshow__preview-image-overlay--active':
+                  activeSlideIndex === i
+              }"
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M28.0001 8.37999L13.1201 25.3573L4.00012 17.3333L5.75879 15.3467L12.8801 21.5947L26.0335 6.66666L28.0001 8.37999Z"
-                fill="white"
-              />
-            </svg>
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M28.0001 8.37999L13.1201 25.3573L4.00012 17.3333L5.75879 15.3467L12.8801 21.5947L26.0335 6.66666L28.0001 8.37999Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <img
+              [src]="imageUrl"
+              alt=""
+              class="project-detail-slideshow__preview-image"
+            />
           </div>
-          <img
-            [src]="imageUrl"
-            alt=""
-            class="project-detail-slideshow__preview-image"
-          />
         </div>
-      </div>
-    </button>
+      </button>
+    </div>
   </div>
 </div>

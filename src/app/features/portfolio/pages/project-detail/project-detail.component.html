@@ -1,15 +1,17 @@
 <section *ngIf="project" class="project-detail">
   <div class="container">
-    <p class="subtitle project-detail__breadcrumbs">
+    <div>
       <button
-        class="subtitle project-detail__back-button"
+        class="subtitle project-detail__breadcrumb"
         (click)="navigateBack()"
       >
         Projekte
       </button>
-      /
-      {{ project.title }}
-    </p>
+      <span class="subtitle project-detail__breadcrumb"> / </span>
+      <span class="subtitle project-detail__breadcrumb">
+        {{ project.title }}
+      </span>
+    </div>
     <div class="project-detail__slideshow-container">
       <portfolio-project-detail-slideshow
         [imageUrls]="project.slideshowImageUrls"
@@ -62,6 +64,7 @@
             [instagramUrl]="project.instagramUrl"
             [linkedInUrl]="project.linkedInUrl"
             [tikTokUrl]="project.tikTokUrl"
+            [iconsColor]="SocialMediaIconsColor.ACCENT"
           ></shared-social-media-channels>
         </div>
         <div class="additional-information-block">

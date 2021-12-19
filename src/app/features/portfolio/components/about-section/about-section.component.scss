@@ -1,6 +1,22 @@
+@use "sass:map";
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .about {
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-container {
+    // 2rem padding for the background-box
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 2rem auto;
+  }
+
   &__image {
     width: 100%;
     height: 100%;
@@ -8,29 +24,25 @@
     position: relative;
     border-radius: $default-border-radius;
   }
+
+  @include media-breakpoint-up("md") {
+    &__content-container {
+      flex-direction: row;
+      align-items: center;
+      gap: 4rem;
+      max-width: map.get($container-widths, "lg");
+      margin: 0 auto;
+    }
+
+    &__image-container {
+      flex: 1;
+      margin: initial;
+      max-width: initial;
+    }
+  }
 }
 
-.image-container {
-  // 82% width and 2rem padding is used so that there is enough space for the
-  // rotated background image
-  width: 82%;
-  margin: 0 auto 2rem auto;
-  padding: 2rem 0;
-}
-
-.padding-top-hack-outer-container {
-  // Aspect ratio 1:1
-  padding-top: 100%;
-  position: relative;
-}
-
-.padding-top-hack-inner-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-
+.padding-top-hack__inner-container {
   &::before {
     display: block;
     content: "";
@@ -42,5 +54,13 @@
     background-image: $primary-accent-color;
     transform: rotate(14deg);
     border-radius: $default-border-radius;
+  }
+}
+
+.section__paragraph {
+  flex: 1;
+
+  @include media-breakpoint-up("md") {
+    text-align: left;
   }
 }

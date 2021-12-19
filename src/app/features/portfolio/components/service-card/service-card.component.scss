@@ -1,6 +1,7 @@
 @import "abstracts/variables";
 
 .service-card {
+  height: 100%;
   padding: 2rem;
   display: flex;
   gap: 1.75rem;
@@ -14,12 +15,11 @@
     height: 100px;
   }
 
+  &__text-container {
+    flex: 1;
+  }
+
   &__title {
     margin-bottom: 0.75rem;
   }
-}
-
-.text-container {
-  flex: 1;
-  min-width: 0;
 }

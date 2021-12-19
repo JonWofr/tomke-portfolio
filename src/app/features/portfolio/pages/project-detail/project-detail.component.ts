@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { projects } from '@features/portfolio/components/projects-section/projects-section.component';
 import { Location } from '@angular/common';
+import { SocialMediaIconsColor } from '@shared/enums/social-media-icons-color.enum';
 
 @Component({
   selector: 'portfolio-project-detail',
@@ -11,6 +12,8 @@ import { Location } from '@angular/common';
   styleUrls: ['./project-detail.component.scss'],
 })
 export class ProjectDetailComponent implements OnInit {
+  SocialMediaIconsColor = SocialMediaIconsColor;
+
   project?: Project;
 
   constructor(

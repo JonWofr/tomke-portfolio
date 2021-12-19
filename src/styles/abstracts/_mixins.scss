@@ -7,6 +7,12 @@
   }
 }
 
+@mixin media-breakpoint-down($grid-breakpoint) {
+  @media only screen and (max-width: calc(map.get($grid-breakpoints, $grid-breakpoint) - 1px)) {
+    @content;
+  }
+}
+
 @mixin with-transition(
   $transition-property,
   $transition-duration: $default-transition-duration,
