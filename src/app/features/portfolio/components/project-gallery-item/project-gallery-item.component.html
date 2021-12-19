@@ -1,4 +1,9 @@
-<a class="project-gallery-item" [routerLink]="'/projects/' + project?.id">
+<div class="project-gallery-item">
+  <a
+    class="project-gallery-item__link"
+    [routerLink]="'/projects/' + project?.id"
+  >
+  </a>
   <div class="project-gallery-item__overlay">
     <h3 class="subtitle project-gallery-item__subtitle">
       {{ project?.services?.join(", ") }}
@@ -15,4 +20,4 @@
     alt=""
     class="project-gallery-item__thumbnail-image"
   />
-</a>
+</div>

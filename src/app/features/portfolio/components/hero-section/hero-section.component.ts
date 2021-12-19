@@ -1,12 +1,11 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef,
   EventEmitter,
   OnInit,
   Output,
-  ViewChild,
 } from '@angular/core';
+import { SectionId } from '@shared/enums/section-id.enum';
 
 @Component({
   selector: 'portfolio-hero-section',
@@ -14,6 +13,8 @@ import {
   styleUrls: ['./hero-section.component.scss'],
 })
 export class HeroSectionComponent implements OnInit, AfterViewInit {
+  SectionId = SectionId;
+
   @Output() changeHeroTitleIntersection = new EventEmitter<boolean>();
 
   isContactButtonIntersecting?: boolean;
@@ -31,24 +32,27 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.initialiseIntersectionObserver(
       '.hero__title',
-      this.titleIntersectionObserverCallback.bind(this)
+      this.titleIntersectionObserverCallback.bind(this),
+      this.intersectionObserverOptions
     );
     this.initialiseIntersectionObserver(
       '.hero__contact-button-trigger',
-      this.contactButtonIntersectionObserverCallback.bind(this)
+      this.contactButtonIntersectionObserverCallback.bind(this),
+      this.intersectionObserverOptions
     );
   }
 
   initialiseIntersectionObserver(
-    elementQuerySelector: string,
-    intersectionObserverCallback: IntersectionObserverCallback
+    elementsQuerySelector: string,
+    intersectionObserverCallback: IntersectionObserverCallback,
+    intersectionObserverOptions: IntersectionObserverInit
   ) {
     const intersectionObserver = new IntersectionObserver(
       intersectionObserverCallback,
-      this.intersectionObserverOptions
+      intersectionObserverOptions
     );
-    const element = document.querySelector(elementQuerySelector);
-    if (element) intersectionObserver.observe(element);
+    const elements = document.querySelectorAll(elementsQuerySelector);
+    elements.forEach((element) => intersectionObserver.observe(element));
   }
 
   titleIntersectionObserverCallback(entries: IntersectionObserverEntry[]) {
