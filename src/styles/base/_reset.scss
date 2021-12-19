@@ -20,3 +20,10 @@ textarea {
 a {
   text-decoration: none;
 }
+
+button,
+input[type="radio"] {
+  &:hover:not(:disabled) {
+    cursor: pointer;
+  }
+}

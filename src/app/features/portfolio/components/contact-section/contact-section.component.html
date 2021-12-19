@@ -7,7 +7,7 @@
     <form ngForm #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="contact-section__form-fields-container">
         <div class="contact-section__name-and-email-form-fields-container">
-          <div class="contact-section__form-field-container">
+          <div class="contact-section__form-field-container fade-in">
             <input
               type="text"
               placeholder="Name"
@@ -29,7 +29,7 @@
               </p>
             </div>
           </div>
-          <div class="contact-section__form-field-container">
+          <div class="contact-section__form-field-container fade-in">
             <input
               type="email"
               placeholder="Email"
@@ -59,7 +59,7 @@
             </div>
           </div>
         </div>
-        <div class="contact-section__form-field-container">
+        <div class="contact-section__form-field-container fade-in">
           <textarea
             cols="30"
             rows="10"
@@ -83,7 +83,11 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="button" [disabled]="contactForm.invalid">
+      <button
+        type="submit"
+        class="button fade-in"
+        [disabled]="contactForm.invalid"
+      >
         <svg
           width="25"
           height="25"

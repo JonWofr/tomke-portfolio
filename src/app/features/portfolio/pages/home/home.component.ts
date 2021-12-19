@@ -48,29 +48,38 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.initialiseIntersectionObserver();
+    this.initialiseIntersectionObserver(
+      '.anchor-element',
+      this.sectionsIntersectionObserverCallback.bind(this),
+      {
+        rootMargin: '-64px 0px 0px 0px',
+        threshold: 0,
+      }
+    );
+    this.initialiseIntersectionObserver(
+      '.fade-in',
+      this.fadingElementsIntersectionObserverCallback.bind(this),
+      {
+        rootMargin: '-64px 0px -64px 0px',
+        threshold: 0,
+      }
+    );
   }
 
-  initialiseIntersectionObserver() {
-    const intersectionObserver = this.createIntersectionObserver();
-    document.querySelectorAll('.anchor-element').forEach((element) => {
-      intersectionObserver.observe(element);
-    });
-  }
-
-  createIntersectionObserver() {
-    const intersectionObserverOptions: IntersectionObserverInit = {
-      rootMargin: '-64px 0px 0px 0px',
-      threshold: 0,
-    };
+  initialiseIntersectionObserver(
+    elementsQuerySelector: string,
+    intersectionObserverCallback: IntersectionObserverCallback,
+    intersectionObserverOptions: IntersectionObserverInit
+  ) {
     const intersectionObserver = new IntersectionObserver(
-      this.intersectionObserverCallback.bind(this),
+      intersectionObserverCallback,
       intersectionObserverOptions
     );
-    return intersectionObserver;
+    const elements = document.querySelectorAll(elementsQuerySelector);
+    elements.forEach((element) => intersectionObserver.observe(element));
   }
 
-  intersectionObserverCallback(entries: IntersectionObserverEntry[]) {
+  sectionsIntersectionObserverCallback(entries: IntersectionObserverEntry[]) {
     entries.forEach((entry) => {
       const section = this.sections.find(
         (section) => section.id === entry.target.id
@@ -100,5 +109,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.headerBackgroundColor = isIntersecting
       ? HeaderBackgroundColor.TRANSPARENT
       : HeaderBackgroundColor.WHITE;
+  }
+
+  fadingElementsIntersectionObserverCallback(
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver
+  ) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in--visible');
+        observer.unobserve(entry.target);
+      }
+    });
   }
 }

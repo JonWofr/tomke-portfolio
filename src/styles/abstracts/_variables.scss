@@ -10,7 +10,7 @@ $primary-accent-color: linear-gradient(
   $primary-accent-color-start,
   $primary-accent-color-stop
 );
-$primary-accent-color-hover: hsl(348, 78%, 41%);
+$primary-accent-color-hover-filter: brightness(0.8);
 $primary-accent-color-disabled-filter: saturate(30%) brightness(1.5);
 $secondary-accent-color: #9997ff;
 $primary-background-color-light: #ffffff;

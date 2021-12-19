@@ -6,8 +6,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  // Has to be 2 because of swiper slides
-  z-index: 2;
+  // Has to be 3 because of swiper slides and contact button
+  z-index: 3;
   @include with-transition(all);
 
   &--white {

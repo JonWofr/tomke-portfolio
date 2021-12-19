@@ -6,6 +6,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project } from '@features/portfolio/models/project.model';
 import ScrollBooster from 'scrollbooster';
 
@@ -23,7 +24,7 @@ export class ProjectGalleryComponent implements OnInit, AfterViewInit {
   readonly MAX_ITEMS_IN_GRID = 5;
   grids: { projects: Project[] }[] = [];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.projects.forEach((project, index) => {
@@ -41,6 +42,19 @@ export class ProjectGalleryComponent implements OnInit, AfterViewInit {
       viewport: this.projectGalleryViewport?.nativeElement ?? null,
       scrollMode: 'transform',
       direction: 'horizontal',
+      emulateScroll: true,
+      onClick: (state, event) => {
+        //
+        if (
+          !state.isDragging &&
+          (event.target as HTMLDivElement).className === 'project-gallery-item'
+        ) {
+          const anchorElement = (event.target as HTMLDivElement)
+            .firstChild as HTMLAnchorElement;
+          const routerLink = anchorElement.href.split('/').slice(-2).join('/');
+          this.router.navigateByUrl(`/${routerLink}`);
+        }
+      },
     });
   }
 
