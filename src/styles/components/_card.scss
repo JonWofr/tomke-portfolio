@@ -1,19 +1,13 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
-.contact {
+.card {
+  padding: 2rem 0.75rem;
   background-color: $primary-background-color-light;
-}
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
 
-.form__group {
   @include media-breakpoint-up("md") {
-    &:first-child,
-    &:nth-child(2) {
-      flex: 1;
-    }
+    padding: 2rem;
   }
-}
-
-.button {
-  margin: 0 auto;
 }

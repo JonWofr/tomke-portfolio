@@ -2,13 +2,9 @@
 
 .service-card {
   height: 100%;
-  padding: 2rem;
   display: flex;
-  gap: 1.75rem;
   align-items: center;
-  background-color: $primary-background-color-light;
-  border-radius: $default-border-radius;
-  box-shadow: $default-box-shadow;
+  gap: 1.75rem;
 
   &__icon {
     width: 100px;
