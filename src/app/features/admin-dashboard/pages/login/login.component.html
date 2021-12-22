@@ -85,25 +85,30 @@
           <div class="form__body">
             <div class="form__group">
               <input
+                type="email"
+                placeholder="Email"
                 class="form__control"
-                type="text"
-                placeholder="Benutzername"
+                name="email"
                 ngModel
-                #username="ngModel"
-                name="username"
+                #email="ngModel"
                 required
+                email
               />
               <div
-                *ngIf="username.invalid && username.touched"
+                *ngIf="email.invalid && email.touched"
                 class="form__alerts-container"
               >
                 <p
-                  *ngIf="
-                    username.errors ? username.errors['required'] : undefined
-                  "
+                  *ngIf="email.errors ? email.errors['required'] : undefined"
                   class="form__alert"
                 >
-                  Du musst deinen Benutzernamen angeben
+                  Du musst deine E-Mail-Adresse angeben
+                </p>
+                <p
+                  *ngIf="email.errors ? email.errors['email'] : undefined"
+                  class="form__alert"
+                >
+                  Ungültige E-Mail-Adresse
                 </p>
               </div>
             </div>

@@ -6,6 +6,12 @@ import { PortfolioModule } from '@features/portfolio/portfolio.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { AdminDashboardModule } from '@features/admin-dashboard/admin-dashboard.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +21,10 @@ import { CoreModule } from './core/core.module';
     CoreModule,
     PortfolioModule,
     AdminDashboardModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent],
