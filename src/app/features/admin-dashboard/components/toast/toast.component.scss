@@ -2,12 +2,13 @@
 
 .toast {
   position: fixed;
-  top: 1rem;
+  top: 0.5rem;
   right: 0;
+  z-index: 2;
   padding: 1rem 2rem;
   border-radius: $default-border-radius 0 0 $default-border-radius;
   box-shadow: $default-box-shadow;
-  background-color: $secondary-background-color-light;
+  background-color: $primary-background-color-light;
   max-width: 300px;
   animation-name: slide-in-and-out;
   animation-timing-function: ease-in-out;

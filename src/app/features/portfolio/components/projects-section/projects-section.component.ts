@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceTitle } from '@features/portfolio/enums/service-title.enum';
-import { Project } from '@features/portfolio/models/project.model';
+import { Project } from '@shared/models/project.model';
+import { Timestamp } from '@angular/fire/firestore';
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 'b83e94b2-f74b-4eb3-9d8e-5ed1e2166cd7',
     title: 'Brabus',
@@ -24,6 +25,8 @@ export const projects = [
     instagramUrl: '/',
     tikTokUrl: '/',
     linkedInUrl: '/',
+    createdAt: Timestamp.now(),
+    modifiedAt: Timestamp.now(),
   },
   {
     id: 'eb981e3c-2e8e-4066-aa64-687a8183e05d',
@@ -38,6 +41,8 @@ export const projects = [
       '/assets/images/3.jpeg',
       '/assets/images/4.jpeg',
     ],
+    createdAt: Timestamp.now(),
+    modifiedAt: Timestamp.now(),
   },
   {
     id: '5d149dd3-4200-4795-99ee-d5bf09e9c211',
@@ -52,6 +57,8 @@ export const projects = [
       '/assets/images/3.jpeg',
       '/assets/images/4.jpeg',
     ],
+    createdAt: Timestamp.now(),
+    modifiedAt: Timestamp.now(),
   },
   {
     id: '1abb6399-8e50-4bdd-9c3a-d220b230f73b',
@@ -69,6 +76,8 @@ export const projects = [
       '/assets/images/3.jpeg',
       '/assets/images/4.jpeg',
     ],
+    createdAt: Timestamp.now(),
+    modifiedAt: Timestamp.now(),
   },
   {
     id: '20d203d0-ef1b-42ad-b545-c6db8838e712',
@@ -83,6 +92,8 @@ export const projects = [
       '/assets/images/3.jpeg',
       '/assets/images/4.jpeg',
     ],
+    createdAt: Timestamp.now(),
+    modifiedAt: Timestamp.now(),
   },
   {
     id: 'a2f355b1-4d47-41d8-8b70-bb080253a7da',
@@ -101,6 +112,8 @@ export const projects = [
       '/assets/images/3.jpeg',
       '/assets/images/4.jpeg',
     ],
+    createdAt: Timestamp.now(),
+    modifiedAt: Timestamp.now(),
   },
   {
     id: '618c0faf-6f61-4264-b92c-20606290d690',
@@ -115,6 +128,8 @@ export const projects = [
       '/assets/images/3.jpeg',
       '/assets/images/4.jpeg',
     ],
+    createdAt: Timestamp.now(),
+    modifiedAt: Timestamp.now(),
   },
 ];
 
