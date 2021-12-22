@@ -17,9 +17,13 @@ $primary-background-color-light: #ffffff;
 $secondary-background-color-light: #f6f6f6;
 $primary-background-color-dark: #2a2a2a;
 $secondary-background-color-dark: #3a3a3a;
-$overlay-color: hsla(0, 0, 0, 0.7);
+$overlay-color: #000000b3;
 $muted-color: #c4c4c4;
-$error-color: hsl(0, 77%, 58%);
+$form-control-background-color: #ececec;
+$success-color: hsl(120, 50%, 60%);
+$info-color: hsl(240, 50%, 60%);
+$warn-color: hsl(60, 50%, 60%);
+$error-color: hsl(0, 50%, 60%);
 
 // Bootstrap breakpoints
 $grid-breakpoints: (
@@ -55,7 +59,8 @@ $secondary-font-bold: "Railway-Bold";
 // Misc
 $default-border-radius: 12px;
 $default-button-hitbox: 0.5rem;
-$default-box-shadow: 0 4px 4px 0 hsla(0, 0, 0, 0.25);
+$default-box-shadow-spread: 4px;
+$default-box-shadow: 0 4px $default-box-shadow-spread 0 hsla(0, 0, 0, 0.25);
 
 // Transitions
 $default-transition-duration: 0.25s;
