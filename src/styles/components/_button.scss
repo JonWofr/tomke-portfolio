@@ -30,23 +30,75 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: $primary-accent-color;
+    box-sizing: border-box;
     @include with-transition(filter);
+  }
+
+  &--embedded {
+    border-radius: initial;
+  }
+
+  &--light {
+    background-color: $primary-background-color-light;
+  }
+
+  &--primary-accent::before {
+    background-image: $primary-accent-color;
+  }
+
+  &--primary-accent-inverted::before {
+    background-image: linear-gradient(
+        $primary-background-color-light,
+        $primary-background-color-light
+      ),
+      $primary-accent-color;
+    background-clip: padding-box, border-box;
+    border: 1px solid transparent;
+    border-radius: $default-border-radius;
+  }
+
+  &--light::before {
+    background-color: $primary-background-color-light;
   }
 
   &__icon {
     width: 24px;
     height: 24px;
-    fill: $primary-font-color-light;
     position: relative;
+
+    &--light {
+      fill: $primary-font-color-light;
+    }
+
+    &--dark {
+      fill: $primary-font-color-dark;
+    }
+    &--primary-accent {
+      // SVG should have a gradient. The XML of the SVG has to be changed. It is not
+      // sufficient to change the fill.
+      fill: initial;
+    }
   }
 
   &__label {
     font-family: $secondary-font-bold;
-    color: $primary-font-color-light;
     font-size: 1rem;
     letter-spacing: 0.1em;
     line-height: 1.5;
     position: relative;
+
+    &--light {
+      color: $primary-font-color-light;
+    }
+
+    &--dark {
+      color: $primary-font-color-dark;
+    }
+
+    &--primary-accent {
+      color: transparent;
+      background-image: $primary-accent-color;
+      background-clip: text;
+    }
   }
 }

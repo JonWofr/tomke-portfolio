@@ -1,4 +1,4 @@
 export enum SocialMediaIconsColor {
-  'WHITE' = 'white',
-  'ACCENT' = 'accent',
+  'LIGHT' = 'light',
+  'PRIMARY_ACCENT' = 'primary-accent',
 }

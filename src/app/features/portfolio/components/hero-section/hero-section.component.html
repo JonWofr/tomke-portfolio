@@ -24,7 +24,7 @@
       <div class="hero__contact-button-container">
         <div class="hero__contact-button-inner-container">
           <a
-            class="button hero__contact-button"
+            class="button button--primary-accent hero__contact-button"
             [ngClass]="{
               'hero__contact-button--fixed':
                 isContactButtonIntersecting === false
@@ -38,7 +38,7 @@
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="button__icon"
+              class="button__icon button__icon--light"
             >
               <path
                 d="M12 12.713L0.015 3H23.985L12 12.713ZM12 15.287L0 5.562V21H24V5.562L12 15.287Z"
@@ -46,7 +46,10 @@
               />
             </svg>
             <p
-              class="button__label hero__contact-button-label"
+              class="
+                button__label button__label--light
+                hero__contact-button-label
+              "
               [ngClass]="{
                 'hero__contact-button-label--fixed':
                   isContactButtonIntersecting === false

@@ -138,9 +138,13 @@
             </div>
           </div>
           <div class="form__footer">
-            <button type="submit" class="button" [disabled]="loginForm.invalid">
+            <button
+              type="submit"
+              class="button button--primary-accent"
+              [disabled]="loginForm.invalid"
+            >
               <svg
-                class="button__icon"
+                class="button__icon button__icon--light"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -152,7 +156,7 @@
                   fill="white"
                 />
               </svg>
-              <p class="button__label">Einloggen</p>
+              <p class="button__label button__label--light">Einloggen</p>
             </button>
           </div>
         </form>
