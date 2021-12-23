@@ -16,6 +16,8 @@ import { AddProjectCardComponent } from './components/add-project-card/add-proje
 import { ProjectCardContextMenuComponent } from './components/project-card-context-menu/project-card-context-menu.component';
 import { ProjectModalComponent } from './components/project-modal/project-modal.component';
 import { ServiceChipComponent } from './components/service-chip/service-chip.component';
+import { ProjectModalImageComponent } from './components/project-modal-image/project-modal-image.component';
+import { ProjectModalFileInputComponent } from './components/project-modal-file-input/project-modal-file-input.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ServiceChipComponent } from './components/service-chip/service-chip.com
     ProjectCardContextMenuComponent,
     ProjectModalComponent,
     ServiceChipComponent,
+    ProjectModalImageComponent,
+    ProjectModalFileInputComponent,
   ],
   imports: [
     CommonModule,

@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./add-project-card.component.scss'],
 })
 export class AddProjectCardComponent implements OnInit {
-  @Output() clickAddProjectButton = new EventEmitter<void>();
+  @Output() clickAddProjectCard = new EventEmitter<void>();
 
   constructor() {}
 

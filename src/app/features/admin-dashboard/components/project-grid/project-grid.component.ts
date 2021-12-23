@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { projects } from '@features/portfolio/components/projects-section/projects-section.component';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Project } from '@shared/models/project.model';
 
 @Component({
@@ -8,14 +7,12 @@ import { Project } from '@shared/models/project.model';
   styleUrls: ['./project-grid.component.scss'],
 })
 export class ProjectGridComponent implements OnInit {
-  projects: Project[] = [];
+  @Input() projects: Project[] = [];
+  @Output() clickProjectCardEditButton = new EventEmitter<Project>();
+  @Output() clickProjectCardDeleteButton = new EventEmitter<Project>();
+  @Output() clickAddProjectCard = new EventEmitter<void>();
 
   constructor() {}
 
-  ngOnInit(): void {
-    // Fetch data
-    this.projects = projects;
-  }
-
-  onClickAddProjectButton() {}
+  ngOnInit(): void {}
 }
