@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Project } from '@shared/models/project.model';
 
 @Component({
@@ -8,6 +8,8 @@ import { Project } from '@shared/models/project.model';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project?: Project;
+  @Output() clickEditButton = new EventEmitter<void>();
+  @Output() clickDeleteButton = new EventEmitter<void>();
   shouldShowContextMenu = false;
 
   constructor() {}

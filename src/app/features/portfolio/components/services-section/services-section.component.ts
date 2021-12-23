@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceTitle } from '@features/portfolio/enums/service-title.enum';
+import { ServiceTitle } from '@shared/enums/service-title.enum';
 import { Service } from '@features/portfolio/models/service.model';
 
 @Component({

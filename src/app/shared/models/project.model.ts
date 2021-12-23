@@ -1,4 +1,4 @@
-import { ServiceTitle } from '../../features/portfolio/enums/service-title.enum';
+import { ServiceTitle } from '../enums/service-title.enum';
 import { Timestamp } from '@angular/fire/firestore';
 
 export interface Project {

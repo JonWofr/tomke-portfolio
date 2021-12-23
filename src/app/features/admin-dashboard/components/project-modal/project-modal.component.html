@@ -1,0 +1,258 @@
+<div class="overlay">
+  <div class="container">
+    <div class="card project-modal">
+      <form
+        ngForm
+        #projectModalForm="ngForm"
+        class="form"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="form__header">
+          <h2>
+            Projekt {{ isCreatingNewProject ? "erstellen" : "bearbeiten" }}
+          </h2>
+        </div>
+        <div class="form__body">
+          <!-- TITLE -->
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="Titel"
+              class="form__control"
+              name="title"
+              [(ngModel)]="project.title"
+              #title="ngModel"
+              required
+            />
+            <div
+              *ngIf="title.invalid && title.touched"
+              class="form__alerts-container"
+            >
+              <p
+                *ngIf="title.errors ? title.errors['required'] : undefined"
+                class="form__alert"
+              >
+                Du musst einen Titel angeben
+              </p>
+            </div>
+          </div>
+
+          <!-- THUMBNAIL IMAGE -->
+          <div class="form__group">
+            <div class="project-modal__image-container">
+              <admin-dashboard-project-modal-image
+                *ngIf="project.thumbnailImageUrl"
+                [imageUrl]="project.thumbnailImageUrl"
+                (clickRemoveButton)="onClickRemoveThumbnailImageButton()"
+              ></admin-dashboard-project-modal-image>
+              <admin-dashboard-project-modal-file-input
+                *ngIf="!project.thumbnailImageUrl"
+                (changeImageFileInput)="onChangeThumbnailImageFileInput($event)"
+              >
+              </admin-dashboard-project-modal-file-input>
+            </div>
+          </div>
+
+          <!-- SERVICES-->
+          <div class="form__group">
+            <div class="project-modal__multi-select-container">
+              <select
+                #servicesSelect
+                class="form__control"
+                (change)="onChangeServicesSelect(servicesSelect.value)"
+              >
+                <option value="" selected disabled hidden>Auswählen</option>
+                <option *ngFor="let service of services" [value]="service">
+                  {{ service }}
+                </option>
+              </select>
+              <div class="project-modal__service-chips-container">
+                <admin-dashboard-service-chip
+                  *ngFor="let service of project.services"
+                  [service]="service"
+                  (clickServiceChip)="onClickServiceChip(service)"
+                >
+                </admin-dashboard-service-chip>
+              </div>
+            </div>
+          </div>
+
+          <!-- DESCRIPTION -->
+          <div class="form__group">
+            <textarea
+              cols="30"
+              rows="10"
+              placeholder="Beschreibung"
+              class="form__control"
+              name="description"
+              [(ngModel)]="project.description"
+              #description="ngModel"
+              required
+            ></textarea>
+            <div
+              *ngIf="description.invalid && description.touched"
+              class="form__alerts-container"
+            >
+              <p
+                *ngIf="
+                  description.errors
+                    ? description.errors['required']
+                    : undefined
+                "
+                class="form__alert"
+              >
+                Du musst eine Beschreibung eingeben
+              </p>
+            </div>
+          </div>
+
+          <!-- SLIDESHOW IMAGES -->
+          <div class="form__group">
+            <div class="project-modal__slideshow-images-container">
+              <div
+                class="project-modal__image-container"
+                *ngFor="
+                  let slideshowImageUrl of project.slideshowImageUrls;
+                  let i = index
+                "
+              >
+                <admin-dashboard-project-modal-image
+                  [imageUrl]="slideshowImageUrl"
+                  (clickRemoveButton)="onClickRemoveSlideshowImageButton(i)"
+                ></admin-dashboard-project-modal-image>
+              </div>
+              <div class="project-modal__image-container">
+                <admin-dashboard-project-modal-file-input
+                  [multipleImages]="true"
+                  (changeImageFileInput)="
+                    onChangeSlideshowImagesFileInput($event)
+                  "
+                ></admin-dashboard-project-modal-file-input>
+              </div>
+            </div>
+          </div>
+
+          <!-- WEBSITE URL -->
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="Website URL"
+              class="form__control"
+              name="websiteUrl"
+              [(ngModel)]="project.websiteUrl"
+            />
+          </div>
+
+          <!-- LINKEDIN URL -->
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="LinkedIn URL"
+              class="form__control"
+              name="linkedInUrl"
+              [(ngModel)]="project.linkedInUrl"
+            />
+          </div>
+
+          <!-- INSTAGRAM URL -->
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="Instagram URL"
+              class="form__control"
+              name="instagramUrl"
+              [(ngModel)]="project.instagramUrl"
+            />
+          </div>
+
+          <!-- TIKTOK URL -->
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="TikTok URL"
+              class="form__control"
+              name="tikTokUrl"
+              [(ngModel)]="project.tikTokUrl"
+            />
+          </div>
+        </div>
+        <div class="form__footer">
+          <button
+            class="button button--primary-accent-inverted"
+            (click)="clickCancelButton.emit()"
+          >
+            <svg
+              class="button__icon button__icon--primary-accent"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_136_2084)">
+                <path
+                  d="M23.9541 21.03L14.7701 11.935L23.8621 2.76098L21.0301 -0.0460205L11.9401 9.13298L2.7641 0.0449795L-0.0458984 2.85498L9.1401 11.96L0.0451016 21.144L2.8551 23.954L11.9671 14.762L21.1471 23.862L23.9541 21.03Z"
+                  fill="url(#paint0_linear_136_2084)"
+                />
+              </g>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_136_2084"
+                  x1="-0.0458984"
+                  y1="11.954"
+                  x2="23.9541"
+                  y2="11.954"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#5653E1" />
+                  <stop offset="1" stop-color="#CD52E0" />
+                </linearGradient>
+                <clipPath id="clip0_136_2084">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="button__label button__label--primary-accent">Abbrechen</p>
+          </button>
+          <button
+            type="submit"
+            class="button button--primary-accent"
+            [disabled]="projectModalForm.invalid"
+          >
+            <ng-container *ngIf="isCreatingNewProject; else saveButton">
+              <svg
+                class="button__icon button__icon--light"
+                width="64"
+                height="65"
+                viewBox="0 0 64 65"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M64 27.1667H37.3333V0.5H26.6667V27.1667H0V37.8333H26.6667V64.5H37.3333V37.8333H64V27.1667Z"
+                />
+              </svg>
+              <p class="button__label button__label--light">Hinzufügen</p>
+            </ng-container>
+          </button>
+          <ng-template #saveButton>
+            <svg
+              class="button__icon button__icon--light"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.003 3H18V8H15.003V3ZM24 4V24H0V0H20L24 4ZM5 9H19V2H5V9ZM21 13H3V22H21V13Z"
+                fill="white"
+              />
+            </svg>
+            <p class="button__label button__label--light">Speichern</p>
+          </ng-template>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

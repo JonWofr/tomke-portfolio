@@ -1,4 +1,16 @@
 <admin-dashboard-header> </admin-dashboard-header>
 <main>
-  <admin-dashboard-projects-section></admin-dashboard-projects-section>
+  <admin-dashboard-project-modal
+    *ngIf="shouldShowModal"
+    [project]="selectedProject"
+    (clickCancelButton)="onClickCancelButton()"
+    (clickAddButton)="onClickAddButton($event)"
+    (clickSaveButton)="onClickSaveButton($event)"
+  ></admin-dashboard-project-modal>
+  <admin-dashboard-projects-section
+    [projects]="projects"
+    (clickProjectCardEditButton)="onClickProjectCardEditButton($event)"
+    (clickProjectCardDeleteButton)="onClickProjectCardDeleteButton($event)"
+    (clickAddProjectCard)="onClickAddProjectCard()"
+  ></admin-dashboard-projects-section>
 </main>

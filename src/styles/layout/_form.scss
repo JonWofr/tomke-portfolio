@@ -2,9 +2,9 @@
 @import "abstracts/variables";
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  &__header {
+    margin-bottom: 1.5rem;
+  }
 
   &__body {
     display: flex;
@@ -38,5 +38,12 @@
   &__alert {
     font-size: 0.75rem;
     color: $error-color;
+  }
+
+  &__footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
   }
 }

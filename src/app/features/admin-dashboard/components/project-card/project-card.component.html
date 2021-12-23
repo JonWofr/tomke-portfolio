@@ -25,7 +25,10 @@
             *ngIf="shouldShowContextMenu"
             class="project-card__context-menu-container"
           >
-            <admin-dashboard-project-card-context-menu></admin-dashboard-project-card-context-menu>
+            <admin-dashboard-project-card-context-menu
+              (clickEditButton)="clickEditButton.emit()"
+              (clickDeleteButton)="clickDeleteButton.emit()"
+            ></admin-dashboard-project-card-context-menu>
           </div>
         </div>
         <img

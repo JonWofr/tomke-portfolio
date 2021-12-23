@@ -1,4 +1,4 @@
-import { ServiceTitle } from '../enums/service-title.enum';
+import { ServiceTitle } from '../../../shared/enums/service-title.enum';
 
 export interface Service {
   iconUrl: string;
