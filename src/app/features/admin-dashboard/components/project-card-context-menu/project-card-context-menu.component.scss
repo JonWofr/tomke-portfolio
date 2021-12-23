@@ -1,0 +1,16 @@
+@import "abstracts/variables";
+
+.context-menu {
+  list-style-type: none;
+  padding: initial;
+  border-top-right-radius: 0;
+  overflow: hidden;
+
+  &__item:not(:first-child) {
+    border-top: 1px solid #e7e7e7;
+  }
+}
+
+.button {
+  width: 100%;
+}

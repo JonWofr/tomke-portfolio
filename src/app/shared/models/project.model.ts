@@ -1,4 +1,5 @@
-import { ServiceTitle } from '../enums/service-title.enum';
+import { ServiceTitle } from '../../features/portfolio/enums/service-title.enum';
+import { Timestamp } from '@angular/fire/firestore';
 
 export interface Project {
   id: string;
@@ -11,4 +12,6 @@ export interface Project {
   linkedInUrl?: string;
   instagramUrl?: string;
   tikTokUrl?: string;
+  createdAt: Timestamp;
+  modifiedAt: Timestamp;
 }

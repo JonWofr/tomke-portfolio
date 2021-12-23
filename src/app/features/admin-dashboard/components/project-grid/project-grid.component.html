@@ -1,0 +1,12 @@
+<div class="project-grid">
+  <div *ngFor="let project of projects">
+    <admin-dashboard-project-card
+      [project]="project"
+    ></admin-dashboard-project-card>
+  </div>
+  <div class="project-grid-item">
+    <admin-dashboard-add-project-card
+      (clickAddProjectButton)="onClickAddProjectButton()"
+    ></admin-dashboard-add-project-card>
+  </div>
+</div>

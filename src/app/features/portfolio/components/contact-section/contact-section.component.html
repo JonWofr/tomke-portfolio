@@ -1,9 +1,9 @@
 <section class="section contact">
   <div class="container">
-    <portfolio-section-header
+    <shared-section-header
       title="Schreibe mir direkt eine Nachricht"
       subtitle="Kontakt"
-    ></portfolio-section-header>
+    ></shared-section-header>
     <form
       ngForm
       #contactForm="ngForm"
@@ -89,7 +89,7 @@
       <div class="form__footer">
         <button
           type="submit"
-          class="button fade-in"
+          class="button button--primary-accent fade-in"
           [disabled]="contactForm.invalid"
         >
           <svg
@@ -98,7 +98,7 @@
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="button__icon"
+            class="button__icon button__icon--light"
           >
             <g clip-path="url(#clip0_211_277)">
               <path
@@ -117,7 +117,7 @@
               </clipPath>
             </defs>
           </svg>
-          <p class="button__label">Senden</p>
+          <p class="button__label button__label--light">Senden</p>
         </button>
       </div>
     </form>

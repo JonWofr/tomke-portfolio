@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Auth, AuthError, signOut } from '@angular/fire/auth';
-import { Router } from '@angular/router';
-import { ToastType } from '@features/admin-dashboard/enums/toast-type.enum';
-import { ToastControllerService } from '@features/admin-dashboard/services/toast-controller/toast-controller.service';
 
 @Component({
   selector: 'admin-dashboard-home',
@@ -10,28 +6,7 @@ import { ToastControllerService } from '@features/admin-dashboard/services/toast
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    private auth: Auth,
-    private router: Router,
-    private toastController: ToastControllerService
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {}
-
-  onClickLogOutButton() {
-    signOut(this.auth)
-      .then(() => {
-        this.toastController.showToast({
-          type: ToastType.SUCCESS,
-          message: 'Erfolgreich ausegloggt!',
-        });
-        this.router.navigateByUrl('/admin/login');
-      })
-      .catch((err: AuthError) => {
-        this.toastController.showToast({
-          type: ToastType.ERROR,
-          message: err.message,
-        });
-      });
-  }
 }

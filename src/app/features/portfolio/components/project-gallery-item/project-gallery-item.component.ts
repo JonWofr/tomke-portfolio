@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Project } from '@features/portfolio/models/project.model';
+import { Project } from '@shared/models/project.model';
 
 @Component({
   selector: 'portfolio-project-gallery-item',

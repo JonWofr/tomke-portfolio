@@ -1,0 +1,12 @@
+@use "sass:map";
+@import "abstracts/variables";
+
+.project-grid {
+  display: grid;
+  // On device width lg three items should be displayed
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(map.get($container-widths, "lg") / 3 - (1rem * 2) / 3), 1fr)
+  );
+  gap: 1rem;
+}

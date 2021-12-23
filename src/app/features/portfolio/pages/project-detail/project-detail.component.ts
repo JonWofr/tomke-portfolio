@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '@features/portfolio/models/project.model';
+import { Project } from '@shared/models/project.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { projects } from '@features/portfolio/components/projects-section/projects-section.component';

@@ -7,7 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project } from '@features/portfolio/models/project.model';
+import { Project } from '@shared/models/project.model';
 import ScrollBooster from 'scrollbooster';
 
 @Component({
