@@ -1,4 +1,7 @@
 <admin-dashboard-header> </admin-dashboard-header>
 <main>
+  <admin-dashboard-project-modal
+    *ngIf="shouldShowModal"
+  ></admin-dashboard-project-modal>
   <admin-dashboard-projects-section></admin-dashboard-projects-section>
 </main>

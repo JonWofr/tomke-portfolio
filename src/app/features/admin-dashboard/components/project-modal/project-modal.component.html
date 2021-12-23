@@ -1,0 +1,82 @@
+<div class="overlay">
+  <div class="container">
+    <div class="card project-modal">
+      <form
+        ngForm
+        #projectModalForm="ngForm"
+        class="form"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="form__header">
+          <h2>Projekt erstellen</h2>
+        </div>
+        <div class="form__body">
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="Titel"
+              class="form__control"
+              name="title"
+              [(ngModel)]="project.title"
+              #title="ngModel"
+              required
+            />
+            <div
+              *ngIf="title.invalid && title.touched"
+              class="form__alerts-container"
+            >
+              <p
+                *ngIf="title.errors ? title.errors['required'] : undefined"
+                class="form__alert"
+              >
+                Du musst einen Titel angeben
+              </p>
+            </div>
+          </div>
+          <div class="form__group">
+            <select
+              #servicesSelect
+              class="form__control"
+              (change)="onChangeServicesSelect(servicesSelect.value)"
+            >
+              <option value="" selected disabled hidden>Auswählen</option>
+              <option *ngFor="let service of services" [value]="service">
+                {{ service }}
+              </option>
+            </select>
+            <div class="service-chips-container">
+              <admin-dashboard-service-chip
+                *ngFor="let service of project.services"
+                [service]="service"
+                (clickServiceChip)="onClickServiceChip(service)"
+              >
+              </admin-dashboard-service-chip>
+            </div>
+          </div>
+        </div>
+        <div class="form__footer">
+          <button
+            type="submit"
+            class="button button--primary-accent"
+            [disabled]="projectModalForm.invalid"
+          >
+            <svg
+              class="button__icon button__icon--light"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 9V5L16 12L8 19V15H0V9H8ZM14 2C12.213 2 10.54 2.474 9.089 3.295L9.317 3.495L10.712 4.716C11.716 4.26 12.827 4 14 4C18.411 4 22 7.589 22 12C22 16.411 18.411 20 14 20C12.827 20 11.716 19.74 10.712 19.285L9.317 20.506L9.089 20.706C10.54 21.526 12.213 22 14 22C19.522 22 24 17.523 24 12C24 6.477 19.522 2 14 2Z"
+                fill="white"
+              />
+            </svg>
+            <p class="button__label button__label--light">Einloggen</p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

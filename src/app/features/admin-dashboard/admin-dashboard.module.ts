@@ -14,6 +14,8 @@ import { SharedModule } from '@shared/shared.module';
 import { ProjectsSectionComponent } from './components/projects-section/projects-section.component';
 import { AddProjectCardComponent } from './components/add-project-card/add-project-card.component';
 import { ProjectCardContextMenuComponent } from './components/project-card-context-menu/project-card-context-menu.component';
+import { ProjectModalComponent } from './components/project-modal/project-modal.component';
+import { ServiceChipComponent } from './components/service-chip/service-chip.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ProjectCardContextMenuComponent } from './components/project-card-conte
     ProjectsSectionComponent,
     AddProjectCardComponent,
     ProjectCardContextMenuComponent,
+    ProjectModalComponent,
+    ServiceChipComponent,
   ],
   imports: [
     CommonModule,
