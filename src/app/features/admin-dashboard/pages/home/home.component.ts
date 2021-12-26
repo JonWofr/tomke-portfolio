@@ -47,6 +47,7 @@ export class HomeComponent implements OnInit {
   }
 
   onClickAddProjectCard() {
+    this.selectedProject = undefined;
     this.toggleModal();
   }
 }

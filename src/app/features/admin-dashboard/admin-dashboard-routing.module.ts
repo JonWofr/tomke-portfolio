@@ -21,12 +21,12 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
-        ...canActivate(redirectLoggedInToHome),
+        //...canActivate(redirectLoggedInToHome),
       },
       {
         path: '',
         component: HomeComponent,
-        ...canActivate(redirectUnauthorizedToLogin),
+        //...canActivate(redirectUnauthorizedToLogin),
       },
     ],
   },
