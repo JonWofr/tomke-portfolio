@@ -1,7 +1,8 @@
 <div class="padding-top-hack padding-top-hack--16-by-9">
   <div class="padding-top-hack__inner-container">
-    <label class="form__control project-modal-file-input" [for]="fileInputId">
+    <div class="form__control project-modal-file-input">
       <svg
+        class="project-modal-file-input__placeholder-icon"
         width="24"
         height="25"
         viewBox="0 0 24 25"
@@ -11,7 +12,6 @@
         <g clip-path="url(#clip0_376_681)">
           <path
             d="M17 22.5V24.5H7V22.5H17ZM17 18.5H7V20.5H17V18.5ZM7 11.5V16.5H17V11.5H23L12 0.5L1 11.5H7Z"
-            fill="#5C5C5C"
           />
         </g>
         <defs>
@@ -25,15 +25,21 @@
           </clipPath>
         </defs>
       </svg>
-      <p>Upload Image</p>
-    </label>
-    <input
-      #imageFileInput
-      [id]="fileInputId"
-      type="file"
-      hidden
-      [multiple]="multipleImages"
-      (change)="onChangeFileInput(imageFileInput.files)"
-    />
+      <p class="project-modal-file-input__placeholder-label">
+        {{ placeholderLabel }}
+      </p>
+      <input
+        #imageFileInput
+        type="file"
+        hidden
+        [multiple]="multipleImages"
+        (change)="onChangeFileInput(imageFileInput.files)"
+      />
+      <input
+        class="project-modal-file-input__file-input"
+        type="button"
+        (click)="imageFileInput.click()"
+      />
+    </div>
   </div>
 </div>
