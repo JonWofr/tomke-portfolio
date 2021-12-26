@@ -1,4 +1,6 @@
+@use "sass:map";
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .overlay {
   position: fixed;
@@ -13,17 +15,21 @@
   overflow: auto;
 }
 
-.container {
-  position: relative;
-}
-
-.project-modal-container {
-  position: absolute;
-  top: 300px;
-  left: 0;
-}
-
 .project-modal {
+  width: 100%;
+  max-width: map.get($container-widths, "xl");
+  margin: 0 auto;
+  position: relative;
+
+  &__close-button {
+    position: absolute;
+    top: 2rem;
+    right: 0.75rem;
+    padding: $default-button-hitbox;
+    margin-top: -$default-button-hitbox;
+    margin-right: -$default-button-hitbox;
+  }
+
   &__multi-select-container {
     display: flex;
     flex-direction: column;
@@ -37,8 +43,8 @@
   }
 
   &__image-container {
-    width: calc(2 / 3 * 100%);
-    max-width: 400px;
+    width: calc(2 / 3 * 100% - 0.5rem / 2);
+    max-width: 300px;
   }
 
   &__slideshow-images-container {
@@ -50,9 +56,28 @@
       flex: none;
     }
   }
+
+  @include media-breakpoint-up("md") {
+    &__close-button {
+      right: 2rem;
+    }
+  }
 }
 
-.form__footer {
-  justify-content: flex-start;
-  flex-wrap: wrap;
+.form {
+  &__group {
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9) {
+      @include media-breakpoint-up("md") {
+        width: calc(50% - 1rem / 2);
+      }
+    }
+  }
+
+  &__footer {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }

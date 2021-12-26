@@ -108,4 +108,8 @@ export class ProjectModalComponent implements OnInit {
       ? this.clickAddButton.emit(this.project)
       : this.clickSaveButton.emit(this.project);
   }
+
+  onClickProjectModal(event: MouseEvent) {
+    event.stopPropagation();
+  }
 }

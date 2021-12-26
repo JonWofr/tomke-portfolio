@@ -8,19 +8,12 @@ import { Project } from '@shared/models/project.model';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project?: Project;
+  @Input() shouldShowContextMenu = false;
+  @Output() clickMoreButton = new EventEmitter<MouseEvent>();
   @Output() clickEditButton = new EventEmitter<void>();
   @Output() clickDeleteButton = new EventEmitter<void>();
-  shouldShowContextMenu = false;
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  onClickMoreButton() {
-    this.toggleContextMenu();
-  }
-
-  toggleContextMenu() {
-    this.shouldShowContextMenu = !this.shouldShowContextMenu;
-  }
 }

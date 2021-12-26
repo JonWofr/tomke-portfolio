@@ -2,6 +2,8 @@
   <div *ngFor="let project of projects">
     <admin-dashboard-project-card
       [project]="project"
+      [shouldShowContextMenu]="project.id === contextMenuProjectId"
+      (clickMoreButton)="onClickProjectCardMoreButton($event, project)"
       (clickEditButton)="clickProjectCardEditButton.emit(project)"
       (clickDeleteButton)="clickProjectCardDeleteButton.emit(project)"
     ></admin-dashboard-project-card>

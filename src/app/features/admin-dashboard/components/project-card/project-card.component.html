@@ -5,7 +5,7 @@
         <div class="project-card__more-button-container">
           <button
             class="project-card__more-button"
-            (click)="onClickMoreButton()"
+            (click)="clickMoreButton.emit($event)"
           >
             <svg
               class="project-card__more-icon"
