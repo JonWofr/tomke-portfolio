@@ -110,6 +110,8 @@ export class ProjectModalComponent implements OnInit {
   }
 
   onClickProjectModal(event: MouseEvent) {
+    // Event has to be stopped. Otherwise the overlay onclick listener would be triggered and
+    // the modal would close.
     event.stopPropagation();
   }
 }
