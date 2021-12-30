@@ -10,8 +10,8 @@ $primary-accent-color: linear-gradient(
   $primary-accent-color-start,
   $primary-accent-color-stop
 );
-$primary-accent-color-hover-filter: brightness(0.8);
-$primary-accent-color-disabled-filter: saturate(30%) brightness(1.5);
+$button-hover-filter: brightness(0.8);
+$button-disabled-filter: saturate(30%) brightness(1.5);
 $secondary-accent-color: #9997ff;
 $primary-background-color-light: #ffffff;
 $secondary-background-color-light: #f6f6f6;
@@ -20,6 +20,7 @@ $secondary-background-color-dark: #3a3a3a;
 $overlay-color: #000000b3;
 $muted-color: #c4c4c4;
 $form-control-background-color: #ececec;
+$form-control-placeholder-color: #757575;
 $success-color: hsl(120, 50%, 60%);
 $info-color: hsl(240, 50%, 60%);
 $warn-color: hsl(60, 50%, 60%);

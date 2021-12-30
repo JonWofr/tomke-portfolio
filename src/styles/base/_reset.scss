@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-button {
+button,
+input[type="button"] {
   border: none;
   background-color: transparent;
 }
@@ -22,7 +23,8 @@ a {
 }
 
 button,
-input[type="radio"] {
+input[type="radio"],
+input[type="button"] {
   &:hover:not(:disabled) {
     cursor: pointer;
   }

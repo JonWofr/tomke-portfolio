@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'admin-dashboard-project-modal-file-input',
@@ -7,9 +6,9 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./project-modal-file-input.component.scss'],
 })
 export class ProjectModalFileInputComponent implements OnInit {
+  @Input() placeholderLabel = '';
   @Input() multipleImages = false;
   @Output() changeImageFileInput = new EventEmitter<FileList>();
-  fileInputId = uuidv4();
 
   constructor() {}
 

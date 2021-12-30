@@ -13,4 +13,13 @@
 
 .button {
   width: 100%;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__label {
+    font-family: $secondary-font-regular;
+  }
 }

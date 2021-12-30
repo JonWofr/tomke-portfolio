@@ -9,16 +9,12 @@
   position: relative;
   overflow: hidden;
 
-  &:hover:not(:disabled) {
-    cursor: pointer;
-
-    &::before {
-      filter: $primary-accent-color-hover-filter;
-    }
+  &:hover:not(:disabled)::before {
+    filter: $button-hover-filter;
   }
 
   &:disabled::before {
-    filter: $primary-accent-color-disabled-filter;
+    filter: $button-disabled-filter;
   }
 
   // Pseudo element has to be created because filter (on e.g. hover) gets applied to all
