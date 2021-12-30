@@ -18,6 +18,7 @@ import { ProjectModalComponent } from './components/project-modal/project-modal.
 import { ServiceChipComponent } from './components/service-chip/service-chip.component';
 import { ProjectModalImageComponent } from './components/project-modal-image/project-modal-image.component';
 import { ProjectModalFileInputComponent } from './components/project-modal-file-input/project-modal-file-input.component';
+import { DeletionModalComponent } from './components/deletion-modal/deletion-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ProjectModalFileInputComponent } from './components/project-modal-file-
     ServiceChipComponent,
     ProjectModalImageComponent,
     ProjectModalFileInputComponent,
+    DeletionModalComponent,
   ],
   imports: [
     CommonModule,

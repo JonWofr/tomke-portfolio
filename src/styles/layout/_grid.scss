@@ -1,37 +1,5 @@
-@use "sass:map";
 @import "abstracts/mixins";
-@import "abstracts/variables";
 
 .container {
-  padding: 0 $container-horizontal-padding-xs;
-}
-
-@include media-breakpoint-up("sm") {
-  .container {
-    max-width: map.get($container-widths, "sm");
-    margin: 0 auto;
-    padding: initial;
-  }
-}
-
-@include media-breakpoint-up("md") {
-  .container {
-    max-width: map.get($container-widths, "md");
-  }
-}
-
-@include media-breakpoint-up("lg") {
-  .container {
-    max-width: map.get($container-widths, "lg");
-  }
-}
-@include media-breakpoint-up("xl") {
-  .container {
-    max-width: map.get($container-widths, "xl");
-  }
-}
-@include media-breakpoint-up("xxl") {
-  .container {
-    max-width: map.get($container-widths, "xxl");
-  }
+  @include container;
 }

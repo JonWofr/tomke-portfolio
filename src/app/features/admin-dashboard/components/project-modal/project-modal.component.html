@@ -1,10 +1,7 @@
-<div class="overlay" (click)="clickCancelButton.emit()">
-  <div class="container">
-    <div class="card project-modal" (click)="onClickProjectModal($event)">
-      <button
-        class="project-modal__close-button"
-        (click)="clickCancelButton.emit()"
-      >
+<div class="modal__overlay" (click)="clickCancelButton.emit()">
+  <div class="modal__container">
+    <div class="modal project-modal" (click)="onClickProjectModal($event)">
+      <button class="modal__close-button" (click)="clickCancelButton.emit()">
         <svg
           width="24"
           height="24"
