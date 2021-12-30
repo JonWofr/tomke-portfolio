@@ -7,7 +7,7 @@ import { Project } from '@shared/models/project.model';
   styleUrls: ['./projects-section.component.scss'],
 })
 export class ProjectsSectionComponent implements OnInit {
-  @Input() projects: Project[] = [];
+  @Input() projects?: Project[];
   @Output() clickProjectCardEditButton = new EventEmitter<Project>();
   @Output() clickProjectCardDeleteButton = new EventEmitter<Project>();
   @Output() clickAddProjectCard = new EventEmitter<void>();

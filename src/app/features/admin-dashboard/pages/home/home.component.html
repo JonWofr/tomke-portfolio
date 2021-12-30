@@ -1,11 +1,17 @@
 <admin-dashboard-header> </admin-dashboard-header>
 <main>
+  <admin-dashboard-deletion-modal
+    *ngIf="shouldShowDeletionModal"
+    [projectTitle]="selectedProject!.title"
+    (clickCancelButton)="onClickDeletionModalCancelButton()"
+    (clickDeleteButton)="onClickDeletionModalDeleteButton()"
+  ></admin-dashboard-deletion-modal>
   <admin-dashboard-project-modal
-    *ngIf="shouldShowModal"
+    *ngIf="shouldShowProjectModal"
     [project]="selectedProject"
-    (clickCancelButton)="onClickCancelButton()"
-    (clickAddButton)="onClickAddButton($event)"
-    (clickSaveButton)="onClickSaveButton($event)"
+    (clickCancelButton)="onClickProjectModalCancelButton()"
+    (clickAddButton)="onClickProjectModalAddButton($event)"
+    (clickSaveButton)="onClickProjectModalSaveButton($event)"
   ></admin-dashboard-project-modal>
   <admin-dashboard-projects-section
     [projects]="projects"

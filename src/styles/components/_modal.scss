@@ -1,0 +1,43 @@
+@use "sass:map";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.modal {
+  width: 100%;
+  max-width: map.get($container-widths, "xl");
+  margin: 0 auto;
+  position: relative;
+  @include card;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    padding: $default-vertical-section-padding 0;
+    backdrop-filter: blur(2px);
+    overflow: auto;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 2rem;
+    right: 0.75rem;
+    padding: $default-button-hitbox;
+    margin-top: -$default-button-hitbox;
+    margin-right: -$default-button-hitbox;
+  }
+
+  @include media-breakpoint-up("md") {
+    &__close-button {
+      right: 2rem;
+    }
+  }
+}

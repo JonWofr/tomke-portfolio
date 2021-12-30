@@ -2,12 +2,5 @@
 @import "abstracts/mixins";
 
 .card {
-  padding: 2rem 0.75rem;
-  background-color: $primary-background-color-light;
-  border-radius: $default-border-radius;
-  box-shadow: $default-box-shadow;
-
-  @include media-breakpoint-up("md") {
-    padding: 2rem;
-  }
+  @include card;
 }
