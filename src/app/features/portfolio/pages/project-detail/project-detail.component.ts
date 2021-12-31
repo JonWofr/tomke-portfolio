@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '@shared/models/project.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { projects } from '@features/portfolio/components/projects-section/projects-section.component';
 import { Location } from '@angular/common';
 import { SocialMediaIconsColor } from '@shared/enums/social-media-icons-color.enum';
+import { ProjectsControllerService } from '@core/services/projects-controller/projects-controller.service';
 
 @Component({
   selector: 'portfolio-project-detail',
@@ -20,7 +20,8 @@ export class ProjectDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private location: Location,
-    private title: Title
+    private title: Title,
+    private projectsController: ProjectsControllerService
   ) {}
 
   ngOnInit(): void {
@@ -29,12 +30,14 @@ export class ProjectDetailComponent implements OnInit {
       this.router.navigateByUrl('/');
       return;
     }
-    this.project = projects.find((project) => project.id === id);
-    if (this.project === undefined) {
-      this.router.navigateByUrl('/');
-      return;
-    }
-    this.title.setTitle(`${this.project.title} - Tomke Nils`);
+    this.projectsController.fetchOneProject(id).subscribe((project) => {
+      if (project === undefined) {
+        this.router.navigateByUrl('/');
+        return;
+      }
+      this.project = project;
+      this.title.setTitle(`${this.project!.title} - Tomke Nils`);
+    });
   }
 
   navigateBack() {

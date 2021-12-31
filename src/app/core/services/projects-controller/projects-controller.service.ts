@@ -23,8 +23,12 @@ import {
   query,
   onSnapshot,
   deleteDoc,
+  orderBy,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+
+type SortBy = 'createdAt';
+type SortDirection = 'asc' | 'desc';
 
 @Injectable({
   providedIn: 'root',
@@ -88,12 +92,26 @@ export class ProjectsControllerService {
     return await getDownloadURL(fileRef);
   }
 
-  fetchAllProjects(): Observable<Project[]> {
+  fetchAllProjects(
+    sortBy: SortBy = 'createdAt',
+    sortDirection: SortDirection = 'asc'
+  ): Observable<Project[]> {
     return new Observable((subscriber) => {
       onSnapshot(
-        query(this.col),
+        query(this.col, orderBy(sortBy, sortDirection)),
         (querySnapshot) =>
           subscriber.next(querySnapshot.docs.map((doc) => doc.data())),
+        subscriber.error,
+        subscriber.complete
+      );
+    });
+  }
+
+  fetchOneProject(id: string): Observable<Project | undefined> {
+    return new Observable((subscriber) => {
+      onSnapshot(
+        doc(this.col, id),
+        (doc) => subscriber.next(doc.data()),
         subscriber.error,
         subscriber.complete
       );
