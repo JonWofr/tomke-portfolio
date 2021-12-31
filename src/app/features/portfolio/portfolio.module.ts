@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
@@ -21,6 +21,8 @@ import { ProjectDetailSlideshowComponent } from './components/project-detail-sli
 import { NewsSectionComponent } from './components/news-section/news-section.component';
 
 @NgModule({
+  // Necessary for the usage of custom HTML elements (e.g. lottie-files) (which are not angular elements)
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     HomeComponent,
     HeroSectionComponent,

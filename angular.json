@@ -44,7 +44,10 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
-            "scripts": ["node_modules/instafeed.js/dist/instafeed.min.js"]
+            "scripts": [
+              "node_modules/instafeed.js/dist/instafeed.min.js",
+              "node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"
+            ]
           },
           "configurations": {
             "production": {
