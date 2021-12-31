@@ -3,7 +3,8 @@ import { Project } from '@shared/models/project.model';
 import { ToastControllerService } from '@features/admin-dashboard/services/toast-controller/toast-controller.service';
 import { ToastType } from '@features/admin-dashboard/enums/toast-type.enum';
 import { ProjectsControllerService } from '@core/services/projects-controller/projects-controller.service';
-import { Toast } from '@features/admin-dashboard/models/toast.model';
+import { InstagramApiKeyControllerService } from '@core/services/instagram-api-key-controller/instagram-api-key-controller.service';
+import { InstagramApiKey } from '@shared/models/instagram-api-key.model';
 
 @Component({
   selector: 'admin-dashboard-home',
@@ -12,21 +13,24 @@ import { Toast } from '@features/admin-dashboard/models/toast.model';
 })
 export class HomeComponent implements OnInit {
   projects?: Project[];
+  instagramApiKey?: InstagramApiKey;
   selectedProject?: Project;
   shouldShowProjectModal = false;
   shouldShowDeletionModal = false;
 
   constructor(
     private projectsController: ProjectsControllerService,
-    private toastController: ToastControllerService
+    private toastController: ToastControllerService,
+    private instagramApiKeysController: InstagramApiKeyControllerService
   ) {}
 
   ngOnInit(): void {
     this.fetchAllProjects();
+    this.fetchInstagramApiKey();
   }
 
   fetchAllProjects() {
-    this.projectsController.fetchAll().subscribe({
+    this.projectsController.fetchAllProjects().subscribe({
       next: (projects) => {
         console.log(projects);
         this.projects = projects;
@@ -41,6 +45,14 @@ export class HomeComponent implements OnInit {
         console.log('complete');
       },
     });
+  }
+
+  fetchInstagramApiKey() {
+    this.instagramApiKeysController
+      .fetchAllInstagramApiKeys()
+      .subscribe((instagramApiKeys) => {
+        this.instagramApiKey = instagramApiKeys[0];
+      });
   }
 
   onClickAddProjectCard() {
@@ -118,5 +130,21 @@ export class HomeComponent implements OnInit {
 
   onClickDeletionModalCancelButton() {
     this.toggleDeletionModal();
+  }
+
+  async onClickInstagramApiKeySectionSubmitButton(
+    instagramApiKey: InstagramApiKey
+  ) {
+    try {
+      await this.instagramApiKeysController.replaceInstagramApiKey(
+        instagramApiKey
+      );
+      this.toastController.showToast({
+        type: ToastType.SUCCESS,
+        message: `Instagram API key erfolgreich ausgetauscht`,
+      });
+    } catch (err) {
+      this.handleCrudError(err);
+    }
   }
 }
