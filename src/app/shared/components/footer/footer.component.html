@@ -1,6 +1,9 @@
 <footer class="section footer">
   <div class="container">
-    <a href="/" class="footer__impressum-link"> Impressum </a>
+    <div class="footer__links-container">
+      <a href="/impressum" class="footer__link"> Impressum </a>
+      <a href="/data-privacy" class="footer__link"> Datenschutz </a>
+    </div>
     <div class="footer__icons-container">
       <a href="/">
         <svg
@@ -43,10 +46,11 @@
         [iconsColor]="SocialMediaIconsColor.LIGHT"
       ></shared-social-media-channels>
     </div>
-    <p class="footer__contact-information">
-      +49 12345678 <br />
-      kontakt@tomke-nils.de
-    </p>
+    <div class="footer__contact-information-container">
+      <a href="mailto:kontakt@tomke-nils.de" class="footer__link">
+        kontakt@tomke-nils.de
+      </a>
+    </div>
   </div>
   <p class="footer__author-note">
     Designt und entwickelt von

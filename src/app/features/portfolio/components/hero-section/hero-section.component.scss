@@ -101,7 +101,7 @@
   }
 
   @include media-breakpoint-up("md") {
-    background-image: url("/assets/images/hero-background-image-tablet.jpeg");
+    background-image: url("/assets/images/hero-background-image-tablet.jpg");
     background-position-y: 65%;
 
     &__content-container {
