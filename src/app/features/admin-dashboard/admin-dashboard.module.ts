@@ -19,6 +19,7 @@ import { ServiceChipComponent } from './components/service-chip/service-chip.com
 import { ProjectModalImageComponent } from './components/project-modal-image/project-modal-image.component';
 import { ProjectModalFileInputComponent } from './components/project-modal-file-input/project-modal-file-input.component';
 import { DeletionModalComponent } from './components/deletion-modal/deletion-modal.component';
+import { InstagramApiKeySectionComponent } from './components/instagram-api-key-section/instagram-api-key-section.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DeletionModalComponent } from './components/deletion-modal/deletion-mod
     ProjectModalImageComponent,
     ProjectModalFileInputComponent,
     DeletionModalComponent,
+    InstagramApiKeySectionComponent,
   ],
   imports: [
     CommonModule,

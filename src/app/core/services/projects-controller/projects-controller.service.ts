@@ -33,18 +33,18 @@ export class ProjectsControllerService {
   private readonly COLLECTION_NAME = 'projects';
   private converter: FirestoreDataConverter<Project> = {
     toFirestore(project: WithFieldValue<Project>): DocumentData {
-      return project as DocumentData;
+      const data = project as DocumentData;
+      // When a document is replaced the id property has to be deleted
+      if ('id' in data) delete data['id'];
+      return data;
     },
     fromFirestore(
       snapshot: QueryDocumentSnapshot,
       options: SnapshotOptions
     ): Project {
       const data = snapshot.data(options)!;
-      console.log('from firestore trigger');
-      return {
-        ...data,
-        id: snapshot.id,
-      } as Project;
+      data['id'] = snapshot.id;
+      return data as Project;
     },
   };
   private col = collection(this.firestore, this.COLLECTION_NAME).withConverter(
@@ -55,13 +55,10 @@ export class ProjectsControllerService {
 
   async addProject(project: Project) {
     await this.replaceDataUrls(project);
-    const data: any = {
-      ...project,
-      createdAt: Timestamp.now(),
-      modifiedAt: Timestamp.now(),
-    };
-    delete data.id;
-    return addDoc(this.col, data);
+    // Overwrite Timestamps to current time
+    project.createdAt = Timestamp.now();
+    project.modifiedAt = Timestamp.now();
+    return addDoc(this.col, project);
   }
 
   private async replaceDataUrls(project: Project) {
@@ -91,7 +88,7 @@ export class ProjectsControllerService {
     return await getDownloadURL(fileRef);
   }
 
-  fetchAll(): Observable<Project[]> {
+  fetchAllProjects(): Observable<Project[]> {
     return new Observable((subscriber) => {
       onSnapshot(
         query(this.col),
@@ -105,19 +102,17 @@ export class ProjectsControllerService {
 
   async updateProject(project: Project) {
     const docRef = doc(this.firestore, `${this.COLLECTION_NAME}/${project.id}`);
-    const data: any = {
-      ...project,
-      modifiedAt: Timestamp.now(),
-    };
-    delete data.id;
+    project.modifiedAt = Timestamp.now();
+    const data = project as DocumentData;
+    // When a document is updated the id property has to be deleted explicitly. toFirestore is not
+    // triggered on an update
+    delete data['id'];
     await updateDoc(docRef, data);
   }
 
   async deleteProject(project: Project) {
     await this.deleteImages(project);
-    console.log('deleted images');
     await this.deleteDoc(project);
-    console.log('deleted doc');
   }
 
   private async deleteImages(project: Project) {
@@ -138,4 +133,6 @@ export class ProjectsControllerService {
     const docRef = doc(this.firestore, `${this.COLLECTION_NAME}/${project.id}`);
     await deleteDoc(docRef);
   }
+
+  removeId() {}
 }

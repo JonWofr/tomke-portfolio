@@ -19,4 +19,8 @@
     (clickProjectCardDeleteButton)="onClickProjectCardDeleteButton($event)"
     (clickAddProjectCard)="onClickAddProjectCard()"
   ></admin-dashboard-projects-section>
+  <admin-dashboard-instagram-api-key-section
+    [instagramApiKey]="instagramApiKey"
+    (clickSubmitButton)="onClickInstagramApiKeySectionSubmitButton($event)"
+  ></admin-dashboard-instagram-api-key-section>
 </main>
