@@ -5,5 +5,8 @@
       subtitle="Projekte"
     ></shared-section-header>
   </div>
-  <portfolio-project-gallery [projects]="projects"></portfolio-project-gallery>
+  <portfolio-project-gallery
+    *ngIf="projects"
+    [projects]="projects"
+  ></portfolio-project-gallery>
 </section>

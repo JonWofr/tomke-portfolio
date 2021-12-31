@@ -13,8 +13,6 @@ export const environment = {
     messagingSenderId: '866223817624',
   },
   production: false,
-  instagramBasicDisplayApiToken:
-    'IGQVJVMnk0WlJqYjRCNVZAHM09OOWo1TEpRYlhtX3VTajlCZAm85Rm1yNUkwUTliMHE4UEJUMXhXN0VxQUNzZAzhjWmJGNkpIMFhpOFdIVy0yY3RUQ1FxVGwtZAVR2ZAlJGNTg5dFpfWXhDSGdwVWxiM2JhTQZDZD',
 };
 
 /*
