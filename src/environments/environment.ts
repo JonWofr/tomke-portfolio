@@ -13,6 +13,7 @@ export const environment = {
     messagingSenderId: '866223817624',
   },
   production: false,
+  backendUrl: 'http://localhost:5001/tomke-portfolio/europe-west3',
 };
 
 /*
