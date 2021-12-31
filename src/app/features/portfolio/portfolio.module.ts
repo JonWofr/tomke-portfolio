@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { ProjectDetailSlideshowComponent } from './components/project-detail-slideshow/project-detail-slideshow.component';
 import { NewsSectionComponent } from './components/news-section/news-section.component';
+import { ImpressumComponent } from './pages/impressum/impressum.component';
+import { DataPrivacyComponent } from './pages/data-privacy/data-privacy.component';
 
 @NgModule({
   // Necessary for the usage of custom HTML elements (e.g. lottie-files) (which are not angular elements)
@@ -39,6 +41,8 @@ import { NewsSectionComponent } from './components/news-section/news-section.com
     ProjectDetailComponent,
     ProjectDetailSlideshowComponent,
     NewsSectionComponent,
+    ImpressumComponent,
+    DataPrivacyComponent,
   ],
   imports: [CommonModule, PortfolioRoutingModule, SharedModule, FormsModule],
 })

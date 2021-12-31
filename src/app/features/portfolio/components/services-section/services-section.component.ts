@@ -13,19 +13,19 @@ export class ServicesSectionComponent implements OnInit {
       iconUrl: '/assets/icons/photography-videography-icon.svg',
       title: ServiceTitle.PHOTOGRAPHY_AND_VIDEOGRAPHY,
       description:
-        'Esse excepteur elit amet in aliqua ut anim. 1Incididunt elit quis anim sunt aliquip tempor.',
+        'Durch meine jahrelange Erfahrung in den Bereichen Foto- und Videografie, kann ich von individuellen Katalogbildern bis hin zum umfangreichen Imagefilm alles bieten. ',
     },
     {
       iconUrl: '/assets/icons/social-media-management-icon.svg',
       title: ServiceTitle.SOCIAL_MEDIA_MANAGEMENT,
       description:
-        'Qui quis pariatur qui aliquip eiusmod reprehenderit ut id nostrud aliquip sunt. Minim ut consectetur exercitation in do irure duis ex laboris id incididunt pariatur occaecat.',
+        'Durch mein strategisches Know-how biete ich das gesamte Spektrum für einen erfolgreichen Social Media Auftritt aus einer Hand. Vom Konzept bis hin zum finalen Content und Management.',
     },
     {
       iconUrl: '/assets/icons/cooperations-icon.svg',
       title: ServiceTitle.COOPERATIONS,
       description:
-        'Pariatur proident enim minim excepteur consectetur Lorem nisi consectetur nisi. Ipsum Lorem ullamco sint eiusmod officia in tempor ut nulla est.',
+        'Sie wollen mit Ihrem Unternehmen mehr Reichweite erzielen und Produkte oder Dienstleistungen via Social Media bewerben? Durch eine Kooperation mit mir können sie Hunderttausende Menschen erreichen. Ich freue mich auf gemeinsame Zusammenarbeit.',
     },
   ];
 

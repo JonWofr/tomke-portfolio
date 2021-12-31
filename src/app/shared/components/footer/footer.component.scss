@@ -6,7 +6,14 @@
   background-color: $primary-background-color-dark;
   position: relative;
 
-  &__impressum-link {
+  &__links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__link {
     color: $secondary-font-color-light;
   }
 
@@ -15,11 +22,6 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  }
-
-  &__contact-information {
-    color: $secondary-font-color-light;
-    text-align: center;
   }
 
   &__author-note {
@@ -39,16 +41,17 @@
   }
 
   @include media-breakpoint-up("md") {
-    &__impressum-link {
+    &__links-container,
+    &__icons-container,
+    &__contact-information-container {
       flex: 1;
     }
 
-    &__icons-container {
-      flex: 1;
+    &__links-container {
+      align-items: flex-start;
     }
 
-    &__contact-information {
-      flex: 1;
+    &__contact-information-container {
       text-align: right;
     }
 
