@@ -47,6 +47,8 @@ export class ProjectsControllerService {
       snapshot: QueryDocumentSnapshot,
       options: SnapshotOptions
     ): Project {
+      const source = snapshot.metadata.fromCache ? 'local cache' : 'server';
+      console.log('Data came from ' + source);
       const data = snapshot.data(options)!;
       data['id'] = snapshot.id;
       return data as Project;
@@ -67,20 +69,21 @@ export class ProjectsControllerService {
   }
 
   private async replaceDataUrls(project: Project) {
-    if (this.isDataUrl(project.thumbnailImageUrl)) {
-      project.thumbnailImageUrl = await this.uploadDataUrl(
-        project.thumbnailImageUrl
-      );
-    }
-    await Promise.all(
-      project.slideshowImageUrls.map(async (slideShowImageUrl, index) => {
-        if (this.isDataUrl(slideShowImageUrl)) {
-          project.slideshowImageUrls[index] = await this.uploadDataUrl(
-            slideShowImageUrl
-          );
-        }
-      })
-    );
+    const replaceDataUrlPromises: Promise<string>[] = [];
+    replaceDataUrlPromises.push(this.replaceDataUrl(project.thumbnailImageUrl));
+    project.slideshowImageUrls.forEach((slideshowImageUrl) => {
+      replaceDataUrlPromises.push(this.replaceDataUrl(slideshowImageUrl));
+    });
+    const urls = await Promise.all(replaceDataUrlPromises);
+    project.thumbnailImageUrl = urls[0];
+    project.slideshowImageUrls = urls.slice(1);
+  }
+
+  private async replaceDataUrl(slideshowImageUrl: string) {
+    const url = this.isDataUrl(slideshowImageUrl)
+      ? await this.uploadDataUrl(slideshowImageUrl)
+      : slideshowImageUrl;
+    return url;
   }
 
   private isDataUrl(value: string) {

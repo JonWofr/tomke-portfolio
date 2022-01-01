@@ -32,7 +32,6 @@ export class AppRoutingModule {
           }, 50);
         } else if (event.anchor) {
           // Anchor navigation. Scroll-margin is set for all anchors in CSS.
-          console.log('anchor navigation');
           document
             .getElementById(event.anchor)
             ?.scrollIntoView({ behavior: 'smooth' });
