@@ -23,10 +23,6 @@ const routes: Routes = [
     path: 'data-privacy',
     component: DataPrivacyComponent,
   },
-  {
-    path: '**',
-    redirectTo: '',
-  },
 ];
 
 @NgModule({

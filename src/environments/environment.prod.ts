@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '866223817624',
   },
   production: true,
-  backendUrl: 'http://localhost:5001/portfolio-29c37/europe-west3',
+  backendUrl: 'https://europe-west3-tomke-portfolio.cloudfunctions.net',
 };
