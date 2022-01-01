@@ -1,22 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Project } from '@shared/models/project.model';
 import { ProjectsControllerService } from '@core/services/projects-controller/projects-controller.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'portfolio-projects-section',
   templateUrl: './projects-section.component.html',
   styleUrls: ['./projects-section.component.scss'],
 })
-export class ProjectsSectionComponent implements OnInit {
+export class ProjectsSectionComponent implements OnInit, OnDestroy {
   projects?: Project[];
+  projectsSubscription?: Subscription;
 
   constructor(private projectsController: ProjectsControllerService) {}
 
   ngOnInit(): void {
-    this.projectsController
+    this.projectsSubscription = this.projectsController
       .fetchAllProjects('createdAt', 'desc')
       .subscribe((projects) => {
+        console.log('projects section next function call', projects);
         this.projects = projects;
       });
+  }
+
+  ngOnDestroy(): void {
+    this.projectsSubscription?.unsubscribe();
   }
 }

@@ -1,4 +1,4 @@
-<main *ngIf="project" class="project-detail">
+<main *ngIf="project; else spinner" class="project-detail">
   <div class="container">
     <div>
       <button
@@ -79,4 +79,8 @@
     </div>
   </div>
 </main>
+<ng-template #spinner
+  ><shared-spinner [overlayColor]="SpinnerOverlayColor.WHITE"></shared-spinner>
+</ng-template>
+
 <shared-footer></shared-footer>

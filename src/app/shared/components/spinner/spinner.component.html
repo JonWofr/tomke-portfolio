@@ -1,7 +1,10 @@
 <div
   class="spinner__overlay"
   [ngClass]="{
-    'spinner__overlay--embedded': isEmbedded
+    'spinner__overlay--embedded': isEmbedded,
+    'spinner__overlay--transparent':
+      overlayColor == SpinnerOverlayColor.TRANSPARENT,
+    'spinner__overlay--white': overlayColor == SpinnerOverlayColor.WHITE
   }"
 >
   <svg

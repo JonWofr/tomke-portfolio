@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SpinnerOverlayColor } from '@shared/enums/spinner-overlay-color.enum';
 
 @Component({
   selector: 'shared-spinner',
@@ -6,8 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./spinner.component.scss'],
 })
 export class SpinnerComponent implements OnInit {
-  @Input() isEmbedded = false;
+  SpinnerOverlayColor = SpinnerOverlayColor;
 
+  @Input() isEmbedded = false;
+  @Input() overlayColor = SpinnerOverlayColor.TRANSPARENT;
   constructor() {}
 
   ngOnInit(): void {}

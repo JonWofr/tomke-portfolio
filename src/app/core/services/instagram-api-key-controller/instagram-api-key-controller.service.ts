@@ -4,13 +4,13 @@ import {
   DocumentData,
   Firestore,
   FirestoreDataConverter,
-  onSnapshot,
   query,
   QueryDocumentSnapshot,
   SnapshotOptions,
   WithFieldValue,
   doc,
   setDoc,
+  collectionData,
 } from '@angular/fire/firestore';
 import { InstagramApiKey } from '@shared/models/instagram-api-key.model';
 import { Observable } from 'rxjs';
@@ -50,14 +50,6 @@ export class InstagramApiKeyControllerService {
   }
 
   fetchAllInstagramApiKeys(): Observable<InstagramApiKey[]> {
-    return new Observable((subscriber) => {
-      onSnapshot(
-        query(this.col),
-        (querySnapshot) =>
-          subscriber.next(querySnapshot.docs.map((doc) => doc.data())),
-        subscriber.error,
-        subscriber.complete
-      );
-    });
+    return collectionData(this.col);
   }
 }

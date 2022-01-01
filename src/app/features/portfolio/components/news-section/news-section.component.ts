@@ -23,6 +23,10 @@ export class NewsSectionComponent implements OnInit, AfterViewInit {
       .fetchAllInstagramApiKeys()
       .pipe(first())
       .subscribe((instagramApiKeys) => {
+        console.log(
+          'home instagram api keys next function call',
+          instagramApiKeys
+        );
         const instafeedContainerElement = document.querySelector('.instafeed');
         if (instafeedContainerElement) {
           const instafeed = new Instafeed({

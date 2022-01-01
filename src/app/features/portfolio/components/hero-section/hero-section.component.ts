@@ -65,7 +65,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     entries: IntersectionObserverEntry[]
   ) {
     entries.forEach((entry) => {
-      console.log('triggered', entry);
       // No animation should happen when the button is initialised
       if (this.isContactButtonIntersecting === undefined) {
         this.isContactButtonIntersecting = entry.isIntersecting;

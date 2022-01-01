@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Project } from '@shared/models/project.model';
 import { ToastControllerService } from '@features/admin-dashboard/services/toast-controller/toast-controller.service';
 import { ToastType } from '@features/admin-dashboard/enums/toast-type.enum';
@@ -6,18 +6,20 @@ import { ProjectsControllerService } from '@core/services/projects-controller/pr
 import { InstagramApiKeyControllerService } from '@core/services/instagram-api-key-controller/instagram-api-key-controller.service';
 import { InstagramApiKey } from '@shared/models/instagram-api-key.model';
 import { SpinnerControllerService } from '@features/admin-dashboard/services/spinner-controller/spinner-controller.service';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'admin-dashboard-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   projects?: Project[];
   instagramApiKey?: InstagramApiKey;
   selectedProject?: Project;
   shouldShowProjectModal = false;
   shouldShowDeletionModal = false;
+  private endSubscriptions = new Subject<void>();
 
   constructor(
     private projectsController: ProjectsControllerService,
@@ -31,22 +33,38 @@ export class HomeComponent implements OnInit {
     this.fetchInstagramApiKey();
   }
 
+  ngOnDestroy(): void {
+    this.endSubscriptions.next();
+    this.endSubscriptions.complete();
+  }
+
   fetchAllProjects() {
-    this.projectsController.fetchAllProjects().subscribe({
-      next: (projects) => {
-        this.projects = projects;
-      },
-      error: this.showErrorToast,
-    });
+    this.projectsController
+      .fetchAllProjects()
+      .pipe(takeUntil(this.endSubscriptions))
+      .subscribe({
+        next: (projects) => {
+          console.log('home projects next function call', projects);
+          this.projects = projects;
+        },
+        error: this.showErrorToast,
+      });
   }
 
   fetchInstagramApiKey() {
-    this.instagramApiKeysController.fetchAllInstagramApiKeys().subscribe({
-      next: (instagramApiKeys) => {
-        this.instagramApiKey = instagramApiKeys[0];
-      },
-      error: this.showErrorToast,
-    });
+    this.instagramApiKeysController
+      .fetchAllInstagramApiKeys()
+      .pipe(takeUntil(this.endSubscriptions))
+      .subscribe({
+        next: (instagramApiKeys) => {
+          console.log(
+            'home instagram api keys next function call',
+            instagramApiKeys
+          );
+          this.instagramApiKey = instagramApiKeys[0];
+        },
+        error: this.showErrorToast,
+      });
   }
 
   onClickAddProjectCard() {

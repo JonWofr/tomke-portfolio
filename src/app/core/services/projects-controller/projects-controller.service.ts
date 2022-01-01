@@ -21,9 +21,10 @@ import {
   doc,
   Timestamp,
   query,
-  onSnapshot,
   deleteDoc,
   orderBy,
+  collectionData,
+  docData,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -96,30 +97,17 @@ export class ProjectsControllerService {
     sortBy: SortBy = 'createdAt',
     sortDirection: SortDirection = 'asc'
   ): Observable<Project[]> {
-    return new Observable((subscriber) => {
-      onSnapshot(
-        query(this.col, orderBy(sortBy, sortDirection)),
-        (querySnapshot) =>
-          subscriber.next(querySnapshot.docs.map((doc) => doc.data())),
-        subscriber.error,
-        subscriber.complete
-      );
-    });
+    const q = query(this.col, orderBy(sortBy, sortDirection));
+    return collectionData(q);
   }
 
   fetchOneProject(id: string): Observable<Project | undefined> {
-    return new Observable((subscriber) => {
-      onSnapshot(
-        doc(this.col, id),
-        (doc) => subscriber.next(doc.data()),
-        subscriber.error,
-        subscriber.complete
-      );
-    });
+    const docRef = doc(this.col, id);
+    return docData(docRef);
   }
 
   async updateProject(project: Project) {
-    const docRef = doc(this.firestore, `${this.COLLECTION_NAME}/${project.id}`);
+    const docRef = doc(this.col, project.id);
     project.modifiedAt = Timestamp.now();
     const data = project as DocumentData;
     // When a document is updated the id property has to be deleted explicitly. toFirestore is not
@@ -135,7 +123,8 @@ export class ProjectsControllerService {
 
   private async deleteImages(project: Project) {
     const deletionPromises: Promise<void>[] = [];
-    deletionPromises.push(this.deleteImage(project.thumbnailImageUrl));
+    if (project.thumbnailImageUrl)
+      deletionPromises.push(this.deleteImage(project.thumbnailImageUrl));
     project.slideshowImageUrls.forEach((slideshowImageUrl) => {
       deletionPromises.push(this.deleteImage(slideshowImageUrl));
     });
@@ -148,9 +137,7 @@ export class ProjectsControllerService {
   }
 
   private async deleteDoc(project: Project) {
-    const docRef = doc(this.firestore, `${this.COLLECTION_NAME}/${project.id}`);
+    const docRef = doc(this.col, project.id);
     await deleteDoc(docRef);
   }
-
-  removeId() {}
 }
