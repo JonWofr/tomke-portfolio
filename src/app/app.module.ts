@@ -17,10 +17,12 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
+    // Feature modules have to be loaded before the global routing configuration
+    // Otherwise the global wildcard route would be applied all the time
     PortfolioModule,
     AdminDashboardModule,
+    AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

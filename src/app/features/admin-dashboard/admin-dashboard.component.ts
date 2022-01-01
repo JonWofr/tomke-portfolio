@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subject, Subscription, take, takeUntil } from 'rxjs';
 import { ToastType } from './enums/toast-type.enum';
 import { Toast } from './models/toast.model';
+import { SpinnerControllerService } from './services/spinner-controller/spinner-controller.service';
 import { ToastControllerService } from './services/toast-controller/toast-controller.service';
 
 @Component({
@@ -13,20 +14,32 @@ export class AdminDashboardComponent implements OnInit, OnDestroy {
   ToastType = ToastType;
 
   currentToast?: Toast;
+  shouldShowSpinner = false;
   private toastQueue: Toast[] = [];
   private canShowToast = true;
-  private toastSubscription?: Subscription;
+  private endSubscriptions = new Subject<void>();
 
-  constructor(private toastController: ToastControllerService) {}
+  constructor(
+    private toastController: ToastControllerService,
+    private spinnerController: SpinnerControllerService
+  ) {}
 
   ngOnInit(): void {
-    this.toastSubscription = this.toastController
+    this.toastController
       .getSubject()
+      .pipe(takeUntil(this.endSubscriptions))
       .subscribe((toast) => this.handleToastAnimation(toast));
+    this.spinnerController
+      .getSubject()
+      .pipe(takeUntil(this.endSubscriptions))
+      .subscribe((shouldShowSpinner) => {
+        this.shouldShowSpinner = shouldShowSpinner;
+      });
   }
 
   ngOnDestroy(): void {
-    this.toastSubscription?.unsubscribe();
+    this.endSubscriptions.next();
+    this.endSubscriptions.complete();
   }
 
   async handleToastAnimation(toast: Toast) {

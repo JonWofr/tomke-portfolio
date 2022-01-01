@@ -48,4 +48,10 @@
   &__retry-button {
     margin-top: 2rem;
   }
+
+  &__spinner-container {
+    // The spinner height is 70px less than the lottie animations height.
+    // This centers the spinner.
+    margin-top: 35px;
+  }
 }

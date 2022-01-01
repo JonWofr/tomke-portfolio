@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 import { Router, RouterModule, Routes, Scroll, Event } from '@angular/router';
 import { filter } from 'rxjs';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '**',
+    redirectTo: '',
+  },
+];
 
 @NgModule({
   // onSameUrlNavigation has to be enabled. Otherwise anchor scrolling to the same

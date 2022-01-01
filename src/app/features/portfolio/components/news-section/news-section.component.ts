@@ -32,7 +32,7 @@ export class NewsSectionComponent implements OnInit, AfterViewInit {
           <div>
             <div class="padding-top-hack padding-top-hack--1-by-1">
               <div class="padding-top-hack__inner-container">
-                <a class="instafeed__link" href="{{link}}">
+                <a class="instafeed__link" href="{{link}}" target="_blank">
                   <img class="instafeed__image" title="{{caption}}" src="{{image}}" />
                 </a>
               </div>
