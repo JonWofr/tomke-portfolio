@@ -5,6 +5,7 @@ import { ToastType } from '@features/admin-dashboard/enums/toast-type.enum';
 import { ProjectsControllerService } from '@core/services/projects-controller/projects-controller.service';
 import { InstagramApiKeyControllerService } from '@core/services/instagram-api-key-controller/instagram-api-key-controller.service';
 import { InstagramApiKey } from '@shared/models/instagram-api-key.model';
+import { SpinnerControllerService } from '@features/admin-dashboard/services/spinner-controller/spinner-controller.service';
 
 @Component({
   selector: 'admin-dashboard-home',
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private projectsController: ProjectsControllerService,
     private toastController: ToastControllerService,
-    private instagramApiKeysController: InstagramApiKeyControllerService
+    private instagramApiKeysController: InstagramApiKeyControllerService,
+    private spinnerController: SpinnerControllerService
   ) {}
 
   ngOnInit(): void {
@@ -32,27 +34,19 @@ export class HomeComponent implements OnInit {
   fetchAllProjects() {
     this.projectsController.fetchAllProjects().subscribe({
       next: (projects) => {
-        console.log(projects);
         this.projects = projects;
       },
-      error: (err) => {
-        this.toastController.showToast({
-          type: ToastType.ERROR,
-          message: err,
-        });
-      },
-      complete: () => {
-        console.log('complete');
-      },
+      error: this.showErrorToast,
     });
   }
 
   fetchInstagramApiKey() {
-    this.instagramApiKeysController
-      .fetchAllInstagramApiKeys()
-      .subscribe((instagramApiKeys) => {
+    this.instagramApiKeysController.fetchAllInstagramApiKeys().subscribe({
+      next: (instagramApiKeys) => {
         this.instagramApiKey = instagramApiKeys[0];
-      });
+      },
+      error: this.showErrorToast,
+    });
   }
 
   onClickAddProjectCard() {
@@ -65,7 +59,7 @@ export class HomeComponent implements OnInit {
     this.toggleProjectModal();
   }
 
-  async onClickProjectCardDeleteButton(selectedProject: Project) {
+  onClickProjectCardDeleteButton(selectedProject: Project) {
     this.selectedProject = selectedProject;
     this.toggleDeletionModal();
   }
@@ -76,27 +70,27 @@ export class HomeComponent implements OnInit {
 
   async onClickProjectModalAddButton(project: Project) {
     try {
+      this.spinnerController.toggleSpinner();
       await this.projectsController.addProject(project);
       this.toggleProjectModal();
-      this.toastController.showToast({
-        type: ToastType.SUCCESS,
-        message: 'Neues Projekt hinzugefügt!',
-      });
+      this.showSuccessToast(`Projekt ${project.title} wurde hinzugefügt!`);
     } catch (err) {
-      this.handleCrudError(err);
+      this.showErrorToast(err);
+    } finally {
+      this.spinnerController.toggleSpinner();
     }
   }
 
   async onClickProjectModalSaveButton(project: Project) {
     try {
+      this.spinnerController.toggleSpinner();
       await this.projectsController.updateProject(project);
       this.toggleProjectModal();
-      this.toastController.showToast({
-        type: ToastType.SUCCESS,
-        message: `Projekt ${project.title} wurde verändert!`,
-      });
+      this.showSuccessToast(`Projekt ${project.title} wurde verändert!`);
     } catch (err) {
-      this.handleCrudError(err);
+      this.showErrorToast(err);
+    } finally {
+      this.spinnerController.toggleSpinner();
     }
   }
 
@@ -108,23 +102,32 @@ export class HomeComponent implements OnInit {
     this.shouldShowDeletionModal = !this.shouldShowDeletionModal;
   }
 
-  private handleCrudError(err: unknown) {
+  private showErrorToast(err: unknown) {
     this.toastController.showToast({
       type: ToastType.ERROR,
       message: err as string,
     });
   }
 
+  private showSuccessToast(message: string) {
+    this.toastController.showToast({
+      type: ToastType.SUCCESS,
+      message,
+    });
+  }
+
   async onClickDeletionModalDeleteButton() {
     try {
+      this.spinnerController.toggleSpinner();
       await this.projectsController.deleteProject(this.selectedProject!);
       this.toggleDeletionModal();
-      this.toastController.showToast({
-        type: ToastType.SUCCESS,
-        message: `Projekt ${this.selectedProject!.title} wurde gelöscht`,
-      });
+      this.showSuccessToast(
+        `Projekt ${this.selectedProject!.title} wurde gelöscht!`
+      );
     } catch (err) {
-      this.handleCrudError(err);
+      this.showErrorToast(err);
+    } finally {
+      this.spinnerController.toggleSpinner();
     }
   }
 
@@ -136,15 +139,17 @@ export class HomeComponent implements OnInit {
     instagramApiKey: InstagramApiKey
   ) {
     try {
+      this.spinnerController.toggleSpinner();
       await this.instagramApiKeysController.replaceInstagramApiKey(
         instagramApiKey
       );
-      this.toastController.showToast({
-        type: ToastType.SUCCESS,
-        message: `Instagram API key erfolgreich ausgetauscht`,
-      });
+      this.showSuccessToast(
+        `Instagram API key wurde erfolgreich ausgetauscht!`
+      );
     } catch (err) {
-      this.handleCrudError(err);
+      this.showErrorToast(err);
+    } finally {
+      this.spinnerController.toggleSpinner();
     }
   }
 }

@@ -6,6 +6,7 @@ import { SocialMediaChannelsComponent } from './components/social-media-channels
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 /**
  * This module contains all components, pipes etc. that are shared across the
@@ -20,6 +21,7 @@ import { SectionHeaderComponent } from './components/section-header/section-head
     SocialMediaChannelsComponent,
     HeaderComponent,
     SectionHeaderComponent,
+    SpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { SectionHeaderComponent } from './components/section-header/section-head
     SocialMediaChannelsComponent,
     HeaderComponent,
     SectionHeaderComponent,
+    SpinnerComponent,
   ],
 })
 export class SharedModule {}
