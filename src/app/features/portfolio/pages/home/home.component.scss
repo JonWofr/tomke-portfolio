@@ -1,8 +1,4 @@
 .anchor-element {
-  // For correct active section recognition the scroll-margin-top is less than the actual margin-top of all intersection-observers.
-  // By that there is a little buffer for incorrect scroll-restoration etc.
-  scroll-margin-top: 60px;
-  // scroll-margin-top gets ignored by Safari without the anchor element being
-  // display: block.
+  // Without anchor elements being block elements problems occurr on Safari
   display: block;
 }

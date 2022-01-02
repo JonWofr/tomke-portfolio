@@ -4,6 +4,39 @@
       title="Meine letzten Posts"
       subtitle="News"
     ></shared-section-header>
-    <div class="instafeed"></div>
+    <div class="news__instafeed-container">
+      <div class="padding-top-hack padding-top-hack--3-by-2">
+        <div class="padding-top-hack__inner-container">
+          <ng-container *ngIf="instagramPosts; else spinner">
+            <div class="instafeed">
+              <div *ngFor="let instagramPost of instagramPosts" sharedFadeIn>
+                <div class="padding-top-hack padding-top-hack--1-by-1">
+                  <div class="padding-top-hack__inner-container">
+                    <a
+                      class="instafeed__link"
+                      [href]="instagramPost.link"
+                      target="_blank"
+                    >
+                      <img
+                        class="instafeed__image"
+                        [title]="instagramPost.caption"
+                        [src]="instagramPost.image"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-template #spinner>
+            <div class="news__spinner-container">
+              <shared-spinner [isEmbedded]="true"></shared-spinner>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+<!-- This element is required by the instafeed library -->
+<div id="instafeed" hidden></div>

@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enum';
 import { SectionId } from '@shared/enums/section-id.enum';
 
@@ -7,7 +8,7 @@ import { SectionId } from '@shared/enums/section-id.enum';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   SectionId = SectionId;
 
   headerBackgroundColor?: HeaderBackgroundColor;
@@ -46,13 +47,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
     },
   ];
   activeSectionId?: SectionId;
+  sectionsIntersectionObserver?: IntersectionObserver;
 
-  constructor() {}
+  constructor(title: Title) {
+    title.setTitle('Tomke Nils');
+  }
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.initialiseIntersectionObserver(
+    this.sectionsIntersectionObserver = this.initialiseIntersectionObserver(
       '.anchor-element',
       this.sectionsIntersectionObserverCallback.bind(this),
       {
@@ -60,14 +64,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         threshold: 0,
       }
     );
-    this.initialiseIntersectionObserver(
-      '.fade-in',
-      this.fadingElementsIntersectionObserverCallback.bind(this),
-      {
-        rootMargin: '-64px 0px -64px 0px',
-        threshold: 0,
-      }
-    );
+  }
+
+  ngOnDestroy(): void {
+    this.sectionsIntersectionObserver?.disconnect();
   }
 
   initialiseIntersectionObserver(
@@ -81,6 +81,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     );
     const elements = document.querySelectorAll(elementsQuerySelector);
     elements.forEach((element) => intersectionObserver.observe(element));
+    return intersectionObserver;
   }
 
   sectionsIntersectionObserverCallback(entries: IntersectionObserverEntry[]) {
@@ -113,17 +114,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.headerBackgroundColor = isIntersecting
       ? HeaderBackgroundColor.TRANSPARENT
       : HeaderBackgroundColor.WHITE;
-  }
-
-  fadingElementsIntersectionObserverCallback(
-    entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver
-  ) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in--visible');
-        observer.unobserve(entry.target);
-      }
-    });
   }
 }

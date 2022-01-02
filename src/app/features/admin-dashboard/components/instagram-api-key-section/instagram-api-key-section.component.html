@@ -12,7 +12,7 @@
       (ngSubmit)="onSubmit()"
     >
       <div class="form__body">
-        <div class="form__group">
+        <div class="form__group" sharedFadeIn>
           <input
             [(ngModel)]="instagramApiKey.key"
             #key="ngModel"
@@ -40,6 +40,7 @@
           type="submit"
           class="button button--primary-accent"
           [disabled]="apiKeyForm.invalid"
+          sharedFadeIn
         >
           <svg
             class="button__icon button__icon--light"

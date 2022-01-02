@@ -44,7 +44,6 @@ export class ProjectGalleryComponent implements OnInit, AfterViewInit {
       direction: 'horizontal',
       emulateScroll: true,
       onClick: (state, event) => {
-        //
         if (
           !state.isDragging &&
           (event.target as HTMLDivElement).className === 'project-gallery-item'

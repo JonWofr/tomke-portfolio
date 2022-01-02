@@ -13,14 +13,21 @@ const routes: Routes = [
 @NgModule({
   // onSameUrlNavigation has to be enabled. Otherwise anchor scrolling to the same
   // section twice in a row does not work.
-  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      onSameUrlNavigation: 'reload',
+      // Offset is a bit less than the actual header height. By that there is a buffer for incorrect
+      // scroll position restoration and anchor scrolling.
+      scrollOffset: [0, 60],
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
   constructor(router: Router, viewportScroller: ViewportScroller) {
     // Custom implementation for working scroll position restoration at backwards navigation and anchor scrolling.
-    // Without custom implementation it's tedious to enable smooth scrolling for anchor scrolling only and somehow scroll position
-    // restoration is not working properly. Although it is not working 100% with this solution either.
+    // Without custom implementation scorll position restoration and anchor scrolling is
+    // not working properly. Although it is not working 100% with this solution either.
     router.events
       .pipe(filter((event: Event): event is Scroll => event instanceof Scroll))
       .subscribe((event) => {
@@ -29,13 +36,13 @@ export class AppRoutingModule {
           const position = event.position;
           setTimeout(() => {
             viewportScroller.scrollToPosition(position);
-          }, 50);
+          });
         } else if (event.anchor) {
-          // Anchor navigation. Scroll-margin is set for all anchors in CSS.
-          console.log('anchor navigation');
-          document
-            .getElementById(event.anchor)
-            ?.scrollIntoView({ behavior: 'smooth' });
+          // Anchor navigation. Small timeout because otherwise anchors do not work all the time.
+          const anchor = event.anchor;
+          setTimeout(() => {
+            viewportScroller.scrollToAnchor(anchor);
+          });
         } else {
           // Forward navigation
           viewportScroller.scrollToPosition([0, 0]);

@@ -1,5 +1,5 @@
 <div class="project-grid">
-  <div *ngFor="let project of projects">
+  <div *ngFor="let project of projects" sharedFadeIn>
     <admin-dashboard-project-card
       [project]="project"
       [shouldShowContextMenu]="project.id === contextMenuProjectId"
@@ -8,7 +8,7 @@
       (clickDeleteButton)="clickProjectCardDeleteButton.emit(project)"
     ></admin-dashboard-project-card>
   </div>
-  <div>
+  <div sharedFadeIn>
     <admin-dashboard-add-project-card
       (clickAddProjectCard)="clickAddProjectCard.emit()"
     ></admin-dashboard-add-project-card>

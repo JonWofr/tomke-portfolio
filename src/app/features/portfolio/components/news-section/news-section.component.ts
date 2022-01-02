@@ -12,6 +12,8 @@ declare var Instafeed: any;
   styleUrls: ['./news-section.component.scss'],
 })
 export class NewsSectionComponent implements OnInit, AfterViewInit {
+  instagramPosts?: any[];
+
   constructor(
     private instagramApiKeyController: InstagramApiKeyControllerService
   ) {}
@@ -23,26 +25,19 @@ export class NewsSectionComponent implements OnInit, AfterViewInit {
       .fetchAllInstagramApiKeys()
       .pipe(first())
       .subscribe((instagramApiKeys) => {
-        const instafeedContainerElement = document.querySelector('.instafeed');
-        if (instafeedContainerElement) {
-          const instafeed = new Instafeed({
-            accessToken: instagramApiKeys[0].key,
-            limit: 6,
-            template: `
-          <div>
-            <div class="padding-top-hack padding-top-hack--1-by-1">
-              <div class="padding-top-hack__inner-container">
-                <a class="instafeed__link" href="{{link}}" target="_blank">
-                  <img class="instafeed__image" title="{{caption}}" src="{{image}}" />
-                </a>
-              </div>
-            </div>
-          </div>
-        `,
-            target: instafeedContainerElement,
-          });
-          instafeed.run();
-        }
+        const instafeed = new Instafeed({
+          accessToken: instagramApiKeys[0].key,
+          limit: 6,
+          // Mock disables rendering
+          mock: true,
+          transform: (instagramPost: any) => {
+            if (!this.instagramPosts) {
+              this.instagramPosts = [];
+            }
+            this.instagramPosts.push(instagramPost);
+          },
+        });
+        instafeed.run();
       });
   }
 }

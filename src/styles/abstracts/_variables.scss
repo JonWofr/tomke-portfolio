@@ -21,10 +21,10 @@ $overlay-color: #000000b3;
 $muted-color: #c4c4c4;
 $form-control-background-color: #ececec;
 $form-control-placeholder-color: #757575;
-$success-color: hsl(120, 50%, 60%);
-$info-color: hsl(240, 50%, 60%);
-$warn-color: hsl(60, 50%, 60%);
-$error-color: hsl(0, 50%, 60%);
+$success-color: #66cc66;
+$info-color: #6666cc;
+$warn-color: #cccc66;
+$error-color: #cc6666;
 
 // Bootstrap breakpoints
 $grid-breakpoints: (
@@ -61,7 +61,7 @@ $secondary-font-bold: "Railway-Bold";
 $default-border-radius: 12px;
 $default-button-hitbox: 0.5rem;
 $default-box-shadow-spread: 4px;
-$default-box-shadow: 0 4px $default-box-shadow-spread 0 hsla(0, 0, 0, 0.25);
+$default-box-shadow: 0 4px $default-box-shadow-spread 0 #00000040;
 $default-header-height: 64px;
 $default-vertical-section-padding: 5rem;
 

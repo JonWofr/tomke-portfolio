@@ -1,12 +1,13 @@
-<main *ngIf="project" class="project-detail">
+<main *ngIf="project; else spinner" class="project-detail">
   <div class="container">
-    <div>
-      <button
+    <div class="project-detail__breadcrumbs-container">
+      <a
         class="subtitle project-detail__breadcrumb"
-        (click)="navigateBack()"
+        routerLink="/"
+        [fragment]="SectionId.PROJECTS"
       >
         Projekte
-      </button>
+      </a>
       <span class="subtitle project-detail__breadcrumb"> / </span>
       <span class="subtitle project-detail__breadcrumb">
         {{ project.title }}
@@ -79,4 +80,8 @@
     </div>
   </div>
 </main>
+<ng-template #spinner
+  ><shared-spinner [overlayColor]="SpinnerOverlayColor.WHITE"></shared-spinner>
+</ng-template>
+
 <shared-footer></shared-footer>

@@ -21,9 +21,10 @@ import {
   doc,
   Timestamp,
   query,
-  onSnapshot,
   deleteDoc,
   orderBy,
+  collectionData,
+  docData,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -66,20 +67,21 @@ export class ProjectsControllerService {
   }
 
   private async replaceDataUrls(project: Project) {
-    if (this.isDataUrl(project.thumbnailImageUrl)) {
-      project.thumbnailImageUrl = await this.uploadDataUrl(
-        project.thumbnailImageUrl
-      );
-    }
-    await Promise.all(
-      project.slideshowImageUrls.map(async (slideShowImageUrl, index) => {
-        if (this.isDataUrl(slideShowImageUrl)) {
-          project.slideshowImageUrls[index] = await this.uploadDataUrl(
-            slideShowImageUrl
-          );
-        }
-      })
-    );
+    const replaceDataUrlPromises: Promise<string>[] = [];
+    replaceDataUrlPromises.push(this.replaceDataUrl(project.thumbnailImageUrl));
+    project.slideshowImageUrls.forEach((slideshowImageUrl) => {
+      replaceDataUrlPromises.push(this.replaceDataUrl(slideshowImageUrl));
+    });
+    const urls = await Promise.all(replaceDataUrlPromises);
+    project.thumbnailImageUrl = urls[0];
+    project.slideshowImageUrls = urls.slice(1);
+  }
+
+  private async replaceDataUrl(slideshowImageUrl: string) {
+    const url = this.isDataUrl(slideshowImageUrl)
+      ? await this.uploadDataUrl(slideshowImageUrl)
+      : slideshowImageUrl;
+    return url;
   }
 
   private isDataUrl(value: string) {
@@ -96,31 +98,19 @@ export class ProjectsControllerService {
     sortBy: SortBy = 'createdAt',
     sortDirection: SortDirection = 'asc'
   ): Observable<Project[]> {
-    return new Observable((subscriber) => {
-      onSnapshot(
-        query(this.col, orderBy(sortBy, sortDirection)),
-        (querySnapshot) =>
-          subscriber.next(querySnapshot.docs.map((doc) => doc.data())),
-        subscriber.error,
-        subscriber.complete
-      );
-    });
+    const q = query(this.col, orderBy(sortBy, sortDirection));
+    return collectionData(q);
   }
 
   fetchOneProject(id: string): Observable<Project | undefined> {
-    return new Observable((subscriber) => {
-      onSnapshot(
-        doc(this.col, id),
-        (doc) => subscriber.next(doc.data()),
-        subscriber.error,
-        subscriber.complete
-      );
-    });
+    const docRef = doc(this.col, id);
+    return docData(docRef);
   }
 
   async updateProject(project: Project) {
-    const docRef = doc(this.firestore, `${this.COLLECTION_NAME}/${project.id}`);
+    await this.replaceDataUrls(project);
     project.modifiedAt = Timestamp.now();
+    const docRef = doc(this.col, project.id);
     const data = project as DocumentData;
     // When a document is updated the id property has to be deleted explicitly. toFirestore is not
     // triggered on an update
@@ -135,7 +125,8 @@ export class ProjectsControllerService {
 
   private async deleteImages(project: Project) {
     const deletionPromises: Promise<void>[] = [];
-    deletionPromises.push(this.deleteImage(project.thumbnailImageUrl));
+    if (project.thumbnailImageUrl)
+      deletionPromises.push(this.deleteImage(project.thumbnailImageUrl));
     project.slideshowImageUrls.forEach((slideshowImageUrl) => {
       deletionPromises.push(this.deleteImage(slideshowImageUrl));
     });
@@ -148,9 +139,7 @@ export class ProjectsControllerService {
   }
 
   private async deleteDoc(project: Project) {
-    const docRef = doc(this.firestore, `${this.COLLECTION_NAME}/${project.id}`);
+    const docRef = doc(this.col, project.id);
     await deleteDoc(docRef);
   }
-
-  removeId() {}
 }

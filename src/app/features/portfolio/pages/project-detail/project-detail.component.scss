@@ -5,16 +5,19 @@
   padding-top: 2rem;
   padding-bottom: 5rem;
 
+  &__breadcrumbs-container {
+    margin-bottom: 1rem;
+  }
+
   &__breadcrumb {
     background-image: $primary-accent-color;
     color: transparent;
     background-clip: text;
     font-family: $primary-font-bold;
-    margin-bottom: 1rem;
   }
 
   &__slideshow-container {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   &__text-information-container {
@@ -35,6 +38,8 @@
 
   &__title {
     text-align: center;
+    line-height: 1.125;
+    margin-bottom: 1rem;
   }
 
   &__paragraph {
@@ -71,7 +76,6 @@
       // line-height is decreased to 1 so that the title alligns with the other h2
       // headings
       line-height: 1;
-      margin-bottom: calc((3.75rem * 1.5 - 3.75rem) / 2);
     }
 
     &__paragraph {

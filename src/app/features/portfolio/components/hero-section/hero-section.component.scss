@@ -5,17 +5,13 @@
 .hero {
   height: 90vh;
   min-height: 500px;
-  background-image: url("/assets/images/hero-background-image-mobile.jpeg");
+  background-image: url("/assets/images/hero-background-image-mobile-xs.jpg");
   background-position-x: 40%;
   background-size: cover;
 
   &__overlay {
     height: 100%;
-    background-image: linear-gradient(
-      90deg,
-      hsla(0, 0, 0, 0.7),
-      hsla(0, 0, 50, 0.7)
-    );
+    background-image: linear-gradient(90deg, #000000b3, #808080b3);
   }
 
   &__content-container {
@@ -100,12 +96,16 @@
     display: none;
   }
 
+  @include media-breakpoint-up("sm") {
+    background-image: url("/assets/images/hero-background-image-mobile-s.jpg");
+  }
+
   @include media-breakpoint-up("md") {
-    background-image: url("/assets/images/hero-background-image-tablet.jpg");
+    background-image: url("/assets/images/hero-background-image-tablet-md.jpg");
     background-position-y: 65%;
 
     &__content-container {
-      top: 25%;
+      top: 30%;
     }
 
     &__contact-button {
@@ -119,6 +119,8 @@
     }
   }
   @include media-breakpoint-up("lg") {
+    background-image: url("/assets/images/hero-background-image-tablet-lg.jpg");
+
     &__contact-button {
       right: calc(100% - 8rem - (100% - map.get($container-widths, "lg")) / 2);
     }
@@ -129,14 +131,22 @@
     }
   }
   @include media-breakpoint-up("xl") {
+    background-image: url("/assets/images/hero-background-image-tablet-xl.jpg");
+
     &__contact-button {
       right: calc(100% - 8rem - (100% - map.get($container-widths, "xl")) / 2);
     }
   }
   @include media-breakpoint-up("xxl") {
+    background-image: url("/assets/images/hero-background-image-tablet-xxl.jpg");
+
     &__contact-button {
       right: calc(100% - 8rem - (100% - map.get($container-widths, "xxl")) / 2);
     }
+  }
+
+  @media only screen and (min-width: 1921px) {
+    background-image: url("/assets/images/hero-background-image-tablet-xxxl.jpg");
   }
 }
 

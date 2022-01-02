@@ -5,6 +5,8 @@
   padding: initial;
   border-top-right-radius: 0;
   overflow: hidden;
+  position: relative;
+  z-index: 0;
 
   &__item:not(:first-child) {
     border-top: 1px solid #e7e7e7;

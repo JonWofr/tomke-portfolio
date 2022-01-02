@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   EventEmitter,
+  OnDestroy,
   OnInit,
   Output,
 } from '@angular/core';
@@ -12,7 +13,7 @@ import { SectionId } from '@shared/enums/section-id.enum';
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss'],
 })
-export class HeroSectionComponent implements OnInit, AfterViewInit {
+export class HeroSectionComponent implements OnInit, AfterViewInit, OnDestroy {
   SectionId = SectionId;
 
   @Output() changeHeroTitleIntersection = new EventEmitter<boolean>();
@@ -24,22 +25,30 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     rootMargin: '-64px 0px 0px 0px',
     threshold: 1,
   };
+  titleIntersectionObserver?: IntersectionObserver;
+  contactButtonIntersectionObserver?: IntersectionObserver;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.initialiseIntersectionObserver(
+    this.titleIntersectionObserver = this.initialiseIntersectionObserver(
       '.hero__title',
       this.titleIntersectionObserverCallback.bind(this),
       this.intersectionObserverOptions
     );
-    this.initialiseIntersectionObserver(
-      '.hero__contact-button-trigger',
-      this.contactButtonIntersectionObserverCallback.bind(this),
-      this.intersectionObserverOptions
-    );
+    this.contactButtonIntersectionObserver =
+      this.initialiseIntersectionObserver(
+        '.hero__contact-button-trigger',
+        this.contactButtonIntersectionObserverCallback.bind(this),
+        this.intersectionObserverOptions
+      );
+  }
+
+  ngOnDestroy(): void {
+    this.titleIntersectionObserver?.disconnect();
+    this.contactButtonIntersectionObserver?.disconnect();
   }
 
   initialiseIntersectionObserver(
@@ -53,6 +62,7 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     );
     const elements = document.querySelectorAll(elementsQuerySelector);
     elements.forEach((element) => intersectionObserver.observe(element));
+    return intersectionObserver;
   }
 
   titleIntersectionObserverCallback(entries: IntersectionObserverEntry[]) {
@@ -65,7 +75,6 @@ export class HeroSectionComponent implements OnInit, AfterViewInit {
     entries: IntersectionObserverEntry[]
   ) {
     entries.forEach((entry) => {
-      console.log('triggered', entry);
       // No animation should happen when the button is initialised
       if (this.isContactButtonIntersecting === undefined) {
         this.isContactButtonIntersecting = entry.isIntersecting;
