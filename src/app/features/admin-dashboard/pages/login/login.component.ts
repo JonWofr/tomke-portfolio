@@ -9,6 +9,7 @@ import { ToastControllerService } from '@features/admin-dashboard/services/toast
 import { ToastType } from '@features/admin-dashboard/enums/toast-type.enum';
 import { Router } from '@angular/router';
 import { SpinnerControllerService } from '@features/admin-dashboard/services/spinner-controller/spinner-controller.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'admin-dashboard-login',
@@ -20,8 +21,11 @@ export class LoginComponent implements OnInit {
     private auth: Auth,
     private router: Router,
     private toastController: ToastControllerService,
-    private spinnerController: SpinnerControllerService
-  ) {}
+    private spinnerController: SpinnerControllerService,
+    title: Title
+  ) {
+    title.setTitle('Login - Tomke Nils');
+  }
 
   ngOnInit(): void {}
 

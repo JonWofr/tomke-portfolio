@@ -12,7 +12,7 @@ declare var Instafeed: any;
   styleUrls: ['./news-section.component.scss'],
 })
 export class NewsSectionComponent implements OnInit, AfterViewInit {
-  instagramPosts: any = [];
+  instagramPosts?: any[];
 
   constructor(
     private instagramApiKeyController: InstagramApiKeyControllerService
@@ -29,20 +29,19 @@ export class NewsSectionComponent implements OnInit, AfterViewInit {
           'home instagram api keys next function call',
           instagramApiKeys
         );
-        const instafeedContainerElement = document.querySelector('.instafeed');
-        if (instafeedContainerElement) {
-          const instafeed = new Instafeed({
-            accessToken: instagramApiKeys[0].key,
-            limit: 6,
-            // Custom render function overwrites default render behaviour. By that more control
-            // is established.
-            render: (instagramPost: any) => {
-              this.instagramPosts.push(instagramPost);
-            },
-            target: instafeedContainerElement,
-          });
-          instafeed.run();
-        }
+        const instafeed = new Instafeed({
+          accessToken: instagramApiKeys[0].key,
+          limit: 6,
+          // Mock disables rendering
+          mock: true,
+          transform: (instagramPost: any) => {
+            if (!this.instagramPosts) {
+              this.instagramPosts = [];
+            }
+            this.instagramPosts.push(instagramPost);
+          },
+        });
+        instafeed.run();
       });
   }
 }

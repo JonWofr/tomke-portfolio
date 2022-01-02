@@ -110,8 +110,9 @@ export class ProjectsControllerService {
   }
 
   async updateProject(project: Project) {
-    const docRef = doc(this.col, project.id);
+    await this.replaceDataUrls(project);
     project.modifiedAt = Timestamp.now();
+    const docRef = doc(this.col, project.id);
     const data = project as DocumentData;
     // When a document is updated the id property has to be deleted explicitly. toFirestore is not
     // triggered on an update

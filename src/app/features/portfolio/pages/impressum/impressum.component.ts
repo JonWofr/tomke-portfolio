@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enum';
 
 @Component({
@@ -9,7 +10,9 @@ import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enu
 export class ImpressumComponent implements OnInit {
   HeaderBackgroundColor = HeaderBackgroundColor;
 
-  constructor() {}
+  constructor(title: Title) {
+    title.setTitle('Impressum - Tomke Nils');
+  }
 
   ngOnInit(): void {}
 }

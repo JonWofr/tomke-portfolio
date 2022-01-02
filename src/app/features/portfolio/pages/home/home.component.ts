@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enum';
 import { SectionId } from '@shared/enums/section-id.enum';
 
@@ -47,7 +48,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
   activeSectionId?: SectionId;
 
-  constructor() {}
+  constructor(title: Title) {
+    title.setTitle('Tomke Nils');
+  }
 
   ngOnInit(): void {}
 

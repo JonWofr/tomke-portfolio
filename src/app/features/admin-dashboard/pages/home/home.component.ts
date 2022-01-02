@@ -7,6 +7,7 @@ import { InstagramApiKeyControllerService } from '@core/services/instagram-api-k
 import { InstagramApiKey } from '@shared/models/instagram-api-key.model';
 import { SpinnerControllerService } from '@features/admin-dashboard/services/spinner-controller/spinner-controller.service';
 import { Subject, takeUntil } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'admin-dashboard-home',
@@ -25,8 +26,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     private projectsController: ProjectsControllerService,
     private toastController: ToastControllerService,
     private instagramApiKeysController: InstagramApiKeyControllerService,
-    private spinnerController: SpinnerControllerService
-  ) {}
+    private spinnerController: SpinnerControllerService,
+    title: Title
+  ) {
+    title.setTitle('Admin Dashboard - Tomke Nils');
+  }
 
   ngOnInit(): void {
     this.fetchAllProjects();
