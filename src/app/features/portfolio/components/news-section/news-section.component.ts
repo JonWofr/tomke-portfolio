@@ -25,10 +25,6 @@ export class NewsSectionComponent implements OnInit, AfterViewInit {
       .fetchAllInstagramApiKeys()
       .pipe(first())
       .subscribe((instagramApiKeys) => {
-        console.log(
-          'home instagram api keys next function call',
-          instagramApiKeys
-        );
         const instafeed = new Instafeed({
           accessToken: instagramApiKeys[0].key,
           limit: 6,

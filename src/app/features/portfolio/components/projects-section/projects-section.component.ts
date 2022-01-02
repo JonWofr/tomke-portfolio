@@ -18,7 +18,6 @@ export class ProjectsSectionComponent implements OnInit, OnDestroy {
     this.projectsSubscription = this.projectsController
       .fetchAllProjects('createdAt', 'desc')
       .subscribe((projects) => {
-        console.log('projects section next function call', projects);
         this.projects = projects;
       });
   }

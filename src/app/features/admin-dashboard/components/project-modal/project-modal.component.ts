@@ -45,7 +45,9 @@ export class ProjectModalComponent implements OnInit {
   ngOnInit(): void {}
 
   onChangeServicesSelect(selectedService: string) {
-    this.project.services.push(selectedService as ServiceTitle);
+    if (!this.project.services.includes(selectedService as ServiceTitle)) {
+      this.project.services.push(selectedService as ServiceTitle);
+    }
   }
 
   onClickServiceChip(selectedService: ServiceTitle) {

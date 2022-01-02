@@ -37,7 +37,6 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     this.projectSubscription = this.projectsController
       .fetchOneProject(id)
       .subscribe((project) => {
-        console.log('project detail page next function call', project);
         if (project === undefined) {
           this.router.navigateByUrl('/');
           return;

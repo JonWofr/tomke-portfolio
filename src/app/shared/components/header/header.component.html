@@ -9,7 +9,7 @@
       [ngClass]="'header__top-row-container--' + backgroundColor"
     >
       <div class="container container--mobile header__top-row">
-        <a routerLink="/" [fragment]="SectionId.HOME">
+        <a routerLink="/">
           <svg
             width="39"
             height="39"
@@ -92,6 +92,7 @@
               }"
               routerLink="/"
               [fragment]="SectionId.HOME"
+              (click)="toggleNavigationMenu()"
               >Home</a
             >
           </li>
@@ -107,6 +108,7 @@
               }"
               routerLink="/"
               [fragment]="SectionId.ABOUT"
+              (click)="toggleNavigationMenu()"
               >Über mich</a
             >
           </li>
@@ -122,6 +124,7 @@
               }"
               routerLink="/"
               [fragment]="SectionId.SERVICES"
+              (click)="toggleNavigationMenu()"
               >Leistungen</a
             >
           </li>
@@ -142,6 +145,7 @@
               }"
               routerLink="/"
               [fragment]="SectionId.PROJECTS"
+              (click)="toggleNavigationMenu()"
               >Projekte</a
             >
           </li>
@@ -157,6 +161,7 @@
               }"
               routerLink="/"
               [fragment]="SectionId.CONTACT"
+              (click)="toggleNavigationMenu()"
               >Kontakt</a
             >
           </li>

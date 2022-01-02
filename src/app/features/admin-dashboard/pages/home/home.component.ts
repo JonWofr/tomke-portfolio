@@ -48,7 +48,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.endSubscriptions))
       .subscribe({
         next: (projects) => {
-          console.log('home projects next function call', projects);
           this.projects = projects;
         },
         error: this.showErrorToast,
@@ -61,10 +60,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.endSubscriptions))
       .subscribe({
         next: (instagramApiKeys) => {
-          console.log(
-            'home instagram api keys next function call',
-            instagramApiKeys
-          );
           this.instagramApiKey = instagramApiKeys[0];
         },
         error: this.showErrorToast,

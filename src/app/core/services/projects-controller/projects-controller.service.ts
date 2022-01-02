@@ -47,8 +47,6 @@ export class ProjectsControllerService {
       snapshot: QueryDocumentSnapshot,
       options: SnapshotOptions
     ): Project {
-      const source = snapshot.metadata.fromCache ? 'local cache' : 'server';
-      console.log('Data came from ' + source);
       const data = snapshot.data(options)!;
       data['id'] = snapshot.id;
       return data as Project;
