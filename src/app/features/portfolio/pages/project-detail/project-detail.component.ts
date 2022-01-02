@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Project } from '@shared/models/project.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { Location } from '@angular/common';
 import { SocialMediaIconsColor } from '@shared/enums/social-media-icons-color.enum';
 import { ProjectsControllerService } from '@core/services/projects-controller/projects-controller.service';
 import { SpinnerOverlayColor } from '@shared/enums/spinner-overlay-color.enum';
 import { Subscription } from 'rxjs';
+import { SectionId } from '@shared/enums/section-id.enum';
 
 @Component({
   selector: 'portfolio-project-detail',
@@ -16,6 +16,7 @@ import { Subscription } from 'rxjs';
 export class ProjectDetailComponent implements OnInit, OnDestroy {
   SocialMediaIconsColor = SocialMediaIconsColor;
   SpinnerOverlayColor = SpinnerOverlayColor;
+  SectionId = SectionId;
 
   project?: Project;
   projectSubscription?: Subscription;
@@ -23,7 +24,6 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private location: Location,
     private title: Title,
     private projectsController: ProjectsControllerService
   ) {}
@@ -49,9 +49,5 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.projectSubscription?.unsubscribe();
-  }
-
-  navigateBack() {
-    this.location.back();
   }
 }

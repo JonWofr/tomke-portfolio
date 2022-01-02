@@ -5,12 +5,15 @@
   padding-top: 2rem;
   padding-bottom: 5rem;
 
+  &__breadcrumbs-container {
+    margin-bottom: 1rem;
+  }
+
   &__breadcrumb {
     background-image: $primary-accent-color;
     color: transparent;
     background-clip: text;
     font-family: $primary-font-bold;
-    margin-bottom: 1rem;
   }
 
   &__slideshow-container {

@@ -13,7 +13,7 @@ export class ServicesSectionComponent implements OnInit {
       iconUrl: '/assets/icons/photography-videography-icon.svg',
       title: ServiceTitle.PHOTOGRAPHY_AND_VIDEOGRAPHY,
       description:
-        'Durch meine jahrelange Erfahrung in den Bereichen Foto- und Videografie, kann ich von individuellen Katalogbildern bis hin zum umfangreichen Imagefilm alles bieten. ',
+        'Durch meine jahrelange Erfahrung in den Bereichen Foto- und Videographie, kann ich von individuellen Katalogbildern bis hin zum umfangreichen Imagefilm alles bieten. ',
     },
     {
       iconUrl: '/assets/icons/social-media-management-icon.svg',
