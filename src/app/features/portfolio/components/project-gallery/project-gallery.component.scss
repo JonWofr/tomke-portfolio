@@ -37,6 +37,7 @@
       "first-project second-project second-project fifth-project"
       "third-project third-project fourth-project fifth-project";
     gap: var(--grid-gap);
+    background-color: $primary-background-color-light;
   }
 
   &__grid-item {

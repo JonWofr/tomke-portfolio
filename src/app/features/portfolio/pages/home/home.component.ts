@@ -60,14 +60,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
         threshold: 0,
       }
     );
-    this.initialiseIntersectionObserver(
-      '.fade-in',
-      this.fadingElementsIntersectionObserverCallback.bind(this),
-      {
-        rootMargin: '-64px 0px -64px 0px',
-        threshold: 0,
-      }
-    );
   }
 
   initialiseIntersectionObserver(
@@ -113,17 +105,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.headerBackgroundColor = isIntersecting
       ? HeaderBackgroundColor.TRANSPARENT
       : HeaderBackgroundColor.WHITE;
-  }
-
-  fadingElementsIntersectionObserverCallback(
-    entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver
-  ) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in--visible');
-        observer.unobserve(entry.target);
-      }
-    });
   }
 }

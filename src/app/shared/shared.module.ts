@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { FadeInDirective } from './directives/fade-in/fade-in.directive';
 
 /**
  * This module contains all components, pipes etc. that are shared across the
@@ -22,6 +23,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     HeaderComponent,
     SectionHeaderComponent,
     SpinnerComponent,
+    FadeInDirective,
   ],
   imports: [
     CommonModule,
@@ -35,6 +37,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     HeaderComponent,
     SectionHeaderComponent,
     SpinnerComponent,
+    FadeInDirective,
   ],
 })
 export class SharedModule {}

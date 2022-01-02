@@ -1,5 +1,34 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .news {
   background-color: $secondary-background-color-light;
+}
+
+.instafeed {
+  // Rules resemble official Instagram styling
+  display: grid;
+  width: 100%;
+  max-width: 935px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+  gap: 0.1875rem;
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include media-breakpoint-up("md") {
+    gap: 1.75rem;
+  }
 }
