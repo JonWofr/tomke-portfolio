@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button,
+input[type="button"] {
+  border: none;
+  background-color: transparent;
+}
+
+svg {
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input[type="radio"],
+input[type="button"] {
+  &:hover:not(:disabled) {
+    cursor: pointer;
+  }
+}

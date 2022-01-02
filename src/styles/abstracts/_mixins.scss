@@ -1,0 +1,59 @@
+@use "sass:map";
+@import "abstracts/variables";
+
+@mixin media-breakpoint-up($grid-breakpoint) {
+  @media only screen and (min-width: map.get($grid-breakpoints, $grid-breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($grid-breakpoint) {
+  @media only screen and (max-width: calc(map.get($grid-breakpoints, $grid-breakpoint) - 1px)) {
+    @content;
+  }
+}
+
+@mixin with-transition(
+  $transition-property,
+  $transition-duration: $default-transition-duration,
+  $transition-timing-function: $default-transition-timing-function
+) {
+  transition: $transition-property $transition-duration
+    $transition-timing-function;
+}
+
+@mixin container {
+  padding: 0 $container-horizontal-padding-xs;
+
+  @include media-breakpoint-up("sm") {
+    max-width: map.get($container-widths, "sm");
+    margin: 0 auto;
+    padding: initial;
+  }
+
+  @include media-breakpoint-up("md") {
+    max-width: map.get($container-widths, "md");
+  }
+
+  @include media-breakpoint-up("lg") {
+    max-width: map.get($container-widths, "lg");
+  }
+
+  @include media-breakpoint-up("xl") {
+    max-width: map.get($container-widths, "xl");
+  }
+  @include media-breakpoint-up("xxl") {
+    max-width: map.get($container-widths, "xxl");
+  }
+}
+
+@mixin card {
+  padding: 2rem 0.75rem;
+  background-color: $primary-background-color-light;
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
+
+  @include media-breakpoint-up("md") {
+    padding: 2rem;
+  }
+}

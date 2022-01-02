@@ -1,0 +1,92 @@
+@use "sass:map";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.project-gallery {
+  // The height is stored in a specific variable to be able to calculate the width
+  // of the child elements depending on the height of the parent element
+  --height: 500px;
+  // The grid gap is stored in a specific variable because it is used across elements
+  --grid-gap: 1.5rem;
+  height: var(--height);
+  overflow: hidden;
+  cursor: grab;
+  padding-left: $container-horizontal-padding-xs;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &__grids-container {
+    height: 100%;
+    display: flex;
+    gap: var(--grid-gap);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(
+      4,
+      calc(var(--height) / 2 - var(--grid-gap) * 3 / 4)
+    );
+    grid-template-rows: repeat(
+      2,
+      calc(var(--height) / 2 - var(--grid-gap) / 2)
+    );
+    grid-template-areas:
+      "first-project second-project second-project fifth-project"
+      "third-project third-project fourth-project fifth-project";
+    gap: var(--grid-gap);
+    background-color: $primary-background-color-light;
+  }
+
+  &__grid-item {
+    &:nth-child(1) {
+      grid-area: first-project;
+    }
+
+    &:nth-child(2) {
+      grid-area: second-project;
+    }
+
+    &:nth-child(3) {
+      grid-area: third-project;
+    }
+
+    &:nth-child(4) {
+      grid-area: fourth-project;
+    }
+
+    &:nth-child(5) {
+      grid-area: fifth-project;
+    }
+  }
+
+  @include media-breakpoint-up("sm") {
+    padding-left: calc(
+      (100vw - (100vw - 100%) - map.get($container-widths, "sm")) / 2
+    );
+  }
+  @include media-breakpoint-up("md") {
+    --height: 600px;
+    --grid-gap: 2rem;
+    padding-left: calc(
+      (100vw - (100vw - 100%) - map.get($container-widths, "md")) / 2
+    );
+  }
+  @include media-breakpoint-up("lg") {
+    padding-left: calc(
+      (100vw - (100vw - 100%) - map.get($container-widths, "lg")) / 2
+    );
+  }
+  @include media-breakpoint-up("xl") {
+    padding-left: calc(
+      (100vw - (100vw - 100%) - map.get($container-widths, "xl")) / 2
+    );
+  }
+  @include media-breakpoint-up("xxl") {
+    padding-left: calc(
+      (100vw - (100vw - 100%) - map.get($container-widths, "xxl")) / 2
+    );
+  }
+}

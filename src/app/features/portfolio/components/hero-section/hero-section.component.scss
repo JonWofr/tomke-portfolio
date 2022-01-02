@@ -1,0 +1,161 @@
+@use "sass:map";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.hero {
+  height: 90vh;
+  min-height: 500px;
+  background-image: url("/assets/images/hero-background-image-mobile-xs.jpg");
+  background-position-x: 40%;
+  background-size: cover;
+
+  &__overlay {
+    height: 100%;
+    background-image: linear-gradient(90deg, #000000b3, #808080b3);
+  }
+
+  &__content-container {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+  }
+
+  &__title {
+    color: $primary-font-color-light;
+    font-family: $primary-font-regular;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__name {
+    font-family: $primary-font-bold;
+    color: inherit;
+    line-height: inherit;
+  }
+
+  &__mission-statement {
+    font-size: 1.25rem;
+    color: $secondary-font-color-light;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__social-media-channels-container {
+    margin-bottom: 2rem;
+  }
+
+  &__contact-button-trigger {
+    width: 100%;
+  }
+
+  &__contact-button-container {
+    position: relative;
+    width: 100%;
+  }
+
+  &__contact-button-inner-container {
+    position: absolute;
+    top: -$default-header-height;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  &__contact-button {
+    // Overwrite default button padding and make width and height fixed so
+    // that these properties are animatable
+    padding: initial;
+    justify-content: center;
+    pointer-events: all;
+
+    position: absolute;
+    bottom: calc(100% - 3rem - $default-header-height);
+    right: calc(50% - 8rem / 2);
+    // Has to be 2 because of swiper slides
+    z-index: 2;
+    width: 8rem;
+    height: 3rem;
+    @include with-transition(all, 0.5s);
+
+    &--fixed {
+      position: fixed;
+      bottom: 1rem;
+      // Rules defined in media-queries would otherwise overwrite this property
+      right: 1rem !important;
+      width: 4rem;
+      height: 4rem;
+
+      border-radius: 50%;
+    }
+  }
+
+  &__contact-button-label--fixed {
+    display: none;
+  }
+
+  @include media-breakpoint-up("sm") {
+    background-image: url("/assets/images/hero-background-image-mobile-s.jpg");
+  }
+
+  @include media-breakpoint-up("md") {
+    background-image: url("/assets/images/hero-background-image-tablet-md.jpg");
+    background-position-y: 65%;
+
+    &__content-container {
+      top: 30%;
+    }
+
+    &__contact-button {
+      right: calc(100% - 8rem - (100% - map.get($container-widths, "md")) / 2);
+    }
+
+    &__title,
+    &__mission-statement {
+      text-align: left;
+      width: 75%;
+    }
+  }
+  @include media-breakpoint-up("lg") {
+    background-image: url("/assets/images/hero-background-image-tablet-lg.jpg");
+
+    &__contact-button {
+      right: calc(100% - 8rem - (100% - map.get($container-widths, "lg")) / 2);
+    }
+
+    &__title,
+    &__mission-statement {
+      width: 50%;
+    }
+  }
+  @include media-breakpoint-up("xl") {
+    background-image: url("/assets/images/hero-background-image-tablet-xl.jpg");
+
+    &__contact-button {
+      right: calc(100% - 8rem - (100% - map.get($container-widths, "xl")) / 2);
+    }
+  }
+  @include media-breakpoint-up("xxl") {
+    background-image: url("/assets/images/hero-background-image-tablet-xxl.jpg");
+
+    &__contact-button {
+      right: calc(100% - 8rem - (100% - map.get($container-widths, "xxl")) / 2);
+    }
+  }
+
+  @media only screen and (min-width: 1921px) {
+    background-image: url("/assets/images/hero-background-image-tablet-xxxl.jpg");
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-breakpoint-up("md") {
+    align-items: flex-start;
+  }
+}

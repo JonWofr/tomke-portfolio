@@ -1,0 +1,23 @@
+@import "abstracts/variables";
+
+.service-chip {
+  background-image: $primary-accent-color;
+  border-radius: calc(2rem / 2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+
+  &__title {
+    font-size: 1rem;
+    line-height: 1;
+    font-family: $secondary-font-bold;
+    color: $primary-font-color-light;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: $primary-font-color-light;
+  }
+}

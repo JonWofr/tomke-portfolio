@@ -1,0 +1,40 @@
+<shared-header
+  [backgroundColor]="headerBackgroundColor"
+  [activeSectionId]="activeSectionId"
+></shared-header>
+<main>
+  <portfolio-hero-section
+    (changeHeroTitleIntersection)="onChangeHeroTitleIntersection($event)"
+    [id]="SectionId.HOME"
+    class="anchor-element"
+  ></portfolio-hero-section>
+  <portfolio-about-section
+    [id]="SectionId.ABOUT"
+    class="anchor-element"
+  ></portfolio-about-section>
+  <portfolio-services-section
+    [id]="SectionId.SERVICES"
+    class="anchor-element"
+  ></portfolio-services-section>
+  <portfolio-projects-section
+    [id]="SectionId.PROJECTS"
+    class="anchor-element"
+  ></portfolio-projects-section>
+  <portfolio-clients-section
+    [id]="SectionId.CLIENTS"
+    class="anchor-element"
+  ></portfolio-clients-section>
+  <portfolio-testimonials-section
+    [id]="SectionId.TESTIMONIALS"
+    class="anchor-element"
+  ></portfolio-testimonials-section>
+  <portfolio-news-section
+    [id]="SectionId.NEWS"
+    class="anchor-element"
+  ></portfolio-news-section>
+  <portfolio-contact-section
+    [id]="SectionId.CONTACT"
+    class="anchor-element"
+  ></portfolio-contact-section>
+</main>
+<shared-footer></shared-footer>

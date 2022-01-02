@@ -1,0 +1,75 @@
+@import "abstracts/variables";
+
+.spinner {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  animation: rotate 2s linear infinite;
+
+  &--embedded {
+    position: initial;
+    top: initial;
+    left: initial;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    // Has to be on top of the modal
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+
+    &--transparent {
+      background-color: $overlay-color;
+    }
+
+    &--white {
+      background-color: $primary-background-color-light;
+    }
+
+    &--embedded {
+      all: initial;
+      display: inline-block;
+    }
+  }
+
+  &__path {
+    stroke-linecap: round;
+    animation: transform-dash 1.5s ease-in-out infinite,
+      change-color 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes transform-dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+@keyframes change-color {
+  0% {
+    stroke: $primary-accent-color-start;
+  }
+  100% {
+    stroke: $primary-accent-color-stop;
+  }
+}

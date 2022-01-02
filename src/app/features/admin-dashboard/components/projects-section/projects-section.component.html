@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="container">
+    <shared-section-header
+      title="Projekt-Übersicht"
+      subtitle="Projekte"
+    ></shared-section-header>
+    <admin-dashboard-project-grid
+      *ngIf="projects"
+      [projects]="projects"
+      (clickProjectCardEditButton)="clickProjectCardEditButton.emit($event)"
+      (clickProjectCardDeleteButton)="clickProjectCardDeleteButton.emit($event)"
+      (clickAddProjectCard)="clickAddProjectCard.emit()"
+    >
+    </admin-dashboard-project-grid>
+  </div>
+</section>

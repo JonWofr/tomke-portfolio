@@ -1,0 +1,7 @@
+<shared-spinner *ngIf="shouldShowSpinner"></shared-spinner>
+<admin-dashboard-toast
+  *ngIf="currentToast"
+  [type]="currentToast.type"
+  [message]="currentToast.message"
+></admin-dashboard-toast>
+<router-outlet></router-outlet>

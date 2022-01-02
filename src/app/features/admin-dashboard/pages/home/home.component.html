@@ -1,0 +1,26 @@
+<admin-dashboard-header> </admin-dashboard-header>
+<main>
+  <admin-dashboard-deletion-modal
+    *ngIf="shouldShowDeletionModal"
+    [projectTitle]="selectedProject!.title"
+    (clickCancelButton)="onClickDeletionModalCancelButton()"
+    (clickDeleteButton)="onClickDeletionModalDeleteButton()"
+  ></admin-dashboard-deletion-modal>
+  <admin-dashboard-project-modal
+    *ngIf="shouldShowProjectModal"
+    [project]="selectedProject"
+    (clickCancelButton)="onClickProjectModalCancelButton()"
+    (clickAddButton)="onClickProjectModalAddButton($event)"
+    (clickSaveButton)="onClickProjectModalSaveButton($event)"
+  ></admin-dashboard-project-modal>
+  <admin-dashboard-projects-section
+    [projects]="projects"
+    (clickProjectCardEditButton)="onClickProjectCardEditButton($event)"
+    (clickProjectCardDeleteButton)="onClickProjectCardDeleteButton($event)"
+    (clickAddProjectCard)="onClickAddProjectCard()"
+  ></admin-dashboard-projects-section>
+  <admin-dashboard-instagram-api-key-section
+    [instagramApiKey]="instagramApiKey"
+    (clickSubmitButton)="onClickInstagramApiKeySectionSubmitButton($event)"
+  ></admin-dashboard-instagram-api-key-section>
+</main>

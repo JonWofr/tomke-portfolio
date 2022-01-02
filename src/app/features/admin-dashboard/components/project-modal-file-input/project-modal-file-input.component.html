@@ -1,0 +1,46 @@
+<div class="padding-top-hack padding-top-hack--16-by-9">
+  <div class="padding-top-hack__inner-container">
+    <div class="form__control project-modal-file-input">
+      <svg
+        class="project-modal-file-input__placeholder-icon"
+        width="24"
+        height="25"
+        viewBox="0 0 24 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_376_681)">
+          <path
+            d="M17 22.5V24.5H7V22.5H17ZM17 18.5H7V20.5H17V18.5ZM7 11.5V16.5H17V11.5H23L12 0.5L1 11.5H7Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_376_681">
+            <rect
+              width="24"
+              height="24"
+              fill="white"
+              transform="translate(0 0.5)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+      <p class="project-modal-file-input__placeholder-label">
+        {{ placeholderLabel }}
+      </p>
+      <input
+        #imageFileInput
+        type="file"
+        hidden
+        accept="image/png, image/jpeg"
+        [multiple]="multipleImages"
+        (change)="onChangeFileInput(imageFileInput.files)"
+      />
+      <input
+        class="project-modal-file-input__file-input"
+        type="button"
+        (click)="imageFileInput.click()"
+      />
+    </div>
+  </div>
+</div>

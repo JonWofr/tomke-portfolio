@@ -1,0 +1,22 @@
+@import "abstracts/variables";
+
+.service-card {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__text-container {
+    flex: 1;
+    min-width: 0px;
+  }
+
+  &__title {
+    margin-bottom: 0.75rem;
+  }
+}

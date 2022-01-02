@@ -1,0 +1,71 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.project-gallery-item {
+  width: 100%;
+  height: 100%;
+  border-radius: $default-border-radius;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+
+  &:hover &__overlay {
+    opacity: 1;
+  }
+
+  &__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // Disabled pointer events. Routing functionality has to be conditionally handled
+    // by the parent component of this component.
+    pointer-events: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $overlay-color;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    pointer-events: none;
+    @include with-transition(opacity);
+  }
+
+  &__subtitle {
+    color: $secondary-accent-color;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    color: $primary-font-color-light;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  &__description {
+    color: $secondary-font-color-light;
+  }
+
+  &__thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  @include media-breakpoint-up("md") {
+    &__overlay {
+      padding: 1.25rem;
+    }
+  }
+}

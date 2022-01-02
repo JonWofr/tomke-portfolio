@@ -1,0 +1,15 @@
+<section class="section services">
+  <div class="container">
+    <shared-section-header title="Was mache Ich?" subtitle="Leistungen">
+    </shared-section-header>
+    <div class="services__service-cards-container">
+      <div
+        *ngFor="let service of services"
+        class="services__service-card-container"
+        sharedFadeIn
+      >
+        <portfolio-service-card [service]="service"></portfolio-service-card>
+      </div>
+    </div>
+  </div>
+</section>

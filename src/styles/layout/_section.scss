@@ -1,0 +1,9 @@
+@import "abstracts/variables";
+
+.section {
+  padding: $default-vertical-section-padding 0;
+
+  &__paragraph {
+    text-align: center;
+  }
+}

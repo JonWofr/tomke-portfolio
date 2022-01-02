@@ -1,0 +1,14 @@
+<div #projectGalleryViewport class="project-gallery">
+  <div class="project-gallery__grids-container">
+    <div *ngFor="let grid of grids" class="project-gallery__grid">
+      <div
+        *ngFor="let project of grid.projects"
+        class="project-gallery__grid-item"
+        sharedFadeIn
+      >
+        <portfolio-project-gallery-item [project]="project">
+        </portfolio-project-gallery-item>
+      </div>
+    </div>
+  </div>
+</div>

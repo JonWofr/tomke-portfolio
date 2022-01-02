@@ -1,0 +1,28 @@
+@import "abstracts/variables";
+
+.impressum {
+  &__main {
+    padding: 8rem 0;
+  }
+
+  &__primary-heading {
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__secondary-heading {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  &__tertiary-heading {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.125rem;
+  }
+
+  &__paragraph {
+    margin-bottom: 0.5rem;
+  }
+}

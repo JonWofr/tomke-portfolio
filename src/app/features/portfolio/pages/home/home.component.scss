@@ -1,0 +1,4 @@
+.anchor-element {
+  // Without anchor elements being block elements problems occurr on Safari
+  display: block;
+}

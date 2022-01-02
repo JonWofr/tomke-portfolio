@@ -1,0 +1,119 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.project-detail {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+
+  &__breadcrumbs-container {
+    margin-bottom: 1rem;
+  }
+
+  &__breadcrumb {
+    background-image: $primary-accent-color;
+    color: transparent;
+    background-clip: text;
+    font-family: $primary-font-bold;
+  }
+
+  &__slideshow-container {
+    margin-bottom: 2rem;
+  }
+
+  &__text-information-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__text-information-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:last-child {
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    line-height: 1.125;
+    margin-bottom: 1rem;
+  }
+
+  &__paragraph {
+    margin-bottom: 2rem;
+  }
+
+  @include media-breakpoint-up("md") {
+    padding-bottom: 10rem;
+
+    &__text-information-container {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    &__text-information-block {
+      align-items: flex-start;
+
+      &:first-child {
+        flex: 3.15;
+      }
+
+      &:last-child {
+        flex: 1;
+        min-width: 0;
+      }
+    }
+
+    &__title,
+    &__paragraph {
+      text-align: left;
+    }
+
+    &__title {
+      // line-height is decreased to 1 so that the title alligns with the other h2
+      // headings
+      line-height: 1;
+    }
+
+    &__paragraph {
+      // Creates more spacing to the right
+      padding-right: 2rem;
+    }
+  }
+  @include media-breakpoint-up("lg") {
+    &__text-information-container {
+      gap: 2rem;
+    }
+
+    &__text-information-block {
+      &:first-child {
+        flex: 3.25;
+      }
+    }
+  }
+  @include media-breakpoint-up("xl") {
+    &__text-information-block {
+      &:first-child {
+        flex: 3.2;
+      }
+    }
+  }
+}
+
+.additional-information-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+
+  &__list {
+    list-style-position: inside;
+  }
+
+  @include media-breakpoint-up("md") {
+    align-items: flex-start;
+  }
+}

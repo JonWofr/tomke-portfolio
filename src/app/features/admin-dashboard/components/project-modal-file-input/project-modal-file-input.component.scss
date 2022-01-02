@@ -1,0 +1,27 @@
+@import "abstracts/variables";
+
+.project-modal-file-input {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+
+  &__placeholder-icon {
+    fill: $form-control-placeholder-color;
+  }
+
+  &__placeholder-label {
+    color: $form-control-placeholder-color;
+  }
+
+  &__file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $default-border-radius;
+  }
+}

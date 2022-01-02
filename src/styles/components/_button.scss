@@ -1,0 +1,101 @@
+@import "abstracts/variables";
+
+.button {
+  padding: 0.75rem 1rem;
+  border-radius: $default-border-radius;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &:hover:not(:disabled)::before {
+    filter: $button-hover-filter;
+  }
+
+  &:disabled::before {
+    filter: $button-disabled-filter;
+  }
+
+  // Pseudo element has to be created because filter (on e.g. hover) gets applied to all
+  // child elements which would also include the icon and the label.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    @include with-transition(filter);
+  }
+
+  &--embedded {
+    border-radius: initial;
+  }
+
+  &--light {
+    background-color: $primary-background-color-light;
+  }
+
+  &--primary-accent::before {
+    background-image: $primary-accent-color;
+  }
+
+  &--primary-accent-inverted::before {
+    background-image: linear-gradient(
+        $primary-background-color-light,
+        $primary-background-color-light
+      ),
+      $primary-accent-color;
+    background-clip: padding-box, border-box;
+    border: 1px solid transparent;
+    border-radius: $default-border-radius;
+  }
+
+  &--light::before {
+    background-color: $primary-background-color-light;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+
+    &--light {
+      fill: $primary-font-color-light;
+    }
+
+    &--dark {
+      fill: $primary-font-color-dark;
+    }
+    &--primary-accent {
+      // SVG should have a gradient. The XML of the SVG has to be changed. It is not
+      // sufficient to change the fill.
+      fill: initial;
+    }
+  }
+
+  &__label {
+    font-family: $secondary-font-bold;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    position: relative;
+
+    &--light {
+      color: $primary-font-color-light;
+    }
+
+    &--dark {
+      color: $primary-font-color-dark;
+    }
+
+    &--primary-accent {
+      color: transparent;
+      background-image: $primary-accent-color;
+      background-clip: text;
+    }
+  }
+}

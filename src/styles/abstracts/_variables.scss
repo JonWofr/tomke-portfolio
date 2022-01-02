@@ -1,0 +1,70 @@
+// Colors
+$primary-font-color-light: #ffffff;
+$primary-font-color-dark: #303030;
+$secondary-font-color-light: #e2e2e2;
+$secondary-font-color-dark: #5c5c5c;
+$primary-accent-color-start: #5452e0;
+$primary-accent-color-stop: #cd52e0;
+$primary-accent-color: linear-gradient(
+  90deg,
+  $primary-accent-color-start,
+  $primary-accent-color-stop
+);
+$button-hover-filter: brightness(0.8);
+$button-disabled-filter: saturate(30%) brightness(1.5);
+$secondary-accent-color: #9997ff;
+$primary-background-color-light: #ffffff;
+$secondary-background-color-light: #f6f6f6;
+$primary-background-color-dark: #2a2a2a;
+$secondary-background-color-dark: #3a3a3a;
+$overlay-color: #000000b3;
+$muted-color: #c4c4c4;
+$form-control-background-color: #ececec;
+$form-control-placeholder-color: #757575;
+$success-color: #66cc66;
+$info-color: #6666cc;
+$warn-color: #cccc66;
+$error-color: #cc6666;
+
+// Bootstrap breakpoints
+$grid-breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+$container-widths: (
+  "xs": 100%,
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1140px,
+  "xxl": 1320px,
+);
+
+// Bootstrap grid
+$container-horizontal-padding-xs: 0.75rem;
+
+// Font-families
+$primary-font-light: "Poppins-Light";
+$primary-font-regular: "Poppins-Regular";
+$primary-font-bold: "Poppins-Bold";
+
+$secondary-font-light: "Railway-Light";
+$secondary-font-regular: "Railway-Regular";
+$secondary-font-bold: "Railway-Bold";
+
+// Misc
+$default-border-radius: 12px;
+$default-button-hitbox: 0.5rem;
+$default-box-shadow-spread: 4px;
+$default-box-shadow: 0 4px $default-box-shadow-spread 0 #00000040;
+$default-header-height: 64px;
+$default-vertical-section-padding: 5rem;
+
+// Transitions
+$default-transition-duration: 0.25s;
+$default-transition-timing-function: ease-in-out;

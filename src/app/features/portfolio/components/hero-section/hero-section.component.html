@@ -1,0 +1,65 @@
+<section class="hero">
+  <div class="hero__overlay">
+    <div class="hero__content-container">
+      <div class="container">
+        <h1 class="hero__title">
+          Hi, <br />
+          ich bin <span class="hero__name">Tomke</span>
+        </h1>
+        <p class="hero__mission-statement">
+          Als leidenschaftlicher Autoliebhaber fahre und teste ich die neusten
+          Modelle der renommiertesten Automarken. Dabei teile ich meine
+          spannenden Abenteuer mit meiner Community.
+        </p>
+        <div class="hero__social-media-channels-container">
+          <shared-social-media-channels
+            instagramUrl="https://www.instagram.com/tomke_nils"
+            linkedInUrl="https://www.linkedin.com/in/tomke-janowitz-032711191"
+            tikTokUrl="https://www.tiktok.com/@tomke_nils"
+          ></shared-social-media-channels>
+        </div>
+        <!-- Only for intersection observer purpuses -->
+        <div class="hero__contact-button-trigger"></div>
+      </div>
+      <div class="hero__contact-button-container">
+        <div class="hero__contact-button-inner-container">
+          <a
+            class="button button--primary-accent hero__contact-button"
+            [ngClass]="{
+              'hero__contact-button--fixed':
+                isContactButtonIntersecting === false
+            }"
+            routerLink="/"
+            [fragment]="SectionId.CONTACT"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="button__icon button__icon--light"
+            >
+              <path
+                d="M12 12.713L0.015 3H23.985L12 12.713ZM12 15.287L0 5.562V21H24V5.562L12 15.287Z"
+                fill="white"
+              />
+            </svg>
+            <p
+              class="
+                button__label button__label--light
+                hero__contact-button-label
+              "
+              [ngClass]="{
+                'hero__contact-button-label--fixed':
+                  isContactButtonIntersecting === false
+              }"
+            >
+              Kontakt
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,196 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // Has to be 3 because of swiper slides and contact button
+  z-index: 3;
+  @include with-transition(all);
+
+  &--white {
+    box-shadow: 0 4px 4px 0 #b3b3b340;
+    border-bottom: 1px solid $primary-background-color-light;
+  }
+  &--transparent {
+    box-shadow: none;
+    border-bottom: 1px solid #a3a3a3;
+  }
+
+  &__inner-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top-row-container {
+    height: calc($default-header-height - 1px);
+    @include with-transition(background-color);
+
+    &--white {
+      background-color: $primary-background-color-light;
+    }
+
+    &--transparent {
+      background-color: transparent;
+    }
+  }
+
+  &__top-row {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__portfolio-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__icon-vector {
+    @include with-transition(fill);
+
+    &--white {
+      fill: $secondary-font-color-dark;
+    }
+
+    &--transparent {
+      fill: $primary-font-color-light;
+    }
+  }
+
+  &__burger-menu-button {
+    padding: $default-button-hitbox;
+    margin-right: -$default-button-hitbox;
+  }
+
+  &__burger-menu-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__navigation {
+    height: 0px;
+    background-color: $primary-background-color-light;
+    overflow: hidden;
+    @include with-transition(height);
+
+    &--expanded {
+      height: 16rem;
+    }
+  }
+
+  &__navigation-list {
+    padding: 0.5rem 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__navigation-link {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 2;
+    padding: 0.5rem 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      bottom: 0.25rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-image: $primary-accent-color;
+      border-radius: 50%;
+      opacity: 0;
+      @include with-transition(opacity);
+    }
+
+    &--active::after {
+      opacity: 1;
+    }
+  }
+
+  @include media-breakpoint-up("md") {
+    height: $default-header-height;
+
+    &--white {
+      background-color: $primary-background-color-light;
+    }
+
+    &--transparent {
+      background-color: transparent;
+    }
+
+    &__inner-container,
+    &__top-row-container,
+    &__navigation,
+    &__navigation-list-container,
+    &__navigation-list {
+      height: 100%;
+    }
+
+    &__inner-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__top-row-container {
+      background-color: initial;
+    }
+
+    &__burger-menu-button {
+      display: none;
+    }
+
+    &__navigation {
+      background-color: initial;
+    }
+
+    &__navigation-list {
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: initial;
+    }
+
+    &__navigation-link {
+      @include with-transition(color);
+      font-family: $secondary-font-bold;
+      letter-spacing: 0.1em;
+      font-size: 0.875rem;
+
+      &--white {
+        color: $secondary-font-color-dark;
+      }
+
+      &--transparent {
+        color: $primary-font-color-light;
+      }
+    }
+  }
+}
+
+// Default container class is overwritten by the rules specified via a device-specific
+// flag
+.container--mobile {
+  @include media-breakpoint-up("md") {
+    padding: initial;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+.container--tablet {
+  @include media-breakpoint-down("md") {
+    padding: initial;
+    max-width: initial;
+    margin: initial;
+  }
+}

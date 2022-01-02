@@ -1,0 +1,66 @@
+@import "abstracts/variables";
+
+.project-card {
+  height: 100%;
+  padding: initial;
+  overflow: hidden;
+
+  &__more-button-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__more-button {
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: $default-box-shadow;
+    background-color: $primary-background-color-light;
+  }
+
+  &__more-icon {
+    width: 24px;
+    height: 24px;
+    fill: $primary-font-color-dark;
+  }
+
+  &__context-menu-container {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+  }
+
+  &__thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__body {
+    padding: 1rem;
+  }
+
+  &__subtitle {
+    background-image: $primary-accent-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    color: $primary-font-color-dark;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  &__description {
+    color: $secondary-font-color-dark;
+    margin-bottom: 1rem;
+  }
+
+  &__date {
+    color: $muted-color;
+    font-size: 0.75rem;
+  }
+}

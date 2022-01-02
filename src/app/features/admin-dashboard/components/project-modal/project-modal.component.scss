@@ -1,0 +1,54 @@
+@use "sass:map";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.project-modal {
+  &__multi-select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__multi-select-default-option {
+    color: $form-control-placeholder-color;
+  }
+
+  &__service-chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  &__image-container {
+    width: calc(2 / 3 * 100% - 0.5rem / 2);
+    max-width: 300px;
+  }
+
+  &__slideshow-images-container {
+    display: flex;
+    gap: 0.5rem;
+    overflow: auto;
+
+    & > * {
+      flex: none;
+    }
+  }
+}
+
+.form {
+  &__group {
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9) {
+      @include media-breakpoint-up("md") {
+        width: calc(50% - 1rem / 2);
+      }
+    }
+  }
+
+  &__footer {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}

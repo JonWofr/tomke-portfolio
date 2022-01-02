@@ -1,0 +1,154 @@
+<div class="project-detail-slideshow">
+  <div class="project-detail-slideshow__cinema-image-container">
+    <div class="padding-top-hack padding-top-hack--16-by-9">
+      <div class="padding-top-hack__inner-container">
+        <div #slideshowContainer class="swiper">
+          <div class="swiper-wrapper">
+            <div *ngFor="let imageUrl of imageUrls" class="swiper-slide">
+              <img
+                class="project-detail-slideshow__cinema-image"
+                [src]="imageUrl"
+                alt=""
+              />
+            </div>
+          </div>
+          <button
+            #arrowLeftButton
+            class="
+              project-detail-slideshow__navigation-button
+              project-detail-slideshow__navigation-button--left
+            "
+            (click)="slideToPreviousSlide()"
+            [disabled]="activeSlideIndex === 0"
+          >
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project-detail-slideshow__arrow-icon"
+            >
+              <g clip-path="url(#clip0_113_469)">
+                <path
+                  d="M16.67 0.0263672L19.5 2.85537L10.161 12.0304L19.5 21.1974L16.67 24.0264L4.5 12.0304L16.67 0.0263672Z"
+                  fill="url(#paint0_linear_113_469)"
+                />
+              </g>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_113_469"
+                  x1="4.5"
+                  y1="12.0264"
+                  x2="19.5"
+                  y2="12.0264"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#5653E1" />
+                  <stop offset="1" stop-color="#CD52E0" />
+                </linearGradient>
+                <clipPath id="clip0_113_469">
+                  <rect
+                    width="24"
+                    height="24"
+                    fill="white"
+                    transform="translate(0 0.0263672)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <button
+            #arrowRightButton
+            class="
+              project-detail-slideshow__navigation-button
+              project-detail-slideshow__navigation-button--right
+            "
+            (click)="slideToNextSlide()"
+            [disabled]="activeSlideIndex === imageUrls.length - 1"
+          >
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project-detail-slideshow__arrow-icon"
+            >
+              <g clip-path="url(#clip0_113_480)">
+                <path
+                  d="M5 3.02637L8.057 0.0263672L20 12.0264L8.057 24.0264L5 21.0264L14 12.0264L5 3.02637Z"
+                  fill="url(#paint0_linear_113_480)"
+                />
+              </g>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_113_480"
+                  x1="5"
+                  y1="12.0264"
+                  x2="20"
+                  y2="12.0264"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#5653E1" />
+                  <stop offset="1" stop-color="#CD52E0" />
+                </linearGradient>
+                <clipPath id="clip0_113_480">
+                  <rect
+                    width="24"
+                    height="24"
+                    fill="white"
+                    transform="translate(0 0.0263672)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-detail-slideshow__preview-image-buttons-container">
+    <div
+      class="project-detail-slideshow__preview-image-buttons-inner-container"
+    >
+      <button
+        *ngFor="let imageUrl of imageUrls; let i = index"
+        class="project-detail-slideshow__preview-image-button"
+        (click)="onClickPreviewImageButton(i)"
+      >
+        <div class="padding-top-hack padding-top-hack--16-by-9">
+          <div class="padding-top-hack__inner-container">
+            <div
+              class="project-detail-slideshow__preview-image-overlay"
+              [ngClass]="{
+                'project-detail-slideshow__preview-image-overlay--active':
+                  activeSlideIndex === i
+              }"
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M28.0001 8.37999L13.1201 25.3573L4.00012 17.3333L5.75879 15.3467L12.8801 21.5947L26.0335 6.66666L28.0001 8.37999Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <img
+              [src]="imageUrl"
+              alt=""
+              class="project-detail-slideshow__preview-image"
+            />
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
