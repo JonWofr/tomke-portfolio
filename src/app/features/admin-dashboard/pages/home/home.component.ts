@@ -8,6 +8,7 @@ import { InstagramApiKey } from '@shared/models/instagram-api-key.model';
 import { SpinnerControllerService } from '@features/admin-dashboard/services/spinner-controller/spinner-controller.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Title } from '@angular/platform-browser';
+import { cloneDeep } from 'lodash';
 
 @Component({
   selector: 'admin-dashboard-home',
@@ -72,12 +73,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onClickProjectCardEditButton(selectedProject: Project) {
-    this.selectedProject = selectedProject;
+    this.selectedProject = cloneDeep(selectedProject);
     this.toggleProjectModal();
   }
 
   onClickProjectCardDeleteButton(selectedProject: Project) {
-    this.selectedProject = selectedProject;
+    this.selectedProject = cloneDeep(selectedProject);
     this.toggleDeletionModal();
   }
 

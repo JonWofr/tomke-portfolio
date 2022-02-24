@@ -21,21 +21,23 @@ export class TestimonialsSectionComponent implements OnInit, AfterViewInit {
     {
       photoUrl: '/assets/images/testimonial-1.jpeg',
       quote:
-        'Nisi elit consectetur consectetur officia fugiat et dolore ullamco anim qui adipisicing aliquip ea in.',
-      name: 'Ola Källenius',
-      jobTitle: 'CEO Daimler',
+        'Durch sein Know-how im Bereich Instagram Marketing hat Tomke maßgeblich zur Verbesserung der Unternehmensreichweite und unserem professionellen Instagramauftritt beigetragen.',
+      name: 'Christopher Tebartz van Elst',
+      jobTitle: 'Geschäftsführer bei Irrland GmbH & Co. KG',
     },
     {
       photoUrl: '/assets/images/testimonial-2.jpeg',
-      quote: 'Excepteur proident tempor esse et ea.',
-      name: 'Oliver Blume',
-      jobTitle: 'CEO Porsche',
+      quote:
+        'Tomke trägt maßgeblich zu unserem Erfolg in den sozialen Medien bei. Kreativität, Professionalität und Fairness stehen im Mittelpunkt unserer  Zusammenarbeit.',
+      name: 'Laurin Schad',
+      jobTitle: 'V8 Hotel Böblingen',
     },
     {
       photoUrl: '/assets/images/testimonial-3.jpg',
-      quote: 'In aliquip labore elit deserunt cupidatat exercitation.',
-      name: 'Tobias Moers',
-      jobTitle: 'CEO AMG',
+      quote:
+        'Seit einiger Zeit profitieren wir von Tomkes Expertise im Social-Media-Bereich. Er ist ohne Zweifel einer der stärksten Content-Creator im Automobil-Sektor und zeichnet sich durch eine extrem hohe Affinität für Perfomance und sein feines Händchen für die schnelllebige Zielgruppe aus.',
+      name: 'Chris Tschöpe',
+      jobTitle: 'Geschäftsführer LeasingMarkt.de',
     },
   ];
   swiper?: Swiper;

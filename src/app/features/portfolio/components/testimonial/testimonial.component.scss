@@ -34,4 +34,9 @@
   &__job-title {
     color: $muted-color;
   }
+
+  &__name,
+  &__job-title {
+    text-align: center;
+  }
 }
