@@ -60,12 +60,12 @@
     }
 
     &--left {
-      left: $container-horizontal-padding-xs;
+      left: 0;
       margin-left: -$default-button-hitbox;
     }
 
     &--right {
-      right: $container-horizontal-padding-xs;
+      right: 0;
       margin-right: -$default-button-hitbox;
     }
   }
@@ -73,19 +73,6 @@
   &__arrow-icon {
     width: 24px;
     height: 24px;
-  }
-
-  @include media-breakpoint-up("sm") {
-    &__navigation-button--left {
-      left: calc(
-        (100vw - (100vw - 100%) - map.get($container-widths, "sm")) / 2
-      );
-    }
-    &__navigation-button--right {
-      right: calc(
-        (100vw - (100vw - 100%) - map.get($container-widths, "sm")) / 2
-      );
-    }
   }
 
   @include media-breakpoint-up("md") {
@@ -103,30 +90,5 @@
       margin-right: initial;
       margin-left: 7rem;
     }
-  }
-}
-
-.swiper {
-  padding: 0 $container-horizontal-padding-xs;
-
-  @include media-breakpoint-up("sm") {
-    padding: 0
-      calc((100vw - (100vw - 100%) - map.get($container-widths, "sm")) / 2);
-  }
-  @include media-breakpoint-up("md") {
-    padding: 0
-      calc((100vw - (100vw - 100%) - map.get($container-widths, "md")) / 2);
-  }
-  @include media-breakpoint-up("lg") {
-    padding: 0
-      calc((100vw - (100vw - 100%) - map.get($container-widths, "lg")) / 2);
-  }
-  @include media-breakpoint-up("xl") {
-    padding: 0
-      calc((100vw - (100vw - 100%) - map.get($container-widths, "xl")) / 2);
-  }
-  @include media-breakpoint-up("xxl") {
-    padding: 0
-      calc((100vw - (100vw - 100%) - map.get($container-widths, "xxl")) / 2);
   }
 }
