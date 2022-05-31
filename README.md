@@ -1,27 +1,29 @@
-# TomkePortfolio
+# Tomke Nils
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+The web application serves as a portfolio for the rising photo-, videographer, social media manager and influencer Tomke Nils.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Website
 
-## Code scaffolding
+https://tomke-nils.de/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## The challenge
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The challenge was to first come up with a modern and sleek design and then build a responsive website that would display information regarding provided services, recent projects, a live Instagram feed etc. He also requested the functionality to make changes to certain content himself after project handover.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## The result
 
-## Running end-to-end tests
+A responsive Angular application was created based on a design mockup which encompasses a user and an admin space. The user space shows static information like services, contact information etc. as well as dynamic information like projects and an Instagram feed. The dynamic information is controlled via the admin space which is login-locked and provides an easy-to-use interface to create, edit and delete information by Tomke himself.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Technologies
 
-## Further help
+Major technologies that I have used within the project.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular
+- Sass
+- TypeScript
+- Firebase
+- HTML5
+- JavaScript
