@@ -22,8 +22,12 @@
   >
     <div class="triangle"></div>
     <ul class="list">
-      <li class="item"><a routerLink="/" class="link">🇩🇪 DE</a></li>
-      <li class="item"><a routerLink="/" class="link">🇬🇧 EN</a></li>
+      <li class="item">
+        <a [href]="'/de' + (currentRoute ?? '')" class="link">🇩🇪 DE</a>
+      </li>
+      <li class="item">
+        <a [href]="'/en' + (currentRoute ?? '')" class="link">🇬🇧 EN</a>
+      </li>
     </ul>
   </nav>
 </div>

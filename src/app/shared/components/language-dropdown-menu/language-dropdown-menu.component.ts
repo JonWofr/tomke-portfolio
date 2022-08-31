@@ -6,6 +6,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enum';
 
 @Component({
@@ -16,6 +17,7 @@ import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enu
 export class LanguageDropdownMenuComponent implements OnInit {
   shouldShowMenu = false;
   selectedLanguage = 'DE';
+  currentRoute?: string;
 
   @Input() backgroundColor?: HeaderBackgroundColor;
 
@@ -30,7 +32,10 @@ export class LanguageDropdownMenuComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  constructor(router: Router) {
+    this.currentRoute = router.url;
+    console.log(this.currentRoute);
+  }
 
   ngOnInit(): void {}
 

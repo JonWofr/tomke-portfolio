@@ -15,6 +15,10 @@
           <context context-type="sourcefile">src/app/features/portfolio/components/about-section/about-section.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="2738024077794806607" datatype="html">
         <source> Was als Leidenschaft und Traum begann, hat sich zu einer Lebensart entwickelt. Die ersten Berührungspunkte sammelte ich bei der Fotografie von Supercars. Inzwischen teste und fahre ich leidenschaftlich PS-starke Fahrzeuge im Sportwagen- und Elektrofahrzeug- Segment. Meine Abenteuer und Erfahrungen teile ich mit meiner Community, hauptsächlich auf Instagram und TikTok. Einen erfolgreichen Social Media Auftritt konnte ich jedoch nicht nur auf meinen eigenen Kanälen aufbauen, sondern auch für zahlreiche Firmen. Authentizität, starke Skills in Foto- und Videografie sowie fundiertes Social Media Wissen sind dabei mein Markenzeichen. Dabei agiere ich mit Leidenschaft und Herzblut. </source>
@@ -23,95 +27,113 @@
           <context context-type="linenumber">21,32</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7218584840088949808" datatype="html">
+        <source>Schreibe mir eine Nachricht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="397497450705980813" datatype="html">
+        <source>Kontakt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8953033926734869941" datatype="html">
         <source>Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1617823982318984595" datatype="html">
         <source> Du musst deinen Namen angeben </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">37,39</context>
+          <context context-type="linenumber">39,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4768749765465246664" datatype="html">
         <source>Email</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2559267207987101980" datatype="html">
         <source> Du musst deine E-Mail-Adresse angeben </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">62,64</context>
+          <context context-type="linenumber">64,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8503869362614223418" datatype="html">
         <source> Ungültige E-Mail-Adresse </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">69,71</context>
+          <context context-type="linenumber">71,73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5644795770167690835" datatype="html">
         <source>Nachricht</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1535365089018575770" datatype="html">
         <source> Du musst eine Nachricht eingeben </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">94,96</context>
+          <context context-type="linenumber">96,98</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8970769016607182045" datatype="html">
         <source>Senden</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">132</context>
+          <context context-type="linenumber">134</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2060922466127038507" datatype="html">
         <source>Ups, etwas ist schief gegangen!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">149</context>
+          <context context-type="linenumber">151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4915196029691427866" datatype="html">
         <source> Versuche es bitte erneut. Falls das Problem weiterhin besteht, kontaktiere mich bitte über die am Seitenende stehende E-Mail-Adresse. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">150,153</context>
+          <context context-type="linenumber">152,155</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8125840596336092063" datatype="html">
         <source>Wiederholen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">169</context>
+          <context context-type="linenumber">171</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8036645955413254181" datatype="html">
         <source>Vielen Dank!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">180</context>
+          <context context-type="linenumber">182</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1568587018136647077" datatype="html">
         <source> Ich schreibe dir in Kürze zurück. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
-          <context context-type="linenumber">181,183</context>
+          <context context-type="linenumber">183,185</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3035053213475890371" datatype="html">
@@ -162,6 +184,10 @@
           <context context-type="sourcefile">src/app/features/portfolio/components/projects-section/projects-section.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="1761357231719775024" datatype="html">
         <source>Was mache Ich?</source>
@@ -175,6 +201,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.html</context>
           <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8204462860419005520" datatype="html">
@@ -273,6 +303,38 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
           <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2400857379190014720" datatype="html">
+        <source> Impressum </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5455880547060138700" datatype="html">
+        <source> Datenschutz </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7883631339141265735" datatype="html">
+        <source> Designt und entwickelt von <x id="START_LINK" ctype="x-a" equiv-text="&lt;a
+      href=&quot;https://jonas-wolfram.de&quot;
+      target=&quot;_blank&quot;
+      class=&quot;footer__jonas-wolfram-link&quot;
+    &gt;"/> Jonas Wolfram <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+          <context context-type="linenumber">55,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
     </body>
