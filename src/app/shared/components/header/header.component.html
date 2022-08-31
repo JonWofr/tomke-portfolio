@@ -93,6 +93,7 @@
               routerLink="/"
               [fragment]="SectionId.HOME"
               (click)="toggleNavigationMenu()"
+              i18n
               >Home</a
             >
           </li>
@@ -109,6 +110,7 @@
               routerLink="/"
               [fragment]="SectionId.ABOUT"
               (click)="toggleNavigationMenu()"
+              i18n
               >Über mich</a
             >
           </li>
@@ -125,6 +127,7 @@
               routerLink="/"
               [fragment]="SectionId.SERVICES"
               (click)="toggleNavigationMenu()"
+              i18n
               >Leistungen</a
             >
           </li>
@@ -146,6 +149,7 @@
               routerLink="/"
               [fragment]="SectionId.PROJECTS"
               (click)="toggleNavigationMenu()"
+              i18n
               >Projekte</a
             >
           </li>
@@ -162,8 +166,14 @@
               routerLink="/"
               [fragment]="SectionId.CONTACT"
               (click)="toggleNavigationMenu()"
+              i18n
               >Kontakt</a
             >
+          </li>
+          <li class="header__language-dropdown-menu-item">
+            <shared-language-dropdown-menu
+              [backgroundColor]="backgroundColor"
+            ></shared-language-dropdown-menu>
           </li>
         </ul>
       </div>

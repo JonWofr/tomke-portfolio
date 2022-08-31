@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="72977788872153498" datatype="html">
+        <source>Was mich auszeichnet</source>
+        <target>What defines me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/about-section/about-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="422120872028529900" datatype="html">
+        <source>Über mich</source>
+        <target>About me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/about-section/about-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2738024077794806607" datatype="html">
+        <source> Was als Leidenschaft und Traum begann, hat sich zu einer Lebensart entwickelt. Die ersten Berührungspunkte sammelte ich bei der Fotografie von Supercars. Inzwischen teste und fahre ich leidenschaftlich PS-starke Fahrzeuge im Sportwagen- und Elektrofahrzeug- Segment. Meine Abenteuer und Erfahrungen teile ich mit meiner Community, hauptsächlich auf Instagram und TikTok. Einen erfolgreichen Social Media Auftritt konnte ich jedoch nicht nur auf meinen eigenen Kanälen aufbauen, sondern auch für zahlreiche Firmen. Authentizität, starke Skills in Foto- und Videografie sowie fundiertes Social Media Wissen sind dabei mein Markenzeichen. Dabei agiere ich mit Leidenschaft und Herzblut. </source>
+        <target>What started as a passion and dream has grown into a lifestyle. I collected the first points of contact while photographing supercars. I am now passionate about testing and driving high-horsepower vehicles in the sports car and electric vehicle segment. I share my adventures and experiences with my community, mainly on Instagram and TikTok. However, I was not only able to build up a successful social media presence on my own channels, but also for numerous companies. Authenticity, strong skills in photography and videography as well as sound social media knowledge are my trademarks. I always work passionately and put my heart into what I do.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/about-section/about-section.component.html</context>
+          <context context-type="linenumber">21,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1617823982318984595" datatype="html">
+        <source> Du musst deinen Namen angeben </source>
+        <target> You have to type in a name </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2559267207987101980" datatype="html">
+        <source> Du musst deine E-Mail-Adresse angeben </source>
+        <target> You have to type in an email </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8503869362614223418" datatype="html">
+        <source> Ungültige E-Mail-Adresse </source>
+        <target> Invalid email </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">69,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5644795770167690835" datatype="html">
+        <source>Nachricht</source>
+        <target>Message</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1535365089018575770" datatype="html">
+        <source> Du musst eine Nachricht eingeben </source>
+        <target> You have to type in a message </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8970769016607182045" datatype="html">
+        <source>Senden</source>
+        <target>Send</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2060922466127038507" datatype="html">
+        <source>Ups, etwas ist schief gegangen!</source>
+        <target>Oops, somthing went wrong!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4915196029691427866" datatype="html">
+        <source> Versuche es bitte erneut. Falls das Problem weiterhin besteht, kontaktiere mich bitte über die am Seitenende stehende E-Mail-Adresse. </source>
+        <target> Please try again. If the problem persists please contact me via the email address listed at the end of the page.  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">150,153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8125840596336092063" datatype="html">
+        <source>Wiederholen</source>
+        <target>Try again</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8036645955413254181" datatype="html">
+        <source>Vielen Dank!</source>
+        <target>Thank you very much!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1568587018136647077" datatype="html">
+        <source> Ich schreibe dir in Kürze zurück. </source>
+        <target> I will respond to your message shortly. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">181,183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3035053213475890371" datatype="html">
+        <source> Hi, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> ich bin <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;hero__name&quot;&gt;"/>Tomke<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Hi, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> I am <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;hero__name&quot;&gt;"/>Tomke<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/hero-section/hero-section.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8146975628104910866" datatype="html">
+        <source> Als leidenschaftlicher Autoliebhaber fahre und teste ich die neusten Modelle der renommiertesten Automarken. Dabei teile ich meine spannenden Abenteuer mit meiner Community. </source>
+        <target> As a passionate car lover, I drive and test the latest models from the most renowned car brands. While doing so I share my exciting adventures with my community. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/hero-section/hero-section.component.html</context>
+          <context context-type="linenumber">9,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7365125715629516713" datatype="html">
+        <source> Kontakt </source>
+        <target> Contact </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/hero-section/hero-section.component.html</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4926154446092131424" datatype="html">
+        <source>Meine letzten Posts</source>
+        <target>My last posts</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/news-section/news-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="841934696444961534" datatype="html">
+        <source>News</source>
+        <target>News</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/news-section/news-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4778163327542828932" datatype="html">
+        <source>Meine letzten Projekte</source>
+        <target>My last projects</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/projects-section/projects-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2277434019757267974" datatype="html">
+        <source>Projekte</source>
+        <target>Projects</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/projects-section/projects-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1761357231719775024" datatype="html">
+        <source>Was mache Ich?</source>
+        <target>What I do?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3156815350118181541" datatype="html">
+        <source>Leistungen</source>
+        <target>Services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8204462860419005520" datatype="html">
+        <source>Fotografie &amp; Videografie</source>
+        <target>Photography &amp; videography</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1664092001457318645" datatype="html">
+        <source>Von individuellen Katalogbildern bis hin zum umfangreichen Imagefilm: Ich übernehm&apos;s!</source>
+        <target>From individual catalog pictures to an extensive image film: I'll take care of it!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1981886251131321983" datatype="html">
+        <source>Social Media Management</source>
+        <target>Social Media Management</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8485786129856593201" datatype="html">
+        <source>Durch mein strategisches Know-how biete ich das gesamte Spektrum für einen erfolgreichen Social Media Auftritt.</source>
+        <target>With my strategic know-how, I offer the entire spectrum for a successful social media presence.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3580934081926380521" datatype="html">
+        <source>Kooperationen</source>
+        <target>Cooperations</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7031583801473933365" datatype="html">
+        <source>Mehr Reichweite erzielen, Produkte oder Dienstleistungen via Social Media bewerben? - Durch eine Kooperation mit mir können sie hunderttausende Menschen erreichen.</source>
+        <target>Increase reach, advertise products or services via social media? - By cooperating with me you can reach hundreds of thousands of people.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7384835656329310194" datatype="html">
+        <source>Was andere über mich sagen</source>
+        <target>What others say about me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5891606542615934185" datatype="html">
+        <source>Empfehlungen</source>
+        <target>Testimonials</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2829382990772722172" datatype="html">
+        <source>Durch sein Know-how im Bereich Instagram Marketing hat Tomke maßgeblich zur Verbesserung der Unternehmensreichweite und unserem professionellen Instagramauftritt beigetragen.</source>
+        <target>With his know-how in the field of Instagram marketing, Tomke has made a significant contribution to improving the company's reach and our professional Instagram presence.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7198144631382030528" datatype="html">
+        <source>Geschäftsführer bei Irrland GmbH &amp; Co. KG</source>
+        <target>CEO Irrland GmbH &amp; Co. KG</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2436702734221704677" datatype="html">
+        <source>Tomke trägt maßgeblich zu unserem Erfolg in den sozialen Medien bei. Kreativität, Professionalität und Fairness stehen im Mittelpunkt unserer  Zusammenarbeit.</source>
+        <target>Tomke is a key contributor to our success on social media. Creativity, professionalism and fairness are the focus of our cooperation.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8955678149925271874" datatype="html">
+        <source>V8 Hotel Böblingen</source>
+        <target>V8 Hotel Böblingen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2361139356994810864" datatype="html">
+        <source>Seit einiger Zeit profitieren wir von Tomkes Expertise im Social-Media-Bereich. Er ist ohne Zweifel einer der stärksten Content-Creator im Automobil-Sektor und zeichnet sich durch eine extrem hohe Affinität für Perfomance und sein feines Händchen für die schnelllebige Zielgruppe aus.</source>
+        <target>For some time we have benefited from Tomke's expertise in the social media area. He is undoubtedly one of the strongest content creators in the automotive sector and is characterized by an extremely high affinity for performance and his fine touch for the fast-moving target group.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3635184577560662242" datatype="html">
+        <source>Geschäftsführer LeasingMarkt.de</source>
+        <target>CEO LeasingMarkt.de</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

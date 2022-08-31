@@ -1,0 +1,107 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.selected-language-container {
+  position: relative;
+}
+
+.selected-language {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 2;
+  padding: 0.5rem 0;
+  position: relative;
+  width: 100%;
+
+  &__arrow {
+    display: inline-block;
+    color: inherit;
+    transform-origin: center;
+
+    &--up {
+      transform: translateY(2px) rotate(180deg);
+    }
+
+    &--down {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  background-color: $primary-background-color-light;
+  border-radius: $default-border-radius;
+  // Should be underneath the selected language plus the height of the arrow and additional spacing
+  top: calc(100% + 10px + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0;
+  width: 100px;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px rgba(142, 142, 142, 0.3);
+
+  &--visible {
+    display: flex;
+  }
+}
+
+.list {
+  list-style-type: none;
+}
+
+.triangle {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    background-color: $primary-background-color-light;
+    box-shadow: 0px 0px 8px rgba(142, 142, 142, 0.3);
+  }
+}
+
+.link {
+  padding: 0.5rem;
+  text-align: center;
+  display: block;
+  background-color: $primary-background-color-light;
+  @include with-transition(filter);
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+@include media-breakpoint-up("md") {
+  .selected-language {
+    @include with-transition(color);
+    font-family: $secondary-font-bold;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+
+    &--white {
+      color: hsl(0, 0%, 50%);
+    }
+
+    &--transparent {
+      color: $secondary-font-color-light;
+    }
+  }
+}
