@@ -2,12 +2,14 @@ import {
   Component,
   ElementRef,
   HostListener,
+  Inject,
   Input,
   OnInit,
   ViewChild,
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enum';
+import { LOCALE_ID } from '@angular/core';
 
 @Component({
   selector: 'shared-language-dropdown-menu',
@@ -16,7 +18,6 @@ import { HeaderBackgroundColor } from '@shared/enums/header-background-color.enu
 })
 export class LanguageDropdownMenuComponent implements OnInit {
   shouldShowMenu = false;
-  selectedLanguage = 'DE';
   currentRoute?: string;
 
   @Input() backgroundColor?: HeaderBackgroundColor;
@@ -32,9 +33,8 @@ export class LanguageDropdownMenuComponent implements OnInit {
     }
   }
 
-  constructor(router: Router) {
+  constructor(router: Router, @Inject(LOCALE_ID) public localeId: string) {
     this.currentRoute = router.url;
-    console.log(this.currentRoute);
   }
 
   ngOnInit(): void {}
