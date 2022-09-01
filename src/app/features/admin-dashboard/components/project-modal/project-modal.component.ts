@@ -27,9 +27,11 @@ export class ProjectModalComponent implements OnInit {
   private _project: Project = {
     id: '',
     title: '',
+    titleEn: '',
     thumbnailImageUrl: '',
     services: [],
     description: '',
+    descriptionEn: '',
     slideshowImageUrls: [],
     websiteUrl: '',
     linkedInUrl: '',
