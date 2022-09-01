@@ -1,0 +1,33 @@
+<div class="selected-language-container">
+  <button
+    [class]="'selected-language selected-language--' + backgroundColor"
+    (click)="onClickSelectedLanguageButton($event)"
+  >
+    <span
+      class="selected-language__arrow"
+      [ngClass]="{
+        'selected-language__arrow--up': shouldShowMenu,
+        'selected-language__arrow--down': !shouldShowMenu
+      }"
+      >▾</span
+    >
+    {{ localeId }}
+  </button>
+  <nav
+    class="menu"
+    [ngClass]="{
+      'menu--visible': shouldShowMenu
+    }"
+    #menu
+  >
+    <div class="triangle"></div>
+    <ul class="list">
+      <li class="item">
+        <a [href]="'/de' + (currentRoute ?? '')" class="link">🇩🇪 DE</a>
+      </li>
+      <li class="item">
+        <a [href]="'/en' + (currentRoute ?? '')" class="link">🇬🇧 EN</a>
+      </li>
+    </ul>
+  </nav>
+</div>

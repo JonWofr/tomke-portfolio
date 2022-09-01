@@ -5,6 +5,7 @@
         class="subtitle project-detail__breadcrumb"
         routerLink="/"
         [fragment]="SectionId.PROJECTS"
+        i18n
       >
         Projekte
       </a>
@@ -57,12 +58,12 @@
               </clipPath>
             </defs>
           </svg>
-          <p class="button__label button__label--light">Zur Website</p>
+          <p class="button__label button__label--light" i18n>Zur Website</p>
         </a>
       </div>
       <div class="project-detail__text-information-block">
         <div class="additional-information-block">
-          <h2>Kanäle</h2>
+          <h2 i18n>Kanäle</h2>
           <shared-social-media-channels
             [instagramUrl]="project.instagramUrl"
             [linkedInUrl]="project.linkedInUrl"
@@ -71,7 +72,7 @@
           ></shared-social-media-channels>
         </div>
         <div class="additional-information-block">
-          <h2>Leistungen</h2>
+          <h2 i18n>Leistungen</h2>
           <ul class="additional-information-block__list">
             <li *ngFor="let service of project.services">{{ service }}</li>
           </ul>

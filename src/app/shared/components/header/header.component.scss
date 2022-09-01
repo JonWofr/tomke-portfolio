@@ -78,7 +78,12 @@
     @include with-transition(height);
 
     &--expanded {
-      height: 16rem;
+      height: 19rem;
+      // A delayed instant animation is added so that an overflow is only enabled once the menu is fully expanded
+      animation-name: overflow;
+      animation-duration: 0s;
+      animation-delay: 0.25s;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -117,6 +122,15 @@
     }
   }
 
+  @keyframes overflow {
+    from {
+      overflow: hidden;
+    }
+    to {
+      overflow: visible;
+    }
+  }
+
   @include media-breakpoint-up("md") {
     height: $default-header-height;
 
@@ -151,6 +165,7 @@
 
     &__navigation {
       background-color: initial;
+      overflow: visible;
     }
 
     &__navigation-list {
@@ -173,6 +188,10 @@
       &--transparent {
         color: $primary-font-color-light;
       }
+    }
+
+    &__language-dropdown-menu-item {
+      margin-left: 1rem;
     }
   }
 }

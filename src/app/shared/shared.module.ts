@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FadeInDirective } from './directives/fade-in/fade-in.directive';
+import { LanguageDropdownMenuComponent } from './components/language-dropdown-menu/language-dropdown-menu.component';
 
 /**
  * This module contains all components, pipes etc. that are shared across the
@@ -24,6 +25,7 @@ import { FadeInDirective } from './directives/fade-in/fade-in.directive';
     SectionHeaderComponent,
     SpinnerComponent,
     FadeInDirective,
+    LanguageDropdownMenuComponent,
   ],
   imports: [
     CommonModule,
