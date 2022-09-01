@@ -9,6 +9,7 @@ import { SectionHeaderComponent } from './components/section-header/section-head
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FadeInDirective } from './directives/fade-in/fade-in.directive';
 import { LanguageDropdownMenuComponent } from './components/language-dropdown-menu/language-dropdown-menu.component';
+import { LocalizeServicesPipe } from './pipes/localize-services/localize-services.pipe';
 
 /**
  * This module contains all components, pipes etc. that are shared across the
@@ -26,6 +27,7 @@ import { LanguageDropdownMenuComponent } from './components/language-dropdown-me
     SpinnerComponent,
     FadeInDirective,
     LanguageDropdownMenuComponent,
+    LocalizeServicesPipe,
   ],
   imports: [
     CommonModule,
@@ -40,6 +42,7 @@ import { LanguageDropdownMenuComponent } from './components/language-dropdown-me
     SectionHeaderComponent,
     SpinnerComponent,
     FadeInDirective,
+    LocalizeServicesPipe,
   ],
 })
 export class SharedModule {}

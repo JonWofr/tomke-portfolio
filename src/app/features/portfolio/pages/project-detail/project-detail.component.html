@@ -10,8 +10,9 @@
         Projekte
       </a>
       <span class="subtitle project-detail__breadcrumb"> / </span>
-      <span class="subtitle project-detail__breadcrumb">
-        {{ project.title }}
+      <span class="subtitle project-detail__breadcrumb" [ngSwitch]="localeId">
+        <ng-container *ngSwitchCase="'en'">{{ project.titleEn }}</ng-container>
+        <ng-container *ngSwitchCase="'de'">{{ project.title }}</ng-container>
       </span>
     </div>
     <div class="project-detail__slideshow-container">
@@ -21,11 +22,22 @@
     </div>
     <div class="project-detail__text-information-container">
       <div class="project-detail__text-information-block">
-        <h1 class="project-detail__title">
-          {{ project.title }}
+        <h1 class="project-detail__title" [ngSwitch]="localeId">
+          <ng-container *ngSwitchCase="'en'">{{
+            project.titleEn
+          }}</ng-container>
+          <ng-container *ngSwitchCase="'de'">{{ project.title }}</ng-container>
         </h1>
-        <p class="section__paragraph project-detail__paragraph">
-          {{ project.description }}
+        <p
+          class="section__paragraph project-detail__paragraph"
+          [ngSwitch]="localeId"
+        >
+          <ng-container *ngSwitchCase="'en'">{{
+            project.descriptionEn
+          }}</ng-container>
+          <ng-container *ngSwitchCase="'de'">{{
+            project.description
+          }}</ng-container>
         </p>
         <a
           *ngIf="project.websiteUrl"
@@ -74,7 +86,9 @@
         <div class="additional-information-block">
           <h2 i18n>Leistungen</h2>
           <ul class="additional-information-block__list">
-            <li *ngFor="let service of project.services">{{ service }}</li>
+            <li *ngFor="let service of project.services | localizeServices">
+              {{ service }}
+            </li>
           </ul>
         </div>
       </div>

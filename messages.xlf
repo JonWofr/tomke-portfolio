@@ -204,53 +204,68 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/project-detail/project-detail.component.html</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">87</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
           <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8204462860419005520" datatype="html">
-        <source>Fotografie &amp; Videografie</source>
+      <trans-unit id="1687243528146310926" datatype="html">
+        <source><x id="PH" equiv-text="ServiceTitle.PHOTOGRAPHY_AND_VIDEOGRAPHY"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/pipes/localize-services/localize-services.pipe.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="meaning">Photography and videography</note>
       </trans-unit>
       <trans-unit id="1664092001457318645" datatype="html">
         <source>Von individuellen Katalogbildern bis hin zum umfangreichen Imagefilm: Ich übernehm&apos;s!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1981886251131321983" datatype="html">
-        <source>Social Media Management</source>
+      <trans-unit id="156331020123388240" datatype="html">
+        <source><x id="PH" equiv-text="ServiceTitle.SOCIAL_MEDIA_MANAGEMENT"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">21</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/pipes/localize-services/localize-services.pipe.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="meaning">Social media management</note>
       </trans-unit>
       <trans-unit id="8485786129856593201" datatype="html">
         <source>Durch mein strategisches Know-how biete ich das gesamte Spektrum für einen erfolgreichen Social Media Auftritt.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3580934081926380521" datatype="html">
-        <source>Kooperationen</source>
+      <trans-unit id="1627295524804725087" datatype="html">
+        <source><x id="PH" equiv-text="ServiceTitle.COOPERATIONS"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">26</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/pipes/localize-services/localize-services.pipe.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="meaning">Cooperations</note>
       </trans-unit>
       <trans-unit id="7031583801473933365" datatype="html">
         <source>Mehr Reichweite erzielen, Produkte oder Dienstleistungen via Social Media bewerben? - Durch eine Kooperation mit mir können sie hunderttausende Menschen erreichen.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7384835656329310194" datatype="html">
@@ -966,14 +981,14 @@
         <source>Zur Website</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/project-detail/project-detail.component.html</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9128050969364856472" datatype="html">
         <source>Kanäle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/project-detail/project-detail.component.html</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2400857379190014720" datatype="html">

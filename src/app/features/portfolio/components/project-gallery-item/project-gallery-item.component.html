@@ -6,13 +6,23 @@
   </a>
   <div class="project-gallery-item__overlay">
     <h3 class="subtitle project-gallery-item__subtitle">
-      {{ project?.services?.join(", ") }}
+      {{ project ? (project.services | localizeServices).join(", ") : "" }}
     </h3>
-    <h4 class="project-gallery-item__title">
-      {{ project?.title }}
+    <h4 class="project-gallery-item__title" [ngSwitch]="localeId">
+      <ng-container *ngSwitchCase="'en'">
+        {{ project?.titleEn }}
+      </ng-container>
+      <ng-container *ngSwitchCase="'de'">
+        {{ project?.title }}
+      </ng-container>
     </h4>
-    <p class="project-gallery-item__description">
-      {{ project ? (project.description | cropText: 15) : undefined }}
+    <p class="project-gallery-item__description" [ngSwitch]="localeId">
+      <ng-container *ngSwitchCase="'en'">
+        {{ project ? (project.descriptionEn | cropText: 15) : undefined }}
+      </ng-container>
+      <ng-container *ngSwitchCase="'de'">
+        {{ project ? (project.description | cropText: 15) : undefined }}
+      </ng-container>
     </p>
   </div>
   <img
