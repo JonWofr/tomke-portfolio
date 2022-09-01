@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as nodemailer from 'nodemailer';
 import * as functions from 'firebase-functions';
+import { EnvironmentVariables } from '../../models/environment-variables';
 
 export const sendMail = async (req: express.Request, res: express.Response) => {
   try {
@@ -15,8 +16,8 @@ export const sendMail = async (req: express.Request, res: express.Response) => {
       port: 587,
       secure: false,
       auth: {
-        user: functions.config().nodemailer.user,
-        pass: functions.config().nodemailer.password,
+        user: (functions.config() as EnvironmentVariables).nodemailer.user,
+        pass: (functions.config() as EnvironmentVariables).nodemailer.password,
       },
     });
 
