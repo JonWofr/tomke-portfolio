@@ -31,6 +31,12 @@ import { Observable } from 'rxjs';
 type SortBy = 'createdAt';
 type SortDirection = 'asc' | 'desc';
 
+// These should match the allowed mimetypes set in the file input
+const fileExtension: { [key: string]: string } = {
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+};
+
 @Injectable({
   providedIn: 'root',
 })
@@ -85,11 +91,13 @@ export class ProjectsControllerService {
   }
 
   private isDataUrl(value: string) {
-    return new RegExp(/data:/).test(value);
+    return new RegExp(/^data:/).test(value);
   }
 
   private async uploadDataUrl(dataUrl: string) {
-    const fileRef = ref(this.storage, `images/${uuidv4()}`);
+    const mimeType = dataUrl.substring(5).split(';')[0];
+    const extension = fileExtension[mimeType];
+    const fileRef = ref(this.storage, `images/${uuidv4()}.${extension}`);
     await uploadString(fileRef, dataUrl, 'data_url');
     return await getDownloadURL(fileRef);
   }
