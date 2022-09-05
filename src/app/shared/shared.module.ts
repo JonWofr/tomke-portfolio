@@ -10,6 +10,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FadeInDirective } from './directives/fade-in/fade-in.directive';
 import { LanguageDropdownMenuComponent } from './components/language-dropdown-menu/language-dropdown-menu.component';
 import { LocalizeServicesPipe } from './pipes/localize-services/localize-services.pipe';
+import { ParseResponsiveImageURLs } from './pipes/parse-responsive-image-urls/parse-responsive-image-urls.pipe';
 
 /**
  * This module contains all components, pipes etc. that are shared across the
@@ -28,6 +29,7 @@ import { LocalizeServicesPipe } from './pipes/localize-services/localize-service
     FadeInDirective,
     LanguageDropdownMenuComponent,
     LocalizeServicesPipe,
+    ParseResponsiveImageURLs,
   ],
   imports: [
     CommonModule,
@@ -43,6 +45,7 @@ import { LocalizeServicesPipe } from './pipes/localize-services/localize-service
     SpinnerComponent,
     FadeInDirective,
     LocalizeServicesPipe,
+    ParseResponsiveImageURLs,
   ],
 })
 export class SharedModule {}

@@ -23,7 +23,8 @@
       "@features/*": ["app/features/*"],
       "@core/*": ["app/core/*"],
       "@shared/*": ["app/shared/*"]
-    }
+    },
+    "skipLibCheck": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

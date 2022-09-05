@@ -14,6 +14,7 @@ export const environment = {
   },
   production: false,
   backendUrl: 'http://localhost:5001/tomke-portfolio/europe-west3',
+  useEmulators: true,
 };
 
 /*
