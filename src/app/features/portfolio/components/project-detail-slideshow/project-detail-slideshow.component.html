@@ -7,6 +7,8 @@
             <div *ngFor="let imageUrl of imageUrls" class="swiper-slide">
               <img
                 class="project-detail-slideshow__cinema-image"
+                [srcset]="imageUrl | parseResponsiveImageURLs"
+                sizes="(min-width: 720px) 75vw, 100vw"
                 [src]="imageUrl"
                 alt=""
               />
@@ -14,10 +16,7 @@
           </div>
           <button
             #arrowLeftButton
-            class="
-              project-detail-slideshow__navigation-button
-              project-detail-slideshow__navigation-button--left
-            "
+            class="project-detail-slideshow__navigation-button project-detail-slideshow__navigation-button--left"
             (click)="slideToPreviousSlide()"
             [disabled]="activeSlideIndex === 0"
           >
@@ -60,10 +59,7 @@
           </button>
           <button
             #arrowRightButton
-            class="
-              project-detail-slideshow__navigation-button
-              project-detail-slideshow__navigation-button--right
-            "
+            class="project-detail-slideshow__navigation-button project-detail-slideshow__navigation-button--right"
             (click)="slideToNextSlide()"
             [disabled]="activeSlideIndex === imageUrls.length - 1"
           >
@@ -142,6 +138,8 @@
               </svg>
             </div>
             <img
+              [srcset]="imageUrl | parseResponsiveImageURLs"
+              sizes="(min-width: 720px) 75vw, 100vw"
               [src]="imageUrl"
               alt=""
               class="project-detail-slideshow__preview-image"

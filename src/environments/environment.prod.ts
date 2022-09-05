@@ -10,4 +10,5 @@ export const environment = {
   },
   production: true,
   backendUrl: 'https://europe-west3-tomke-portfolio.cloudfunctions.net',
+  useEmulators: false,
 };

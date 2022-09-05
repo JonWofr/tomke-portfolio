@@ -10,8 +10,16 @@ import { CoreModule } from './core/core.module';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { provideStorage, getStorage } from '@angular/fire/storage';
+import {
+  provideFirestore,
+  getFirestore,
+  connectFirestoreEmulator,
+} from '@angular/fire/firestore';
+import {
+  provideStorage,
+  getStorage,
+  connectStorageEmulator,
+} from '@angular/fire/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,8 +33,18 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
+    provideFirestore(() => {
+      const firestore = getFirestore();
+      if (environment.useEmulators)
+        connectFirestoreEmulator(firestore, 'localhost', 8080);
+      return firestore;
+    }),
+    provideStorage(() => {
+      const storage = getStorage();
+      if (environment.useEmulators)
+        connectStorageEmulator(storage, 'localhost', 9199);
+      return storage;
+    }),
     HttpClientModule,
   ],
   providers: [],
