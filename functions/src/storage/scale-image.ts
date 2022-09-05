@@ -21,9 +21,24 @@ export const scaleImage = async (object: functions.storage.ObjectMetadata) => {
   }
 
   const fileName = path.basename(filePath);
-  const fileNameParts = fileName.split('_');
+  const fileNameParts = fileName.split('.');
 
-  if (sizes.includes(parseInt(fileNameParts[fileNameParts.length - 1]))) {
+  if (fileNameParts.length === 0) {
+    return functions.logger.log('Missing file extension.');
+  }
+
+  const extension = fileNameParts[fileNameParts.length - 1];
+  const fileNameWithoutExtension = fileNameParts.slice(0, -1).join('.');
+  const fileNameWithoutExtensionParts = fileNameWithoutExtension.split('-');
+
+  if (
+    fileNameWithoutExtensionParts.length > 0 &&
+    sizes.includes(
+      parseInt(
+        fileNameWithoutExtensionParts[fileNameWithoutExtensionParts.length - 1]
+      )
+    )
+  ) {
     return functions.logger.log(`File ${fileName} is already a resized image.`);
   }
 
@@ -37,7 +52,7 @@ export const scaleImage = async (object: functions.storage.ObjectMetadata) => {
 
   await Promise.all(
     sizes.map(async (size) => {
-      const targetImageFilename = `${fileName}_${size}`;
+      const targetImageFilename = `${fileNameWithoutExtension}-${size}.${extension}`;
 
       const localTargetImagePath = path.join(os.tmpdir(), targetImageFilename);
 
