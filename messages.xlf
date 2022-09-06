@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="72977788872153498" datatype="html">
+        <source>Was mich auszeichnet</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/about-section/about-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="422120872028529900" datatype="html">
+        <source>Über mich</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/about-section/about-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2738024077794806607" datatype="html">
+        <source> Was als Leidenschaft und Traum begann, hat sich zu einer Lebensart entwickelt. Die ersten Berührungspunkte sammelte ich bei der Fotografie von Supercars. Inzwischen teste und fahre ich leidenschaftlich PS-starke Fahrzeuge im Sportwagen- und Elektrofahrzeug- Segment. Meine Abenteuer und Erfahrungen teile ich mit meiner Community, hauptsächlich auf Instagram und TikTok. Einen erfolgreichen Social Media Auftritt konnte ich jedoch nicht nur auf meinen eigenen Kanälen aufbauen, sondern auch für zahlreiche Firmen. Authentizität, starke Skills in Foto- und Videografie sowie fundiertes Social Media Wissen sind dabei mein Markenzeichen. Dabei agiere ich mit Leidenschaft und Herzblut. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/about-section/about-section.component.html</context>
+          <context context-type="linenumber">21,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7218584840088949808" datatype="html">
+        <source>Schreibe mir eine Nachricht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="397497450705980813" datatype="html">
+        <source>Kontakt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1617823982318984595" datatype="html">
+        <source> Du musst deinen Namen angeben </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2559267207987101980" datatype="html">
+        <source> Du musst deine E-Mail-Adresse angeben </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">64,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8503869362614223418" datatype="html">
+        <source> Ungültige E-Mail-Adresse </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">71,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5644795770167690835" datatype="html">
+        <source>Nachricht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1535365089018575770" datatype="html">
+        <source> Du musst eine Nachricht eingeben </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">96,98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8970769016607182045" datatype="html">
+        <source>Senden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2060922466127038507" datatype="html">
+        <source>Ups, etwas ist schief gegangen!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4915196029691427866" datatype="html">
+        <source> Versuche es bitte erneut. Falls das Problem weiterhin besteht, kontaktiere mich bitte über die am Seitenende stehende E-Mail-Adresse. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">152,155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8125840596336092063" datatype="html">
+        <source>Wiederholen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8036645955413254181" datatype="html">
+        <source>Vielen Dank!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1568587018136647077" datatype="html">
+        <source> Ich schreibe dir in Kürze zurück. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/contact-section/contact-section.component.html</context>
+          <context context-type="linenumber">183,185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3035053213475890371" datatype="html">
+        <source> Hi, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> ich bin <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;hero__name&quot;&gt;"/>Tomke<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/hero-section/hero-section.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8146975628104910866" datatype="html">
+        <source> Als leidenschaftlicher Autoliebhaber fahre und teste ich die neusten Modelle der renommiertesten Automarken. Dabei teile ich meine spannenden Abenteuer mit meiner Community. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/hero-section/hero-section.component.html</context>
+          <context context-type="linenumber">9,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7365125715629516713" datatype="html">
+        <source> Kontakt </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/hero-section/hero-section.component.html</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4926154446092131424" datatype="html">
+        <source>Meine letzten Posts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/news-section/news-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="841934696444961534" datatype="html">
+        <source>News</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/news-section/news-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4778163327542828932" datatype="html">
+        <source>Meine letzten Projekte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/projects-section/projects-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2277434019757267974" datatype="html">
+        <source>Projekte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/projects-section/projects-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1761357231719775024" datatype="html">
+        <source>Was mache Ich?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3156815350118181541" datatype="html">
+        <source>Leistungen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/project-detail/project-detail.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1687243528146310926" datatype="html">
+        <source><x id="PH" equiv-text="ServiceTitle.PHOTOGRAPHY_AND_VIDEOGRAPHY"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/pipes/localize-services/localize-services.pipe.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="meaning">Photography and videography</note>
+      </trans-unit>
+      <trans-unit id="1664092001457318645" datatype="html">
+        <source>Von individuellen Katalogbildern bis hin zum umfangreichen Imagefilm: Ich übernehm&apos;s!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="156331020123388240" datatype="html">
+        <source><x id="PH" equiv-text="ServiceTitle.SOCIAL_MEDIA_MANAGEMENT"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/pipes/localize-services/localize-services.pipe.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="meaning">Social media management</note>
+      </trans-unit>
+      <trans-unit id="8485786129856593201" datatype="html">
+        <source>Durch mein strategisches Know-how biete ich das gesamte Spektrum für einen erfolgreichen Social Media Auftritt.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1627295524804725087" datatype="html">
+        <source><x id="PH" equiv-text="ServiceTitle.COOPERATIONS"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/pipes/localize-services/localize-services.pipe.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="meaning">Cooperations</note>
+      </trans-unit>
+      <trans-unit id="7031583801473933365" datatype="html">
+        <source>Mehr Reichweite erzielen, Produkte oder Dienstleistungen via Social Media bewerben? - Durch eine Kooperation mit mir können sie hunderttausende Menschen erreichen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/services-section/services-section.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7384835656329310194" datatype="html">
+        <source>Was andere über mich sagen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5891606542615934185" datatype="html">
+        <source>Empfehlungen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2829382990772722172" datatype="html">
+        <source>Durch sein Know-how im Bereich Instagram Marketing hat Tomke maßgeblich zur Verbesserung der Unternehmensreichweite und unserem professionellen Instagramauftritt beigetragen.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7198144631382030528" datatype="html">
+        <source>Geschäftsführer bei Irrland GmbH &amp; Co. KG</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2436702734221704677" datatype="html">
+        <source>Tomke trägt maßgeblich zu unserem Erfolg in den sozialen Medien bei. Kreativität, Professionalität und Fairness stehen im Mittelpunkt unserer  Zusammenarbeit.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8955678149925271874" datatype="html">
+        <source>V8 Hotel Böblingen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2361139356994810864" datatype="html">
+        <source>Seit einiger Zeit profitieren wir von Tomkes Expertise im Social-Media-Bereich. Er ist ohne Zweifel einer der stärksten Content-Creator im Automobil-Sektor und zeichnet sich durch eine extrem hohe Affinität für Perfomance und sein feines Händchen für die schnelllebige Zielgruppe aus.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3635184577560662242" datatype="html">
+        <source>Geschäftsführer LeasingMarkt.de</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/testimonials-section/testimonials-section.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4082114936887396529" datatype="html">
+        <source>Datenschutz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2420160221221844315" datatype="html">
+        <source> Allgemeines zur Datenverarbeitung </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7995033337000330960" datatype="html">
+        <source> Umfang der Verarbeitung personenbezogener Daten </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="309551794208086681" datatype="html">
+        <source> Wir verarbeiten personenbezogene Daten unserer Nutzer, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist. Die Verarbeitung personenbezogener Daten unserer Nutzer erfolgt entweder aufgrund einer vom Nutzer erteilten vorherigen Einwilligung oder in Fällen, in denen die Verarbeitung der Daten durch gesetzliche Vorschriften gestattet ist. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">11,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7023221380622547859" datatype="html">
+        <source> Rechtsgrundlage für die Verarbeitung personenbezogener Daten </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4393882576451265055" datatype="html">
+        <source> Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient Art. 6 Abs. 1 lit. a EU-Datenschutzgrundverordnung (DSGVO) als Rechtsgrundlage. Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages, dessen Vertragspartei die betroffene Person ist, erforderlich ist, dient Art. 6 Abs. 1 lit. b DSGVO als Rechtsgrundlage. Dies gilt auch für Verarbeitungsvorgänge, die zur Durchführung vorvertraglicher Maßnahmen erforderlich sind. Soweit eine Verarbeitung personenbezogener Daten zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, der unser Unternehmen unterliegt, dient Art. 6 Abs. 1 lit. c DSGVO als Rechtsgrundlage. Für den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage. Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich und überwiegen die Interessen, Grundrechte und Grundfreiheiten des Betroffenen das erstgenannte Interesse nicht, so dient Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage für die Verarbeitung. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">22,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1665013142145379235" datatype="html">
+        <source> Datenlöschung und Speicherdauer </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="327558800165695502" datatype="html">
+        <source> Die personenbezogenen Daten der betroffenen Person werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt. Eine Speicherung kann darüber hinaus erfolgen, wenn dies durch den europäischen oder nationalen Gesetzgeber in unionsrechtlichen Verordnungen, Gesetzen oder sonstigen Vorschriften, denen der Verantwortliche unterliegt, vorgesehen wurde. Eine Sperrung oder Löschung der Daten erfolgt auch dann, wenn eine durch die genannten Normen vorgeschriebene Speicherfrist abläuft, es sei denn, dass eine Erforderlichkeit zur weiteren Speicherung der Daten für einen Vertragsabschluss oder eine Vertragserfüllung besteht. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">45,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4928012777907283962" datatype="html">
+        <source> Bereitstellung der Website und Erstellung von Logfiles </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">56,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2486476008941157373" datatype="html">
+        <source> Sie können unsere Webseiten besuchen, ohne Angaben zu Ihrer Person zu machen. Bei jedem Aufruf einer Webseite speichert der Webserver lediglich automatisch ein sogenanntes Server-Logfile, das z.B. den Namen der angeforderten Datei, Ihre IP-Adresse, Datum und Uhrzeit des Abrufs, übertragene Datenmenge und den anfragenden Provider (Zugriffsdaten) enthält und den Abruf dokumentiert. Diese Zugriffsdaten werden ausschließlich zum Zwecke der Sicherstellung eines störungsfreien Betriebs der Seite sowie der Verbesserung unseres Angebots ausgewertet. Dies dient der Wahrung unserer im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen an einer korrekten Darstellung unseres Angebots im Sinne des Art. 6 Abs. 1 lit. f DSGVO. Alle Zugriffsdaten werden spätestens sieben Tage nach Ende Ihres Seitenbesuchs gelöscht. Die Erfassung der Zugriffsdaten zur Bereitstellung der Website und die Speicherung der Daten in Logfiles ist für den Betrieb der Internetseite zwingend erforderlich. Es besteht folglich seitens des Nutzers keine Widerspruchsmöglichkeit. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">59,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4083421903331005967" datatype="html">
+        <source>Verwendung von Cookies</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3546555591681782899" datatype="html">
+        <source> Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, verwendet unsere Webseite sogenannte Cookies. Bei Cookies handelt es sich um Textdateien, die im Internetbrowser bzw. vom Internetbrowser auf dem Endgerät des Nutzers gespeichert werden. Ein Cookie enthält in der Regel den Namen der Domain, von der die Cookie-Daten gesendet wurden sowie Informationen über das Alter des Cookies und ein alphanumerisches Identifizierungszeichen. Cookies ermöglichen unseren Systemen, das Gerät des Nutzers zu erkennen und eventuelle Voreinstellungen sofort verfügbar zu machen und helfen uns, unsere Website zu verbessern und Ihnen einen besseren und auf Sie zugeschnittenen Service anbieten zu können. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">77,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5199852437793451508" datatype="html">
+        <source> Dauer der Speicherung, Widerspruchs- und Beseitigungsmöglichkeit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1386170179757584590" datatype="html">
+        <source> Cookies werden auf dem Rechner des Nutzers gespeichert und von diesem an unsere Seite übermittelt. Daher haben Sie als Nutzer auch die volle Kontrolle über die Verwendung von Cookies. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und einzeln über deren Annahme entscheiden oder die Annahme von Cookies für bestimmte Fälle oder generell ausschließen. Wenn Sie nur unsere eigenen Cookies, nicht aber die Cookies unserer Dienstleister und Partner akzeptieren wollen, können Sie die Einstellung in Ihrem Browser „Cookies von Drittanbietern blockieren“ wählen. Jeder Browser unterscheidet sich in der Art, wie er die Cookie-Einstellungen verwaltet. Diese ist in dem Hilfemenü jedes Browsers beschrieben, welches Ihnen erläutert, wie Sie Ihre Cookie-Einstellungen ändern können. Werden Cookies für unsere Website deaktiviert, können möglicherweise nicht mehr alle Funktionen der Website vollumfänglich genutzt werden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">93,108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="599081444828501583" datatype="html">
+        <source> Hosting-Dienstleistungen durch einen Drittanbieter </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">109,111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7826879840957614011" datatype="html">
+        <source> Im Rahmen einer Verarbeitung in unserem Auftrag erbringt ein Drittanbieter für uns die Dienste zum Hosting und zur Darstellung der Webseite. Alle Daten, die im Rahmen der Nutzung dieser Webseite oder in dafür vorgesehenen Formularen im Onlineshop wie folgend beschrieben<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>erhoben werden, werden auf seinen Servern verarbeitet. Eine Verarbeitung auf anderen Servern findet nur in dem hier erläuterten Rahmen statt. Dieser Dienstleister sitzt innerhalb eines Landes der Europäischen Union oder des Europäischen Wirtschaftsraums. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">112,121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="499682345031118794" datatype="html">
+        <source> Kontaktaufnahme per E-Mail </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">122,124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7486582529472415362" datatype="html">
+        <source> Sie können über die auf unserer Internetseite bereitgehaltene E-Mail-Adresse mit uns Kontakt aufnehmen. In diesem Fall werden Ihre mit der E-Mail übermittelten personenbezogenen Daten gespeichert. Es erfolgt in diesem Zusammenhang keine Weitergabe der Daten an Dritte. Die Daten werden ausschließlich für die Verarbeitung der Konversation verwendet. Rechtsgrundlage für die Verarbeitung der Daten, die Sie per E-Mail übermitteln, ist Art. 6 Abs. 1 lit. f DSGVO. Zielt die Kontaktaufnahme auf den Abschluss eines Vertrages ab, ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO. Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. Für die personenbezogenen Daten, die per E-Mail übersandt wurden, ist dies dann der Fall, wenn die jeweilige Konversation mit Ihnen beendet ist. Beendet ist die Konversation dann, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist. Sie haben jederzeit die Möglichkeit, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten Widerspruch einzulegen. In einem solchen Fall kann die Konversation nicht fortgeführt werden. Den Widerspruch gegen die Verarbeitung richten Sie bitte per E-Mail an die E-Mail-Adresse <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:kontakt@tomke-nils.de&quot;&gt;"/>kontakt@tomke-nils.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">125,145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7735213385968748447" datatype="html">
+        <source> Alle personenbezogenen Daten, die im Zuge der Kontaktaufnahme gespeichert wurden, werden in diesem Fall gelöscht. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">147,150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9002936973386566558" datatype="html">
+        <source> Instagram Social Media Plugin </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">151,153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="595350210862568092" datatype="html">
+        <source> Wir setzen auf unserer Website Inhalte und Funktionen des sozialen Netzwerk-Dienstes Instagram ein, um unser Angebot hierüber bekannter zu machen und für Sie interessanter und persönlicher auszugestalten. Anbieter ist die Instagram LLC., 1601 Willow Road, Menlo Park, CA 94025, USA. Hierzu zählen Bilder, Videos, Texte und Schaltflächen mit dem Instagram-Logo oder in Form einer „Instagram-Kamera“. Mit diesen Funktionen können Inhalte unserer Onlineangebots innerhalb der Plattform von Instagram geteilt werden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">154,163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2073907052691234129" datatype="html">
+        <source> Wenn Sie Mitglied der Plattform Instagram sind, kann Instagram den Aufruf der vorgenannten Inhalte und Funktionen Ihrem dortigen Nutzerprofil zuordnen. Dabei stellt Ihr Browser eine direkte Verbindung zu den Servern von Instagram her. Der Inhalt des Plugins wird von Instagram direkt an Ihren Browser übermittelt und in die Seite eingebunden. Durch diese Einbindung erhält Instagram die Information, dass Ihr Browser die entsprechende Seite unseres Webauftritts aufgerufen hat, auch wenn Sie kein Instagram-Profil besitzen oder gerade nicht bei Instagram eingeloggt sind. Diese Information (einschließlich Ihrer IP-Adresse) wird von Ihrem Browser direkt an einen Server von Instagram in die USA übermittelt und dort gespeichert. Sind Sie bei Instagram eingeloggt, kann Instagram den Besuch unserer Website Ihrem Instagram-Account unmittelbar zuordnen. Wenn Sie mit den Plugins interagieren, zum Beispiel das „Instagram“-Button betätigen, wird diese Information ebenfalls direkt an einen Server von Instagram übermittelt und dort gespeichert. Die Informationen werden außerdem auf Ihrem Instagram-Account veröffentlicht und dort Ihren Kontakten angezeigt. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">164,182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8219645903387963783" datatype="html">
+        <source> Rechtsgrundlage für die Verarbeitung der personenbezogenen Daten der Nutzer ist Art. 6 Abs. 1 lit. f DS-GVO. Der dahinterstehende werbliche Zweck, unser Angebot hierüber bekannter zu machen und für Sie interessanter auszugestalten, ist unser berechtigtes Interesse im Sinne der DSGVO. Wenn Sie nicht damit einverstanden sind, dass Instagram die über unseren Webauftritt gesammelten Daten unmittelbar Ihrem Instagram-Account zuordnet, müssen Sie sich vor Ihrem Besuch unserer Website bei Instagram ausloggen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">183,192</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7382725764339965918" datatype="html">
+        <source> Nähere Informationen hierzu Sie in der Datenschutzerklärung von Instagram <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://help.instagram.com/155833707900388&quot; target=&quot;_blank&quot;
+        &gt;"/>https://help.instagram.com/155833707900388<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+      &gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">193,197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7106282630791618604" datatype="html">
+        <source> Ihre Rechte als betroffene Person </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">199,201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2379165223722330862" datatype="html">
+        <source> Werden personenbezogene Daten von Ihnen verarbeitet, sind Sie Betroffener i.S.d. DSGVO und es stehen Ihnen folgende Rechte gegenüber dem Verantwortlichen zu: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">202,206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1125002276133741497" datatype="html">
+        <source>Auskunftsrecht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8515101843529072038" datatype="html">
+        <source> Sie können von dem Verantwortlichen eine Bestätigung darüber verlangen, ob personenbezogene Daten, die Sie betreffen, von uns verarbeitet werden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">208,211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="821492531179825826" datatype="html">
+        <source> Liegt eine solche Verarbeitung vor, können Sie von dem Verantwortlichen über folgende Informationen Auskunft verlangen: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">212,215</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1938203930000780367" datatype="html">
+        <source> die Zwecke, zu denen die personenbezogenen Daten verarbeitet werden; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">217,219</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2434687078608955348" datatype="html">
+        <source> die Kategorien von personenbezogenen Daten, welche verarbeitet werden; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">220,222</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7715908720460810551" datatype="html">
+        <source> die Empfänger bzw. die Kategorien von Empfängern, gegenüber denen die Sie betreffenden personenbezogenen Daten offengelegt wurden oder noch offengelegt werden; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">223,227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6808757824836630292" datatype="html">
+        <source> die geplante Dauer der Speicherung der Sie betreffenden personenbezogenen Daten oder, falls konkrete Angaben hierzu nicht möglich sind, Kriterien für die Festlegung der Speicherdauer; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">228,232</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6337983386791388381" datatype="html">
+        <source> das Bestehen eines Rechts auf Berichtigung oder Löschung der Sie betreffenden personenbezogenen Daten, eines Rechts auf Einschränkung der Verarbeitung durch den Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">233,238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8591877192319990073" datatype="html">
+        <source> das Bestehen eines Beschwerderechts bei einer Aufsichtsbehörde; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">239,241</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3811376042973497958" datatype="html">
+        <source> alle verfügbaren Informationen über die Herkunft der Daten, wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">242,245</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2561050818379157510" datatype="html">
+        <source> das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling gemäß Art. 22 Abs. 1 und 4 DSGVO und - zumindest in diesen Fällen - aussagekräftige Informationen über die involvierte Logik sowie die Tragweite und die angestrebten Auswirkungen einer derartigen Verarbeitung für die betroffene Person. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">246,252</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5212544251346886148" datatype="html">
+        <source> Ihnen steht das Recht zu, Auskunft darüber zu verlangen, ob die Sie betreffenden personenbezogenen Daten in ein Drittland oder an eine internationale Organisation übermittelt werden. In diesem Zusammenhang können Sie verlangen, über die geeigneten Garantien gem. Art. 46 DSGVO im Zusammenhang mit der Übermittlung unterrichtet zu werden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">254,260</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6448687937773206900" datatype="html">
+        <source>Recht auf Berichtigung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">261</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7639908790512315001" datatype="html">
+        <source> Sie haben ein Recht auf unverzügliche Berichtigung und/oder Vervollständigung gegenüber dem Verantwortlichen, sofern die verarbeiteten personenbezogenen Daten, die Sie betreffen, unrichtig oder unvollständig sind. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">262,267</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4245216903731842581" datatype="html">
+        <source>Recht auf Löschung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">268</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6694684454556294662" datatype="html">
+        <source>Löschungspflicht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">269</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7224823558117243266" datatype="html">
+        <source> Sie können von dem Verantwortlichen verlangen, dass die Sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, und der Verantwortliche ist verpflichtet, diese Daten unverzüglich zu löschen, sofern einer der folgenden Gründe zutrifft: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">270,275</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3596886673564645533" datatype="html">
+        <source> Die Sie betreffenden personenbezogenen Daten sind für die Zwecke, für die sie erhoben oder auf sonstige Weise verarbeitet wurden, nicht mehr notwendig. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">277,281</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4085542013200461512" datatype="html">
+        <source> Sie widerrufen Ihre Einwilligung, auf die sich die Verarbeitung gem. Art. 6 Abs. 1 lit. a oder Art. 9 Abs. 2 lit. a DSGVO stützte, und es fehlt an einer anderweitigen Rechtsgrundlage für die Verarbeitung. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">282,286</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1046964180971690006" datatype="html">
+        <source> Sie legen gem. Art. 21 Abs. 1 DSGVO Widerspruch gegen die Verarbeitung ein und es liegen keine vorrangigen berechtigten Gründe für die Verarbeitung vor. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">287,291</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1091601980667377340" datatype="html">
+        <source> Die Sie betreffenden personenbezogenen Daten wurden unrechtmäßig verarbeitet. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">292,295</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7219294617484793312" datatype="html">
+        <source> Die Löschung der Sie betreffenden personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten erforderlich, dem der Verantwortliche unterliegt. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">296,301</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7940332867485955340" datatype="html">
+        <source>Ausnahmen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">303</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4480146952846615084" datatype="html">
+        <source> Das Recht auf Löschung besteht nicht, soweit die Verarbeitung erforderlich ist </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">304,307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3146472155856583437" datatype="html">
+        <source> zur Ausübung des Rechts auf freie Meinungsäußerung und Information; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">309,311</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="336375794768859339" datatype="html">
+        <source> zur Erfüllung einer rechtlichen Verpflichtung, die die Verarbeitung nach dem Recht der Union oder der Mitgliedstaaten, dem der Verantwortliche unterliegt, erfordert, oder zur Wahrnehmung einer Aufgabe, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die dem Verantwortlichen übertragen wurde; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">312,318</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8476514713671343180" datatype="html">
+        <source> für im öffentlichen Interesse liegende Archivzwecke, wissenschaftliche oder historische Forschungszwecke oder für statistische Zwecke gem. Art. 89 Abs. 1 DSGVO, soweit das unter Abschnitt a) genannte Recht voraussichtlich die Verwirklichung der Ziele dieser Verarbeitung unmöglich macht oder ernsthaft beeinträchtigt, oder </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">319,325</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9213537351052408034" datatype="html">
+        <source> zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">326,328</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6662963433988362800" datatype="html">
+        <source> Recht auf Einschränkung der Verarbeitung </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">330,332</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="36604417550805584" datatype="html">
+        <source> Unter den folgenden Voraussetzungen können Sie die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten verlangen: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">333,336</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9149208758550404380" datatype="html">
+        <source> wenn Sie die Richtigkeit der Sie betreffenden personenbezogenen für eine Dauer bestreiten, die es dem Verantwortlichen ermöglicht, die Richtigkeit der personenbezogenen Daten zu überprüfen; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">338,342</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8766998151170212906" datatype="html">
+        <source> die Verarbeitung unrechtmäßig ist und Sie die Löschung der personenbezogenen Daten ablehnen und stattdessen die Einschränkung der Nutzung der personenbezogenen Daten verlangen; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">343,347</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1469709408477112842" datatype="html">
+        <source> der Verantwortliche die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger benötigt, Sie diese jedoch zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen, oder </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">348,352</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3794731233752934554" datatype="html">
+        <source> wenn Sie Widerspruch gegen die Verarbeitung gemäß Art. 21 Abs. 1 DSGVO eingelegt haben und noch nicht feststeht, ob die berechtigten Gründe des Verantwortlichen gegenüber Ihren Gründen überwiegen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">353,357</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="713587666777972615" datatype="html">
+        <source> Wurde die Verarbeitung der Sie betreffenden personenbezogenen Daten eingeschränkt, dürfen diese Daten - von ihrer Speicherung abgesehen - nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Union oder eines Mitgliedstaats verarbeitet werden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">359,366</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768250335265742767" datatype="html">
+        <source> Wurde die Einschränkung der Verarbeitung nach den o.g. Voraussetzungen eingeschränkt, werden Sie von dem Verantwortlichen unterrichtet bevor die Einschränkung aufgehoben wird. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">367,371</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5546013225313788064" datatype="html">
+        <source> Recht auf Unterrichtung </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">372,374</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3363090981624719309" datatype="html">
+        <source> Haben Sie das Recht auf Berichtigung, Löschung oder Einschränkung der Verarbeitung gegenüber dem Verantwortlichen geltend gemacht, ist dieser verpflichtet, allen Empfängern, denen die Sie betreffenden personenbezogenen Daten offengelegt wurden, diese Berichtigung oder Löschung der Daten oder Einschränkung der Verarbeitung mitzuteilen, es sei denn, dies erweist sich als unmöglich oder ist mit einem unverhältnismäßigen Aufwand verbunden. Ihnen steht gegenüber dem Verantwortlichen das Recht zu, über diese Empfänger unterrichtet zu werden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">375,385</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5537891177345773465" datatype="html">
+        <source> Recht auf Datenübertragbarkeit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">386,388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7849174867459242765" datatype="html">
+        <source> Sie haben das Recht, die Sie betreffenden personenbezogenen Daten, die Sie dem Verantwortlichen bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Außerdem haben Sie das Recht diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen Daten bereitgestellt wurden, zu übermitteln, sofern </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">389,396</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4066338690151262684" datatype="html">
+        <source> die Verarbeitung auf einer Einwilligung gem. Art. 6 Abs. 1 lit. a DSGVO oder Art. 9 Abs. 2 lit. a DSGVO oder auf einem Vertrag gem. Art. 6 Abs. 1 lit. b DSGVO beruht und </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">398,402</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8063081582836350063" datatype="html">
+        <source>die Verarbeitung mithilfe automatisierter Verfahren erfolgt.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">403</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6444814344189152994" datatype="html">
+        <source> In Ausübung dieses Rechts haben Sie ferner das Recht, zu erwirken, dass die Sie betreffenden personenbezogenen Daten direkt von einem Verantwortlichen einem anderen Verantwortlichen übermittelt werden, soweit dies technisch machbar ist. Freiheiten und Rechte anderer Personen dürfen hierdurch nicht beeinträchtigt werden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">405,411</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1845494853345244170" datatype="html">
+        <source> Das Recht auf Datenübertragbarkeit gilt nicht für eine Verarbeitung personenbezogener Daten, die für die Wahrnehmung einer Aufgabe erforderlich ist, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die dem Verantwortlichen übertragen wurde. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">412,417</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1104853495412778281" datatype="html">
+        <source>Widerspruchsrecht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">418</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5403739405916098432" datatype="html">
+        <source> Sie haben das Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">419,424</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3031923563624789371" datatype="html">
+        <source> Der Verantwortliche verarbeitet die Sie betreffenden personenbezogenen Daten nicht mehr, es sei denn, er kann zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">425,431</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1419397662726209684" datatype="html">
+        <source> Recht auf Widerruf der datenschutzrechtlichen Einwilligungserklärung </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">432,434</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2989066070870834724" datatype="html">
+        <source> Sie haben das Recht, Ihre datenschutzrechtliche Einwilligungserklärung jederzeit zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">435,440</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2124723870938267183" datatype="html">
+        <source> Recht auf Beschwerde bei einer Aufsichtsbehörde </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">441,443</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="201224467009185567" datatype="html">
+        <source> Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen gemäß Art. 77 DSGVO das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">444,450</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6362788076804594969" datatype="html">
+        <source> Aktualität und Änderung dieser Datenschutzerklärung </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">451,453</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3730715920648564252" datatype="html">
+        <source> Diese Datenschutzerklärung ist aktuell gültig und hat den Stand 2021. Durch die Weiterentwicklung unserer Website und Angebote darüber oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/data-privacy/data-privacy.component.html</context>
+          <context context-type="linenumber">454,459</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1193253358691614952" datatype="html">
+        <source>Angaben gemäß § 5 TMG</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6475164061023793718" datatype="html">
+        <source>Vertreten durch:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2642650664350300512" datatype="html">
+        <source>Tomke Nils Janowitz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8950886269953402713" datatype="html">
+        <source>Kontakt:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1519041222754789513" datatype="html">
+        <source> E-Mail:<x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:kontakt@tomke-nils.de&quot;&gt;"/>kontakt@tomke-nils.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1966073063161398687" datatype="html">
+        <source> Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">17,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8609213074051834224" datatype="html">
+        <source>Haftungsausschluss:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7113499405001155169" datatype="html">
+        <source>Haftung für Inhalte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8764938935499526005" datatype="html">
+        <source> Die Inhalte meiner Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">28,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="489999504763117156" datatype="html">
+        <source>Haftung für Links</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9203356953021318125" datatype="html">
+        <source> Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">44,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="514664328454340034" datatype="html">
+        <source>Urheberrecht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7905829087431409515" datatype="html">
+        <source> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">57,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3741200213318438827" datatype="html">
+        <source> Projekte </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/project-detail/project-detail.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3150775246119356018" datatype="html">
+        <source>Zur Website</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/project-detail/project-detail.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9128050969364856472" datatype="html">
+        <source>Kanäle</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/project-detail/project-detail.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2400857379190014720" datatype="html">
+        <source> Impressum </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5455880547060138700" datatype="html">
+        <source> Datenschutz </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7883631339141265735" datatype="html">
+        <source> Designt und entwickelt von <x id="START_LINK" ctype="x-a" equiv-text="&lt;a
+      href=&quot;https://jonas-wolfram.com&quot;
+      target=&quot;_blank&quot;
+      class=&quot;footer__jonas-wolfram-link&quot;
+    &gt;"/> Jonas Wolfram <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.component.html</context>
+          <context context-type="linenumber">55,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

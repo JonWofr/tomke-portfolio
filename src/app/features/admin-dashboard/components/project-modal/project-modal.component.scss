@@ -37,10 +37,10 @@
 
 .form {
   &__group {
-    &:nth-child(6),
-    &:nth-child(7),
     &:nth-child(8),
-    &:nth-child(9) {
+    &:nth-child(9),
+    &:nth-child(10),
+    &:nth-child(11) {
       @include media-breakpoint-up("md") {
         width: calc(50% - 1rem / 2);
       }

@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "tomke-portfolio"
-  }
+  },
+  "targets": {
+    "tomke-portfolio": {
+      "hosting": {
+        "dev": [
+          "tomke-portfolio-dev"
+        ],
+        "prod": [
+          "tomke-portfolio"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { Project } from '@shared/models/project.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -7,6 +7,7 @@ import { ProjectsControllerService } from '@core/services/projects-controller/pr
 import { SpinnerOverlayColor } from '@shared/enums/spinner-overlay-color.enum';
 import { Subscription } from 'rxjs';
 import { SectionId } from '@shared/enums/section-id.enum';
+import { LOCALE_ID } from '@angular/core';
 
 @Component({
   selector: 'portfolio-project-detail',
@@ -25,7 +26,8 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private title: Title,
-    private projectsController: ProjectsControllerService
+    private projectsController: ProjectsControllerService,
+    @Inject(LOCALE_ID) public localeId: string
   ) {}
 
   ngOnInit(): void {

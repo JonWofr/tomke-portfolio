@@ -58,6 +58,30 @@
             </div>
           </div>
 
+          <!-- TITLE (ENGLISH) -->
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="Titel (Englisch)"
+              class="form__control"
+              name="titleEn"
+              [(ngModel)]="project.titleEn"
+              #titleEn="ngModel"
+              required
+            />
+            <div
+              *ngIf="titleEn.invalid && titleEn.touched"
+              class="form__alerts-container"
+            >
+              <p
+                *ngIf="titleEn.errors ? titleEn.errors['required'] : undefined"
+                class="form__alert"
+              >
+                Du musst einen Titel in Englisch angeben
+              </p>
+            </div>
+          </div>
+
           <!-- THUMBNAIL IMAGE -->
           <div class="form__group">
             <div class="project-modal__image-container">
@@ -128,6 +152,35 @@
                 class="form__alert"
               >
                 Du musst eine Beschreibung eingeben
+              </p>
+            </div>
+          </div>
+
+          <!-- DESCRIPTION (ENGLISH) -->
+          <div class="form__group">
+            <textarea
+              cols="30"
+              rows="10"
+              placeholder="Beschreibung (Englisch)"
+              class="form__control"
+              name="descriptionEn"
+              [(ngModel)]="project.descriptionEn"
+              #descriptionEn="ngModel"
+              required
+            ></textarea>
+            <div
+              *ngIf="descriptionEn.invalid && descriptionEn.touched"
+              class="form__alerts-container"
+            >
+              <p
+                *ngIf="
+                  descriptionEn.errors
+                    ? descriptionEn.errors['required']
+                    : undefined
+                "
+                class="form__alert"
+              >
+                Du musst eine Beschreibung in Englisch eingeben
               </p>
             </div>
           </div>
