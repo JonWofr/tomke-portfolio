@@ -886,88 +886,118 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="6847297462856680578" datatype="html">
+        <source> Handelsregister: HRB 106357<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Registergericht: Düsseldorf </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="6475164061023793718" datatype="html">
         <source>Vertreten durch:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2642650664350300512" datatype="html">
-        <source>Tomke Nils Janowitz</source>
+      <trans-unit id="46171705143863573" datatype="html">
+        <source>Tomke Janowitz</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8950886269953402713" datatype="html">
         <source>Kontakt:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1519041222754789513" datatype="html">
-        <source> E-Mail:<x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:kontakt@tomke-nils.de&quot;&gt;"/>kontakt@tomke-nils.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+      <trans-unit id="5614294036367608362" datatype="html">
+        <source> E-Mail: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:kontakt@tomke-nils.de&quot;&gt;"/>kontakt@tomke-nils.de<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">14,15</context>
+          <context context-type="linenumber">18,19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1966073063161398687" datatype="html">
-        <source> Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: </source>
+      <trans-unit id="4549789857324665560" datatype="html">
+        <source> Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE331165289 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">17,19</context>
+          <context context-type="linenumber">21,24</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8609213074051834224" datatype="html">
-        <source>Haftungsausschluss:</source>
+      <trans-unit id="3068133603857323745" datatype="html">
+        <source>EU-Streitschlichtung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5569364652346985733" datatype="html">
+        <source> Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://ec.europa.eu/consumers/odr/&quot; target=&quot;_blank&quot;
+        &gt;"/>https://ec.europa.eu/consumers/odr/<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+      &gt;"/>.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Unsere E-Mail-Adresse finden Sie oben im Impressum. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">26,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="684686642633947529" datatype="html">
+        <source> Verbraucherstreitbeilegung/Universalschlichtungsstelle </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2896622375143739605" datatype="html">
+        <source> Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
+          <context context-type="linenumber">37,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7113499405001155169" datatype="html">
         <source>Haftung für Inhalte</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8764938935499526005" datatype="html">
         <source> Die Inhalte meiner Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">28,42</context>
+          <context context-type="linenumber">42,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="489999504763117156" datatype="html">
         <source>Haftung für Links</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9203356953021318125" datatype="html">
         <source> Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">44,55</context>
+          <context context-type="linenumber">58,69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="514664328454340034" datatype="html">
         <source>Urheberrecht</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7905829087431409515" datatype="html">
         <source> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/pages/impressum/impressum.component.html</context>
-          <context context-type="linenumber">57,70</context>
+          <context context-type="linenumber">71,84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3741200213318438827" datatype="html">
